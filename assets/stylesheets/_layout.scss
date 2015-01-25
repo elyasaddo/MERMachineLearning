@@ -1,0 +1,113 @@
+//Colour Palatte
+//Blacks
+$black:      #050505;
+$darkGrey:   #272727;
+$lightGrey:  #c7c7c7;
+$white:      #f3f3f3;
+
+//Purples
+$deepPurple:  #881058;
+$midPurple:   #ab568a;
+$lightPurple: #cd9aba;
+$palePurple:  #efdfeb;
+
+//Blues
+$deepBlue:    #0e5f9b;
+$midBlue:     #4d86b4;
+$lightBlue:   #8baecc;
+$paleBlue:    #cad5e5;
+
+//Greens
+$deepGreen:   #277512;
+$midGreen:    #669c57;
+$lightGreen:  #a4c39c;
+$paleGreen:   #e3eae1;
+
+//Yellows
+$deepYellow:  #dbbd0b;
+$midYellow:   #e3cf56;
+$lightYellow: #ece2a2;
+$paleYellow:  #f4f4ed;
+
+//Fonts
+$fontStack: "Calluna", Georgia, Times, 'Times New Roman', serif;
+
+//Main body
+body {}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+//Header
+header {
+  margin: 10px 0 26px;
+  * {
+    display: inline-block;
+  }
+}
+
+//Footer
+footer {
+  height:18px;
+  margin: 18px 0 36px;
+}
+
+//Article
+
+//Lists
+ul {
+  @extend .a-c;
+  float: left;
+  li {
+    display: inline-block;
+    ul {
+      display:none;
+      text-transform: none;
+      clear: left;
+      li {display: block;}
+    }
+  }
+}
+dl {
+  .defn-container{
+    border-left: 4px solid $darkGrey;
+    padding: 9px 0 9px 9px;
+    margin: 9px;
+    &.topic-a {
+      border-color: $deepPurple;
+    }
+    &.topic-b {
+      border-color: $deepBlue;
+    }
+    &.topic-c {
+      border-color: $deepGreen;
+    }
+    &.topic-d {
+      border-color: $deepYellow;
+    }
+  }
+  dt{
+    @extend strong;
+    margin-bottom: 18px;
+  }
+  dd {
+    font-size: 0.75em;
+    line-height: 1.125em;
+  }
+}
+
+//Seperators
+.vertical-bar {
+  height: 18px;
+  width: 4px;
+  margin: 0 16px;
+  display: inline-block;
+  &.tall {
+    height:80px;
+  }
+  &.dark-grey {
+    background: $darkGrey;
+  }
+}

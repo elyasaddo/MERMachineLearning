@@ -1,0 +1,208 @@
+/**
+* Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+* http://cssreset.com
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, h1, h2, dl dt, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+::selection {
+  color: #050505;
+  background: #c7c7c7;
+  /* Safari */ }
+
+::-moz-selection {
+  color: #050505;
+  background: #c7c7c7;
+  /* Firefox */ }
+
+/*
+  All of our type will be based on the following grid:
+  1em == 16px
+  font-size: 12px;
+  line-height: 18px;
+
+  NB: Padding and Margins (including width of borders) but be a
+      multiple of the line-height.
+*/
+html {
+  color: #272727;
+  font-family: "Calluna", Georgia, Times, "Times New Roman", serif; }
+
+p {
+  margin: 0 0 18px 0;
+  font-size: 0.75em;
+  line-height: 1.5em; }
+  p.lead {
+    font-size: 1em;
+    line-height: 1.5em; }
+
+h1 {
+  font-size: 3em;
+  line-height: 1.125em; }
+
+h2 {
+  font-size: 2.25em;
+  line-height: 1.5em; }
+
+h3 {
+  font-size: 1.5em;
+  line-height: 2em; }
+
+h4 {
+  font-size: 0.75em;
+  line-height: 1.5em; }
+
+a, a:visited {
+  color: #050505; }
+
+a:hover, a:focus {
+  text-decoration: none; }
+
+em {
+  font-style: italic; }
+
+strong, h1, h2, dl dt {
+  font-weight: 700; }
+
+pre {
+  font-family: "Menlo", monospace; }
+
+.black {
+  color: #050505; }
+
+.purple {
+  color: #881058; }
+
+.blue {
+  color: #0e5f9b; }
+
+.green {
+  color: #277512; }
+
+.yellow {
+  color: #dbbd0b; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.center {
+  text-align: center; }
+
+.f-l {
+  float: left; }
+
+.f-r {
+  float: right; }
+
+.c-l {
+  clear: left; }
+
+.c-r {
+  clear: right; }
+
+.c-b {
+  clear: both; }
+
+.i-b {
+  display: inline-block; }
+
+.a-c, ul {
+  text-transform: uppercase; }
+
+.s-c {
+  font-variant: small-caps; }
+
+.container {
+  margin: 0 auto;
+  width: 960px; }
+
+header {
+  margin: 10px 0 26px; }
+  header * {
+    display: inline-block; }
+
+footer {
+  height: 18px;
+  margin: 18px 0 36px; }
+
+ul {
+  float: left; }
+  ul li {
+    display: inline-block; }
+    ul li ul {
+      display: none;
+      text-transform: none;
+      clear: left; }
+      ul li ul li {
+        display: block; }
+
+dl .defn-container {
+  border-left: 4px solid #272727;
+  padding: 9px 0 9px 9px;
+  margin: 9px; }
+  dl .defn-container.topic-a {
+    border-color: #881058; }
+  dl .defn-container.topic-b {
+    border-color: #0e5f9b; }
+  dl .defn-container.topic-c {
+    border-color: #277512; }
+  dl .defn-container.topic-d {
+    border-color: #dbbd0b; }
+dl dt {
+  margin-bottom: 18px; }
+dl dd {
+  font-size: 0.75em;
+  line-height: 1.125em; }
+
+.vertical-bar {
+  height: 18px;
+  width: 4px;
+  margin: 0 16px;
+  display: inline-block; }
+  .vertical-bar.tall {
+    height: 80px; }
+  .vertical-bar.dark-grey {
+    background: #272727; }

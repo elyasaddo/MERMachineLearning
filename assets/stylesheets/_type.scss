@@ -1,0 +1,129 @@
+//Colour Palatte
+//Blacks
+$black:      #050505;
+$darkGrey:   #272727;
+$lightGrey:  #c7c7c7;
+$white:      #f3f3f3;
+
+//Purples
+$deepPurple:  #881058;
+$midPurple:   #ab568a;
+$lightPurple: #cd9aba;
+$palePurple:  #efdfeb;
+
+//Blues
+$deepBlue:    #0e5f9b;
+$midBlue:     #4d86b4;
+$lightBlue:   #8baecc;
+$paleBlue:    #cad5e5;
+
+//Greens
+$deepGreen:   #277512;
+$midGreen:    #669c57;
+$lightGreen:  #a4c39c;
+$paleGreen:   #e3eae1;
+
+//Yellows
+$deepYellow:  #dbbd0b;
+$midYellow:   #e3cf56;
+$lightYellow: #ece2a2;
+$paleYellow:  #f4f4ed;
+
+//Fonts
+$fontStack: "Calluna", Georgia, Times, 'Times New Roman', serif;
+
+::selection {
+  color: $black;
+  background: $lightGrey; /* Safari */
+}
+::-moz-selection {
+  color: $black;
+  background: $lightGrey; /* Firefox */
+}
+
+/*
+  All of our type will be based on the following grid:
+  1em == 16px
+  font-size: 12px;
+  line-height: 18px;
+
+  NB: Padding and Margins (including width of borders) but be a
+      multiple of the line-height.
+*/
+
+//Body copy
+html {
+  color: $darkGrey;
+  font-family: $fontStack;
+}
+p {
+  margin: 0 0 18px 0;
+  font-size: 0.75em;
+  line-height: 1.5em;
+  &.lead {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+
+//Headings
+h1 {
+  @extend strong;
+  font-size: 3em;
+  line-height: 1.125em;
+}
+h2 {
+  @extend strong;
+  font-size: 2.25em;
+  line-height: 1.5em;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+h4 {
+  font-size: 0.75em;
+  line-height: 1.5em;
+}
+
+//Links
+a, a:visited {
+  color: $black;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+//Variants
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: 700;
+}
+pre {
+  font-family: "Menlo", monospace;
+}
+
+//Special Text
+blockquote {}
+
+//Additional Classes
+
+//Text Formatting
+.black { color: $black; }
+.purple { color: $deepPurple; }
+.blue { color: $deepBlue; }
+.green { color: $deepGreen; }
+.yellow { color: $deepYellow; }
+.left {text-align: left;}
+.right {text-align: right;}
+.center {text-align: center;}
+.f-l {float: left;}
+.f-r {float: right;}
+.c-l {clear: left;}
+.c-r {clear: right;}
+.c-b {clear: both;}
+.i-b {display: inline-block;}
+.a-c {text-transform: uppercase;}
+.s-c {font-variant: small-caps;}

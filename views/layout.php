@@ -36,8 +36,10 @@
 </head>
 <!-- !Header -->
 <body class="<?php echo (isset($class) ? $class : '') ?>">
-  <?php echo $header_content; ?>
-  <?php echo $body_content; ?>
-  <?php echo $footer_content; ?>
+  <div class="container">
+    <?php echo $header_content; ?>
+    <?php echo $body_content; ?>
+    <?php echo $footer_content; ?>
+  </div>
 </body>
 </html>

@@ -1,8 +1,8 @@
-<img src="" alt="Large waveform image"/>
-<h1>
+<img src="" alt="Large waveform image" width="840" height="630"/>
+<h1 class="center">
   Music Emotion Recognition
 </h1>
-<h2>
+<h2 class="center">
   Machine Learning
 </h2>
 <p class="center lead">
@@ -12,39 +12,39 @@
   Topics
 </h3>
 <dl>
-  <div class="defn-container">
+  <div class="defn-container topic-a">
     <dt>
       Topic A
     </dt>
     <dd>
-      Brief, concise description of Topic A.
+      Brief, concise description of Topic A.<br>
       <a href="<?php echo $GLOBALS['base'] ?>/articles/topic-a">Read More &rarr;</a>
     </dd>
   </div>
-  <div class="defn-container">
+  <div class="defn-container topic-b">
     <dt>
       Topic B
     </dt>
     <dd>
-      Brief, concise description of Topic B.
+    Brief, concise description of Topic B.<br>
       <a href="<?php echo $GLOBALS['base'] ?>/articles/topic-b">Read More &rarr;</a>
     </dd>
   </div>
-  <div class="defn-container">
+  <div class="defn-container topic-c">
     <dt>
       Topic C
     </dt>
     <dd>
-      Brief, concise description of Topic C.
+      Brief, concise description of Topic C.<br>
       <a href="<?php echo $GLOBALS['base'] ?>/articles/topic-c">Read More &rarr;</a>
     </dd>
   </div>
-  <div class="defn-container">
+  <div class="defn-container topic-d">
     <dt>
       Topic D
     </dt>
     <dd>
-      Brief, concise description of Topic D.
+      Brief, concise description of Topic D.<br>
       <a href="<?php echo $GLOBALS['base'] ?>/articles/topic-d">Read More &rarr;</a>
     </dd>
   </div>
