@@ -1,4 +1,4 @@
-<img src="" alt="Large waveform image" width="840" height="630"/>
+<img src="" alt="Large waveform image" width="960" height="480"/>
 <h1 class="center">
   Music Emotion Recognition
 </h1>
