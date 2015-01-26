@@ -18,7 +18,7 @@
   function article($topic) {
     //TODO: add class bg
     //TODO: pass in topic name
-    Flight::render('article', array('topic' => $topic), 'body_content'); //body
+    Flight::render('article', array('topic' => $topic, 'class' => $topic), 'body_content'); //body
     Flight::render('layout', array('title' => Util::urlToName($topic))); //layout
   }
 
