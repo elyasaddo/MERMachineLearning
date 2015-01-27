@@ -11,13 +11,16 @@
   Flight::render('footer', array(), 'footer_content');
 
   function home() {
-    Flight::render('home', array(), 'body_content'); //body
+    Flight::render('home', array('class' => 'home'), 'body_content'); //body
     Flight::render('layout', array('title' => 'Home')); //layout
   }
 
+  function listen() {
+    Flight::render('listen', array('class' => 'listen'), 'body_content'); //body
+    Flight::render('layout', array('title' => 'Listen')); //layout
+  }
+
   function article($topic) {
-    //TODO: add class bg
-    //TODO: pass in topic name
     Flight::render('article', array('topic' => $topic, 'class' => $topic), 'body_content'); //body
     Flight::render('layout', array('title' => Util::urlToName($topic))); //layout
   }
@@ -34,6 +37,8 @@
   Flight::route('/home', 'redirect_home');
   Flight::route('/index', 'redirect_home');
 
+  //Articles Links
+  Flight::route('/listen', 'listen');
   //Articles Links
   Flight::route('/articles/@topic', 'article');
 

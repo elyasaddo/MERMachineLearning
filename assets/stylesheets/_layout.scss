@@ -35,16 +35,16 @@ $fontStack: "Calluna", Georgia, Times, 'Times New Roman', serif;
 //Main body
 body {
   background: $white;
-  &.topic-a {
+  &.classification {
     background: $palePurple;
   }
-  &.topic-b {
+  &.regression {
     background: $paleBlue;
   }
-  &.topic-c {
+  &.techniques {
     background: $paleGreen;
   }
-  &.topic-d {
+  &.summary {
     background: $paleYellow;
   }
 }
@@ -63,6 +63,7 @@ body {
 //Header
 header {
   margin: 10px 0 26px;
+  padding: 0 40px;
   * {
     display: inline-block;
   }
@@ -77,6 +78,23 @@ footer {
 }
 
 //Article
+figure {
+  padding: 0 0 18px;
+  margin: 0 auto;
+  @extend .center;
+  img {
+    padding: 9px;
+    width:520px;
+  }
+  figcaption {
+    width: 520px;
+    @extend .left;
+    font-size: 75%;
+    color: darken($lightGrey, 20%);
+    left: 220px;
+    position: relative;
+  }
+}
 
 //Lists
 nav {
@@ -101,6 +119,7 @@ ul {
       margin: -9px 16px 0;
       li {
         padding: 0 16px 0 0;
+        color: $black;
         }
     }
     &:hover{
@@ -116,8 +135,8 @@ ul {
             animation-delay: .2s;
           }
           &:nth-child(4) {
-            -webkit-animation-delay: .2s;
-            animation-delay: .2s;
+            -webkit-animation-delay: .3s;
+            animation-delay: .3s;
           }
         }
         display: inline-block;
@@ -130,6 +149,7 @@ dl {
   .defn-container{
     float:left;
     width:480px;
+    height: 80px;
     border-left: 4px solid $darkGrey;
     padding: 9px 0 9px 9px;
     margin: 9px;
@@ -140,26 +160,36 @@ dl {
     -moz-border-radius-bottomright: 3px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-    &.topic-a {
+    &.classification {
       border-color: $deepPurple;
     }
-    &.topic-b {
+    &.regression {
       border-color: $deepBlue;
     }
-    &.topic-c {
+    &.techniques {
       border-color: $deepGreen;
     }
-    &.topic-d {
+    &.summary {
       border-color: $deepYellow;
     }
   }
   dt{
     @extend strong;
     margin-bottom: 18px;
+    width: 440px;
   }
   dd {
     font-size: 0.75em;
     line-height: 1.125em;
+    width: 440px;
+  }
+  .defn-arr {
+    padding-top: 32px;
+    float:right;
+    display: inline-block;
+    a {
+      text-decoration: none;
+    }
   }
 }
 dl:after {

@@ -9,26 +9,31 @@
         </a>
       </li>
       <li>
+        <a href="<?php echo $GLOBALS['base'] ?>/listen">
+          Listen &amp; Rate
+        </a>
+      </li>
+      <li>
         Articles
         <ul>
           <li>
-            <a href="<?php echo $GLOBALS['base'] ?>/articles/topic-a" class="purple">
-              <span class="vertical-bar dark-grey"></span> Topic A
+            <a href="<?php echo $GLOBALS['base'] ?>/articles/classification" class="purple">
+              <span class="vertical-bar dark-grey"></span> Classification
             </a>
           </li>
           <li>
-            <a href="<?php echo $GLOBALS['base'] ?>/articles/topic-b" class="blue">
-              <span class="vertical-bar dark-grey"></span> Topic B
+            <a href="<?php echo $GLOBALS['base'] ?>/articles/regression" class="blue">
+              <span class="vertical-bar dark-grey"></span> Regression
             </a>
           </li>
           <li>
-            <a href="<?php echo $GLOBALS['base'] ?>/articles/topic-c" class="green">
-              <span class="vertical-bar dark-grey"></span> Topic C
+            <a href="<?php echo $GLOBALS['base'] ?>/articles/techniques" class="green">
+              <span class="vertical-bar dark-grey"></span> Techniques
             </a>
           </li>
           <li>
-            <a href="<?php echo $GLOBALS['base'] ?>/articles/topic-d" class="yellow">
-              <span class="vertical-bar dark-grey"></span> Topic D
+            <a href="<?php echo $GLOBALS['base'] ?>/articles/summary" class="yellow">
+              <span class="vertical-bar dark-grey"></span> Summary
             </a>
           </li>
         </ul>

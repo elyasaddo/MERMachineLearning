@@ -56,6 +56,10 @@ $secondaryFontStack: "proxima-nova", "HelveticaNeue", "Helvetica Neue", Helvetic
 html {
   color: $darkGrey;
   font-family: $fontStack;
+  font-variant-ligatures: additional-ligatures;
+  -webkit-font-variant-ligatures: additional-ligatures;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
 }
 p {
   margin: 0 0 18px 0;
@@ -109,9 +113,24 @@ a:hover, a:focus {
 
 nav a, nav a:visited {
   text-decoration:none;
+  color: $black;
 }
-nav a:hover, nav a:focus {
-  color: $lightGrey;
+nav > ul > li > a:hover, nav a:focus {
+  .classification header > & {
+    color: $deepPurple;
+  }
+  .regression header > & {
+    color: $deepBlue;
+  }
+  .techniques header > & {
+    color: $deepGreen;
+  }
+  .summary header > & {
+    color: $deepYellow;
+  }
+  .home header > &, .listen header > & {
+    color: $lightGrey;
+  }
 }
 
 //Variants
@@ -124,9 +143,57 @@ strong {
 pre {
   font-family: "Menlo", monospace;
 }
+sub, sup {
+  /* Specified in % so that the sup/sup is the
+  right size relative to the surrounding text */
+  font-size: 75%;
+
+  /* Zero out the line-height so that it doesn't
+  interfere with the positioning that follows */
+  line-height: 0;
+
+  /* Where the magic happens: makes all browsers position
+  the sup/sup properly, relative to the surrounding text */
+  position: relative;
+
+  /* Note that if you're using Eric Meyer's reset.css, this
+  is already set and you can remove this rule */
+  vertical-align: baseline;
+}
+
+sup {
+  /* Move the superscripted text up */
+  top: -0.5em;
+}
+
+sub {
+  /* Move the subscripted text down, but only
+  half as far down as the superscript moved up */
+  bottom: -0.25em;
+}
 
 //Special Text
-blockquote {}
+blockquote {
+  margin: 10px 50px 10px 0;
+  padding-left: 15px;
+  border-left: 3px solid $lightGrey;
+  .classification & {
+    color: $deepPurple;
+    border-color: $deepPurple;
+  }
+  .regression & {
+    color: $deepBlue;
+    border-color: $deepBlue;
+  }
+  .techniques & {
+    color: $deepGreen;
+    border-color: $deepGreen;
+  }
+  .summary & {
+    color: $deepYellow;
+    border-color: $deepYellow;
+  }
+}
 
 //Additional Classes
 header {
@@ -137,11 +204,6 @@ header {
 }
 
 //Text Formatting
-.black { color: $black; }
-.purple { color: $deepPurple; }
-.blue { color: $deepBlue; }
-.green { color: $deepGreen; }
-.yellow { color: $deepYellow; }
 .left {text-align: left;}
 .right {text-align: right;}
 .center {text-align: center;}
