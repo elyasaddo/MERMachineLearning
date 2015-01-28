@@ -1,3 +1,3 @@
 <h1>
-  Liﬆen &amp; Rate
+  Listen &amp; Rate
 </h1>
