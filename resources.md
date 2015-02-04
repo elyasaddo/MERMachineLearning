@@ -12,9 +12,10 @@
     > git remote add upstream https://github.com/elliotgreenwood/MERMachineLearning.git
     > git remote -v
 
+    $ -- for updating Git repo
     $ downloads original repo
     > git fetch upstream
     $ changes to master branch
-    > git checkoutmaster
+    > git checkout master
     $ merges local master with upstream master
-    > git merge upstream
+    > git merge upstream/master
