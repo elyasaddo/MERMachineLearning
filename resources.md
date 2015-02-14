@@ -19,3 +19,8 @@
     > git checkout master
     $ merges local master with upstream master
     > git merge upstream/master
+
+## Harvard referencing templates
+    journal article: online/electronic
+    Author (Year) title-of-article <i>title-of-journal</i>.
+    [Online] vol-num, page-nums. Avaliable from: URL or DOI [Accessed Date]
