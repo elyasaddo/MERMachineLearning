@@ -3,6 +3,9 @@
 ##Links
 
 -[Harvard Referencing - Imperial](http://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/library/public/harvard.pdf)
+
+Very useful to help you create references. Try to learn how to use it: https://www.refworks.com/
+
 -[Initial Articles](http://egnwd.com/1dqbt)
 
 ##Git Commands
@@ -19,8 +22,3 @@
     > git checkout master
     $ merges local master with upstream master
     > git merge upstream/master
-
-## Harvard referencing templates
-    journal article: online/electronic
-    Author (Year) title-of-article <i>title-of-journal</i>.
-    [Online] vol-num, page-nums. Avaliable from: URL or DOI [Accessed Date]
