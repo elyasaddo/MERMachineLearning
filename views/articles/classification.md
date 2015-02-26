@@ -14,6 +14,11 @@
  2.  German philosopher Friedrich Nietzsche, who said that
  “without music, life would be a mistake”
 
+ Note: Supervised Learning: training data has been correctly labeled
+        instead of the machine having to create groups on its own
+ Note: Classification provides discrete labels instead of the continuous
+        nature of regression.
+
 #Classification
  2. Traditional
  single-label classification is concerned with learning from
