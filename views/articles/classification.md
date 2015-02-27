@@ -18,6 +18,16 @@
         instead of the machine having to create groups on its own
  Note: Classification provides discrete labels instead of the continuous
         nature of regression.
+ Note: Classification problems will exist in one of two classes
+        Multi-class can have many discrete classes [Andrew Ng Coursera]
+
+#To Look Up
+ - Sigmoid function (theta is column vector of parameters -> transposing
+   turns it on its side)
+ - Decision boundary (decided by theta {theta decided by training set})
+ - Cost function for logistical regression and gradient descent (probably)
+   not necessary
+
 
 #Classification
  2. Traditional
