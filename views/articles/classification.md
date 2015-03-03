@@ -1,83 +1,36 @@
-## General
- 1. Note the subjects are asked to label the emotion
- based on their feelings of what the music sample is
- trying to evoke, rather than the emotion the subjects
- perceive at the test. We must make this distinction
- clear because perceived emotion and evoking emotion
- are not always the same. For example, a person who
- enjoys sorrowful tone might feel pleased when listening[^3]
- to sorrowful songs. Since MER is developed to help
- people retrieve music samples through a coordinate in the
- emotion plane, it is more natural and adequate that the AV
- values of a song are correspondent with the evoking emotion.
+# Classification - Elyas
+## Introduction
+  - what is classification?
+### what is a classification problem
 
- 2. German philosopher Friedrich Nietzsche, who said that
- “without music, life would be a mistake”
+  A classification problem is one in which the data is to be given some label(s) describing their nature in relation to a given situation. In the context of Music Emotion Recognition (MER) this involves giving a piece of music a label or a set of labels in describing which emotion(s) the music is trying to evoke, e.g. confident, cheerful, aggressive. See the MIREX table of 5 clusters of emotional labels[^7]. It is important to note that what the Machine Learning Algorithms want to retrieve the emotion which the piece of music is trying to evoke, rather than the perceived emotion, as listeners may respond to different pieces of music in different way, e.g. a person may be pleased to hear melancholic music if this is the tone of music they enjoy[^1].
 
- Note: Supervised Learning: training data has been correctly labeled
-        instead of the machine having to create groups on its own
- Note: Classification provides discrete labels instead of the continuous
-        nature of regression.
- Note: Classification problems will exist in one of two classes
-        Multi-class can have many discrete classes [Andrew Ng Coursera]
+### different types of classification
 
-### To Look Up
-  - Sigmoid function (theta is column vector of parameters &rarr; transposing
-   turns it on its side)
-  - Decision boundary (decided by theta {theta decided by training set})
-  - Cost function for logistical regression and gradient descent (probably)
-   not necessary
+   In general, if a problem is labeled as a classification problem, it means that all elements in the data set should fall into one of two opposing categories, e.g. in the scenario of determining whether it is day or night in a photograph, each photo should be classified as 'day' or 'not day'.[^(8)FIND REF!!] This is clearly not the case for MER as there are so many emotional label for a piece of music to fall under. In this article, four different forms of classification will be discussed which involve a large set of candidate labels:
+   - Single-label
+   The single-label technique acknowledges the possibility of data belonging to many labels. [^4]
+   - Multi-class
+   - Multi-label
+   - Fuzzy-label
+//// don't go too in depth, apart from what strictly ties in with machine learning
+
+## Why classification is difficult
+
+## How ML helps (briefly)
+
+## Use the machine learning models as paragraphs/sections
+//// in each section then talk about Single/Multi label multi class and fuzzy labelling
+//// provide real life studies where the methods have been used, even better if the study used machine learning
+
+## Comparative paragraph
+
+## Classification difficulties
+
+## How ML helps
 
 
-## Classification
-  1. Traditional
-  single-label classification is concerned with learning from
-  a set of examples that are associated with a single label λ
-  from a set of disjoint labels L, |L| > 1.In multilabel
-  classification, the examples are associated with a set of
-  labels Y ⊆ L
-
-  2. Multilabel classification methods can be categorized into
-  two different groups: i) problem transformation methods (PTMs),
-  and ii) algorithm adaptation methods.
-  PTMs involve turning a multi-label classification problem into
-  1+ single-label classification/ regression problems
-
-  3. {Multi-label} When choosing their data sets, most researchers either
-  avoid such images, label them subjectively with the base
-  (single-label) class most obvious to them, or consider
-  “beach+urban” as a new class. The last method is unrealistic
-  in most cases because it would increase the number of
-  classes to be considered substantially and the data in such
-  combined classes is usually sparse. The "rst two methods
-  have limitations as well. For example, in content-based
-  image indexing and retrieval applications, it would be more
-  difficult for a user to retrieve a multiple-class image (e.g.,
-  beach+urban) if we only have exclusive beach or urban labels.
-  It may require that two separate queries be conducted
-  respectively and the intersection of the retrieved images be
-  taken. In a content-sensitive image enhancement application,
-  it may be desirable for the system to have different
-  settings for beach, urban, and beach+urban scenes. This is
-  impossible using exclusive single labels.
-   use of binary vectors
-   In previous work, researchers labeled the multi-label[^2]
-  data with the one class to which the data most likely
-  belonged, by some perhaps subjective criterion. For example,
-  the image of hotels along a beach would be
-  labeled as a beach if the beach covered the majority
-  of the image, or if one happened to be looking
-  for a beach scene at the time of data collection. In
-  our example, part of the ‘*’ data would be labeled as
-  ‘+’, and part would be labeled as ‘x’ (e.g., depending
-  on which class was most dominant). We call this
-  kind of model MODEL-s (s stands for “single-label” class).[^1]
-
-### References
-
-[^1]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1655&rep=rep1&type=pdf
-[^2]: http://ismir2008.ismir.net/papers/ISMIR2008_275.pdf
-[^3]: http://books.google.co.uk/books?hl=en&lr=&id=1bpEifVEi2MC&oi=fnd&pg=PA64&dq=Multi-label+classification:An+overview&ots=WyD83kziKF&sig=P6VHFTT9RycLgfpCDrK0vq5o4hM#v=onepage&q=single-label%20&f=false
-[^4]: Multi-label (I think for a type of PTM) https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf
-[^5]: (greater expansion of methods) https://books.google.co.uk/books?hl=en&lr=&id=Br33IRC3PkQC&oi=fnd&pg=PR3&dq=%5D+R.+Duda,+R.+Hart,+D.+Stork,+Pattern+Classification,+2nd+Edition,+Wiley,+New+York,+2001&ots=2wySQzhbDu&sig=y9BqLIkUho6EhJ00NM_yx-snTxs#v=onepage&q&f=false
-[^6]: (SVM use) http://link.springer.com/chapter/10.1007%2FBFb0026683#page-1
+#### Non-textual features
+ - Table1 comparison of Multi(class vs Label)
+ - Animation1 (think about one)
+ - Table2 emotional adjectives
