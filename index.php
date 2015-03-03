@@ -25,6 +25,11 @@
     Flight::render('layout', array('title' => Util::urlToName($topic))); //layout
   }
 
+  function demo() {
+    Flight::render('demo', array(), 'body_content'); //body
+    Flight::render('layout', array('title' => 'Markdown Demo')); //layout
+  }
+
   Flight::map('notFound', function(){
     // Handle not found
     Flight::render('header', array(), 'header_content');
@@ -41,5 +46,8 @@
   Flight::route('/listen', 'listen');
   //Articles Links
   Flight::route('/articles/@topic', 'article');
+
+  //Articles Links
+  Flight::route('/demo', 'demo');
 
   Flight::start();?>

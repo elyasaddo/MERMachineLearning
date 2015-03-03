@@ -9,11 +9,6 @@
         </a>
       </li>
       <li>
-        <a href="<?php echo $GLOBALS['base'] ?>/listen">
-          Listen &amp; Rate
-        </a>
-      </li>
-      <li>
         Articles
         <ul>
           <li>

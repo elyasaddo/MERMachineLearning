@@ -58,6 +58,14 @@ body {
   width: 640px;
   margin: 0 auto;
   padding: 0 0 36px;
+  
+  ol {
+    list-style: decimal-leading-zero outside;
+  }
+  ul {
+    float:none;
+    list-style: disc outside;
+  }
 }
 
 //Header
@@ -105,7 +113,7 @@ nav {
     cursor: pointer;
   }
 }
-ul {
+header ul {
   @extend .a-c;
   float: left;
    & > li {
