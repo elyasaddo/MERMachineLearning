@@ -205,7 +205,7 @@ header * {
 .i-b {
   display: inline-block; }
 
-.a-c, ul {
+.a-c, header ul {
   text-transform: uppercase; }
 
 .s-c {
@@ -230,6 +230,11 @@ body {
   width: 640px;
   margin: 0 auto;
   padding: 0 0 36px; }
+  .post-html ol {
+    list-style: decimal-leading-zero outside; }
+  .post-html ul {
+    float: none;
+    list-style: disc outside; }
 
 header {
   margin: 10px 0 26px;
@@ -263,29 +268,29 @@ nav {
   nav li {
     cursor: pointer; }
 
-ul {
+header ul {
   float: left; }
-  ul > li {
+  header ul > li {
     display: inline-block;
     padding: 32px 0px 0px 24px;
     position: relative; }
-    ul > li > ul {
+    header ul > li > ul {
       display: none;
       float: right;
       height: 24px;
       margin: -9px 16px 0; }
-      ul > li > ul li {
+      header ul > li > ul li {
         padding: 0 16px 0 0;
         color: #050505; }
-    ul > li:hover > ul {
+    header ul > li:hover > ul {
       display: inline-block; }
-      ul > li:hover > ul > li:nth-child(2) {
+      header ul > li:hover > ul > li:nth-child(2) {
         -webkit-animation-delay: .1s;
         animation-delay: .1s; }
-      ul > li:hover > ul > li:nth-child(3) {
+      header ul > li:hover > ul > li:nth-child(3) {
         -webkit-animation-delay: .2s;
         animation-delay: .2s; }
-      ul > li:hover > ul > li:nth-child(4) {
+      header ul > li:hover > ul > li:nth-child(4) {
         -webkit-animation-delay: .3s;
         animation-delay: .3s; }
 
@@ -371,7 +376,7 @@ dl:after {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
-.fadeInLeft, ul > li:hover > ul > li {
+.fadeInLeft, header ul > li:hover > ul > li {
   -webkit-animation: fadeInLeft .4s;
   animation: fadeInLeft .4s;
   -webkit-animation-fill-mode: both; }

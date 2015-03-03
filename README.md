@@ -10,5 +10,7 @@ Imperial Computing Year 1 Topics Group Project - MER Machine Learning
  - Quotes at top of each page
   - music emotion or ML
  - abbreviations (abbr tags)
+- Ask about own ideas, Nana
+
 ### Deadlines
  - 10th Feb: Structures
