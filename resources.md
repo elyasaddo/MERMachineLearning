@@ -7,6 +7,7 @@
 - [Additional Articles](http://egnwd.com/1ei6Y)
 - [Mendeley](http://www.mendeley.com)
 - http://ceur-ws.org/Vol-1263/ - Look for music submissions
+- Very useful to help you create references. Try to learn how to use it: [Refworks](https://www.refworks.com/)
 
 ##Other Articles/Sources
 
