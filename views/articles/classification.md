@@ -43,9 +43,40 @@
   PTMs involve turning a multi-label classification problem into
   1+ single-label classification/ regression problems
 
+  4. {Multi-label} When choosing their data sets, most researchers either
+  avoid such images, label them subjectively with the base
+  (single-label) class most obvious to them, or consider
+  “beach+urban” as a new class. The last method is unrealistic
+  in most cases because it would increase the number of
+  classes to be considered substantially and the data in such
+  combined classes is usually sparse. The "rst two methods
+  have limitations as well. For example, in content-based
+  image indexing and retrieval applications, it would be more
+  difficult for a user to retrieve a multiple-class image (e.g.,
+  beach+urban) if we only have exclusive beach or urban labels.
+  It may require that two separate queries be conducted
+  respectively and the intersection of the retrieved images be
+  taken. In a content-sensitive image enhancement application,
+  it may be desirable for the system to have di5erent
+  settings for beach, urban, and beach+urban scenes. This is
+  impossible using exclusive single labels.
+  - use of binary vectors
+  - In previous work, researchers labeled the multi-label
+  data with the one class to which the data most likely
+  belonged, by some perhaps subjective criterion. For example,
+  the image of hotels along a beach would be
+  labeled as a beach if the beach covered the majority
+  of the image, or if one happened to be looking
+  for a beach scene at the time of data collection. In
+  our example, part of the ‘*’ data would be labeled as
+  ‘+’, and part would be labeled as ‘x’ (e.g., depending
+  on which class was most dominant). We call this
+  kind of model MODEL-s (s stands for “single-label” class).
+
 #References
  [1] http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1655&rep=rep1&type=pdf
  [2] http://ismir2008.ismir.net/papers/ISMIR2008_275.pdf
  [3] http://books.google.co.uk/books?hl=en&lr=&id=1bpEifVEi2MC&oi=fnd&pg=PA64&dq=Multi-label+classification:An+overview&ots=WyD83kziKF&sig=P6VHFTT9RycLgfpCDrK0vq5o4hM#v=onepage&q=single-label%20&f=false
- [4] (I think for a type of PTM) https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf
+ [4] Multi-label (I think for a type of PTM) https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf
  [5] (greater expansion of methods) https://books.google.co.uk/books?hl=en&lr=&id=Br33IRC3PkQC&oi=fnd&pg=PR3&dq=%5D+R.+Duda,+R.+Hart,+D.+Stork,+Pattern+Classification,+2nd+Edition,+Wiley,+New+York,+2001&ots=2wySQzhbDu&sig=y9BqLIkUho6EhJ00NM_yx-snTxs#v=onepage&q&f=false
+ [6] (SVM use) http://link.springer.com/chapter/10.1007%2FBFb0026683#page-1
