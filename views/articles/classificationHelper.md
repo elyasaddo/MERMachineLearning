@@ -81,3 +81,4 @@
  [5] (greater expansion of methods) https://books.google.co.uk/books?hl=en&lr=&id=Br33IRC3PkQC&oi=fnd&pg=PR3&dq=%5D+R.+Duda,+R.+Hart,+D.+Stork,+Pattern+Classification,+2nd+Edition,+Wiley,+New+York,+2001&ots=2wySQzhbDu&sig=y9BqLIkUho6EhJ00NM_yx-snTxs#v=onepage&q&f=false
  [6] (SVM use) http://link.springer.com/chapter/10.1007%2FBFb0026683#page-1
  [7] (MIREX emotion labels) http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf
+ [8] find how to ref. Andrew Ng coursera {classification}
