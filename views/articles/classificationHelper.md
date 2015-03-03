@@ -1,17 +1,17 @@
-## General
+#General
  1. Note the subjects are asked to label the emotion
  based on their feelings of what the music sample is
  trying to evoke, rather than the emotion the subjects
  perceive at the test. We must make this distinction
  clear because perceived emotion and evoking emotion
  are not always the same. For example, a person who
- enjoys sorrowful tone might feel pleased when listening[^3]
+ enjoys sorrowful tone might feel pleased when listening
  to sorrowful songs. Since MER is developed to help
  people retrieve music samples through a coordinate in the
  emotion plane, it is more natural and adequate that the AV
  values of a song are correspondent with the evoking emotion.
 
- 2. German philosopher Friedrich Nietzsche, who said that
+ 2.  German philosopher Friedrich Nietzsche, who said that
  “without music, life would be a mistake”
 
  Note: Supervised Learning: training data has been correctly labeled
@@ -21,29 +21,29 @@
  Note: Classification problems will exist in one of two classes
         Multi-class can have many discrete classes [Andrew Ng Coursera]
 
-### To Look Up
-  - Sigmoid function (theta is column vector of parameters &rarr; transposing
+#To Look Up
+ - Sigmoid function (theta is column vector of parameters &rarr; transposing
    turns it on its side)
-  - Decision boundary (decided by theta {theta decided by training set})
-  - Cost function for logistical regression and gradient descent (probably)
+ - Decision boundary (decided by theta {theta decided by training set})
+ - Cost function for logistical regression and gradient descent (probably)
    not necessary
 
 
-## Classification
-  1. Traditional
-  single-label classification is concerned with learning from
-  a set of examples that are associated with a single label λ
-  from a set of disjoint labels L, |L| > 1.In multilabel
-  classification, the examples are associated with a set of
-  labels Y ⊆ L
+#Classification
+ 2. Traditional
+ single-label classification is concerned with learning from
+ a set of examples that are associated with a single label λ
+ from a set of disjoint labels L, |L| > 1.In multilabel
+ classification, the examples are associated with a set of
+ labels Y ⊆ L
 
-  2. Multilabel classification methods can be categorized into
-  two different groups: i) problem transformation methods (PTMs),
+ 3. Multilabel classification methods can be categorized into
+ two different groups: i) problem transformation methods (PTMs),
   and ii) algorithm adaptation methods.
   PTMs involve turning a multi-label classification problem into
   1+ single-label classification/ regression problems
 
-  3. {Multi-label} When choosing their data sets, most researchers either
+  4. {Multi-label} When choosing their data sets, most researchers either
   avoid such images, label them subjectively with the base
   (single-label) class most obvious to them, or consider
   “beach+urban” as a new class. The last method is unrealistic
@@ -57,11 +57,11 @@
   It may require that two separate queries be conducted
   respectively and the intersection of the retrieved images be
   taken. In a content-sensitive image enhancement application,
-  it may be desirable for the system to have different
+  it may be desirable for the system to have di5erent
   settings for beach, urban, and beach+urban scenes. This is
   impossible using exclusive single labels.
-   use of binary vectors
-   In previous work, researchers labeled the multi-label[^2]
+  - use of binary vectors
+  - In previous work, researchers labeled the multi-label
   data with the one class to which the data most likely
   belonged, by some perhaps subjective criterion. For example,
   the image of hotels along a beach would be
@@ -71,7 +71,7 @@
   our example, part of the ‘*’ data would be labeled as
   ‘+’, and part would be labeled as ‘x’ (e.g., depending
   on which class was most dominant). We call this
-  kind of model MODEL-s (s stands for “single-label” class).[^1]
+  kind of model MODEL-s (s stands for “single-label” class).
 
 ### References
 
