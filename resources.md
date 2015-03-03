@@ -2,11 +2,21 @@
 
 ##Links
 
--[Harvard Referencing - Imperial](http://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/library/public/harvard.pdf)
+- [Harvard Referencing - Imperial](http://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/library/public/harvard.pdf)
+- [Initial Articles](http://egnwd.com/1dqbt)
+- [Additional Articles](http://egnwd.com/1ei6Y)
+- [Mendeley](http://www.mendeley.com)
+- http://ceur-ws.org/Vol-1263/ - Look for music submissions
+- Very useful to help you create references. Try to learn how to use it: [Refworks](https://www.refworks.com/)
 
-Very useful to help you create references. Try to learn how to use it: https://www.refworks.com/
+##Other Articles/Sources
 
--[Initial Articles](http://egnwd.com/1dqbt)
+- Enery Schubert, 1999
+- Hark Korhowen, 2004 (System Identification)
+- E. Coutinho, 2009, 2011, 2012 (SRNN)
+- E. Coutinho, 2014 (LSTM)
+- Emotion in Music Task - Mediaeval Challenge 2013
+
 
 ##Git Commands
     $ list remote git servers

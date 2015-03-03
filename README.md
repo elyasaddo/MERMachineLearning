@@ -4,8 +4,11 @@ Imperial Computing Year 1 Topics Group Project - MER Machine Learning
 ### TODO List
  - article.php: create article class
  - Read all the articles
- - Split the article between us
- - Update structure with Eduardo's Amendments
-
+ - Make sure everyone can see the website
+  - XAMPP (Elyas &amp; Nana)
+  - MAMP (Elliot &amp; Florian)
+ - Quotes at top of each page
+  - music emotion or ML
+ - abbreviations (abbr tags)
 ### Deadlines
  - 10th Feb: Structures
