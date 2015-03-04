@@ -73,6 +73,15 @@
   on which class was most dominant). We call this
   kind of model MODEL-s (s stands for “single-label” class).
 
+  9. Fuzzy labeling is used to accommodate for the subjective
+  nature of labeling the emotion of a piece of music (i.e. people
+  may label the same piece differently)
+    <!-- case study of this is reference 89 of this reference -->
+    Output is fuzzy vector - like the binary vector of multi-label
+  classification, but with continuous values in each element
+  0 <= x <= 1
+  This can be seen as a step towards continuous models like regression
+
 ### References
 
 [^1]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1655&rep=rep1&type=pdf
@@ -83,3 +92,4 @@
 [^6]: (SVM use) http://link.springer.com/chapter/10.1007%2FBFb0026683#page-1
 [^7]: (MIREX emotion labels) http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf
 [^8]: find how to ref. Andrew Ng coursera {classification}
+[^9]: (good read to overview all) https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false
