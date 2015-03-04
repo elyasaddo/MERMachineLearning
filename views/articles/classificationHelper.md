@@ -73,10 +73,12 @@
   on which class was most dominant). We call this
   kind of model MODEL-s (s stands for “single-label” class).
 
+  5. Classification is essentially pattern recognition, which humans have
+  taken pretty damn long to be able to do. 'Pattern recognition - the act of taking in raw data and making an action based on the "category" of the pattern'.
+
   9. Fuzzy labeling is used to accommodate for the subjective
   nature of labeling the emotion of a piece of music (i.e. people
   may label the same piece differently)
-    <!-- case study of this is reference 89 of this reference -->
     Output is fuzzy vector - like the binary vector of multi-label
   classification, but with continuous values in each element
   0 <= x <= 1
@@ -93,3 +95,4 @@
 [^7]: (MIREX emotion labels) http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf
 [^8]: find how to ref. Andrew Ng coursera {classification}
 [^9]: (good read to overview all) https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false
+[^10]: (Fuzzy label case study) http://delivery.acm.org/10.1145/1190000/1180665/p81-yang.pdf?ip=129.31.176.116&id=1180665&acc=ACTIVE%20SERVICE&key=BF07A2EE685417C5%2EF5014A9D3D5CC2D9%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=483894553&CFTOKEN=48367803&__acm__=1425502483_3a9feda291bf75d5741f0ede1ea4b69f
