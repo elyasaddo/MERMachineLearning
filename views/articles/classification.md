@@ -3,12 +3,11 @@
   "Without music, life would be a mistake" Friedrich Nietzsche, German philosopher.[^2]
 
 ## Introduction
-  - what is classification?
-### what is a classification problem
+### What is a classification problem?
 
   A classification problem is one in which the data is to be given some discrete label(s) describing their nature in relation to a given situation. In the context of Music Emotion Recognition (MER) this involves giving a piece of music a label or a set of labels in describing which emotion(s) the music is trying to evoke, e.g. confident, cheerful, aggressive. See the MIREX table of 5 clusters of emotional labels[^7]. It is important to note that what the Machine Learning Algorithms want to retrieve the emotion which the piece of music is trying to evoke, rather than the perceived emotion, as listeners may respond to different pieces of music in different way, e.g. a person may be pleased to hear melancholic music if this is the tone of music they enjoy[^1]. A ground truth is the term given to a label which a certain piece of data actually has. the aim of classification techniques is to suggest a high probability (or in a perfect world 'certainty') of the data having this ground truth label. Note that many ground truths can exist for a given data piece.
 
-### different types of classification
+### Different types of classification
 
    In general, if a problem is labeled as a classification problem, it means that all elements in the data set should fall into one of two opposing categories, e.g. in the scenario of determining whether it is day or night in a photograph, each photo should be classified as 'day' or 'not day'.[^(8)FIND REF!!] This is clearly not the case for MER as there are so many emotional label for a piece of music to fall under. In this article, four different forms of classification will be discussed which involve a large set of candidate labels:
    - Single-label
@@ -24,7 +23,9 @@
 ## Why classification is difficult
 
 
-## How ML helps (briefly)
+
+## How ML helps
+<!-- briefly -->
 <!-- supervised learning -->
 
 ## Use the machine learning models as paragraphs/sections
@@ -37,8 +38,22 @@
 
 ## How ML helps
 
-
+<!--
 #### Non-textual features
  - Table1 comparison of Multi(class vs Label)
  - Animation1 (think about one)
  - Table2 emotional adjectives
+-->
+
+### References
+
+[^1]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1655&rep=rep1&type=pdf
+[^2]: http://ismir2008.ismir.net/papers/ISMIR2008_275.pdf
+[^3]: http://books.google.co.uk/books?hl=en&lr=&id=1bpEifVEi2MC&oi=fnd&pg=PA64&dq=Multi-label+classification:An+overview&ots=WyD83kziKF&sig=P6VHFTT9RycLgfpCDrK0vq5o4hM#v=onepage&q=single-label%20&f=false
+[^4]: Multi-label (I think for a type of PTM) https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf
+[^5]: (greater expansion of methods) https://books.google.co.uk/books?hl=en&lr=&id=Br33IRC3PkQC&oi=fnd&pg=PR3&dq=%5D+R.+Duda,+R.+Hart,+D.+Stork,+Pattern+Classification,+2nd+Edition,+Wiley,+New+York,+2001&ots=2wySQzhbDu&sig=y9BqLIkUho6EhJ00NM_yx-snTxs#v=onepage&q&f=false
+[^6]: (SVM use) http://link.springer.com/chapter/10.1007%2FBFb0026683#page-1
+[^7]: (MIREX emotion labels) http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf
+[^8]: find how to ref. Andrew Ng coursera {classification}
+[^9]: (good read to overview all) https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false
+[^10]: (Fuzzy label case study) http://delivery.acm.org/10.1145/1190000/1180665/p81-yang.pdf?ip=129.31.176.116&id=1180665&acc=ACTIVE%20SERVICE&key=BF07A2EE685417C5%2EF5014A9D3D5CC2D9%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=483894553&CFTOKEN=48367803&__acm__=1425502483_3a9feda291bf75d5741f0ede1ea4b69f
