@@ -21,8 +21,7 @@
 <!-- don't go too in depth, apart from what strictly ties in with machine learning -->
 
 ## Why classification is difficult
-
-
+Classification is in essence pattern recognition <!-- quote --> 'the act of taking in raw data and making an action based on the "category" of the pattern'.[^5] Although humans clearly have this skill, we often struggle with defining rules for the classification of a particular set of data because it comes so naturally to us. Because of this, machine learning is very useful in classification as rules created are data based and so are more likely to be accurate in determining the nature of the data.[^11] The training set of data does however need to be labeled by a human before a machine can come up with a suitable model for classifying (known as supervised learning); otherwise it will just be trying to partition groups of data with common attributes (unsuprevised learning) which may not result in emotion related connections.[^12]
 
 ## How ML helps
 <!-- briefly -->
@@ -32,11 +31,6 @@
  <!-- in each section then talk about Single/Multi label multi class and fuzzy labelling -->
  <!-- provide real life studies where the methods have been used, even better if the study used machine learning -->
 
-## Comparative paragraph
-
-## Classification difficulties
-
-## How ML helps
 
 <!--
 #### Non-textual features
@@ -47,13 +41,8 @@
 
 ### References
 
-[^1]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1655&rep=rep1&type=pdf
-[^2]: http://ismir2008.ismir.net/papers/ISMIR2008_275.pdf
-[^3]: http://books.google.co.uk/books?hl=en&lr=&id=1bpEifVEi2MC&oi=fnd&pg=PA64&dq=Multi-label+classification:An+overview&ots=WyD83kziKF&sig=P6VHFTT9RycLgfpCDrK0vq5o4hM#v=onepage&q=single-label%20&f=false
-[^4]: Multi-label (I think for a type of PTM) https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf
-[^5]: (greater expansion of methods) https://books.google.co.uk/books?hl=en&lr=&id=Br33IRC3PkQC&oi=fnd&pg=PR3&dq=%5D+R.+Duda,+R.+Hart,+D.+Stork,+Pattern+Classification,+2nd+Edition,+Wiley,+New+York,+2001&ots=2wySQzhbDu&sig=y9BqLIkUho6EhJ00NM_yx-snTxs#v=onepage&q&f=false
-[^6]: (SVM use) http://link.springer.com/chapter/10.1007%2FBFb0026683#page-1
-[^7]: (MIREX emotion labels) http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf
-[^8]: find how to ref. Andrew Ng coursera {classification}
-[^9]: (good read to overview all) https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false
-[^10]: (Fuzzy label case study) http://delivery.acm.org/10.1145/1190000/1180665/p81-yang.pdf?ip=129.31.176.116&id=1180665&acc=ACTIVE%20SERVICE&key=BF07A2EE685417C5%2EF5014A9D3D5CC2D9%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=483894553&CFTOKEN=48367803&__acm__=1425502483_3a9feda291bf75d5741f0ede1ea4b69f
+<!-- DONT FORGET TO COPY OVER REFERENCES -->
+
+########
+<!-- references used -->
+<!--1, 2, 3, 4, 5, 7, 8, 9, 11 -->

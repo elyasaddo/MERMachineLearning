@@ -74,7 +74,12 @@
   kind of model MODEL-s (s stands for “single-label” class).
 
   5. Classification is essentially pattern recognition, which humans have
-  taken pretty damn long to be able to do. 'Pattern recognition - the act of taking in raw data and making an action based on the "category" of the pattern'.
+  taken pretty damn long to be able to do. 'Pattern recognition - the act
+  of taking in raw data and making an action based on the "category" of the
+  pattern'.
+    Image of complicated weight/ height sea-bass and salmon decision graph.
+  Use this to bring up the issue of being too specific for the data set and
+  'generalisation'.
 
   9. Fuzzy labeling is used to accommodate for the subjective
   nature of labeling the emotion of a piece of music (i.e. people
@@ -93,6 +98,8 @@
 [^5]: (greater expansion of methods) https://books.google.co.uk/books?hl=en&lr=&id=Br33IRC3PkQC&oi=fnd&pg=PR3&dq=%5D+R.+Duda,+R.+Hart,+D.+Stork,+Pattern+Classification,+2nd+Edition,+Wiley,+New+York,+2001&ots=2wySQzhbDu&sig=y9BqLIkUho6EhJ00NM_yx-snTxs#v=onepage&q&f=false
 [^6]: (SVM use) http://link.springer.com/chapter/10.1007%2FBFb0026683#page-1
 [^7]: (MIREX emotion labels) http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf
-[^8]: find how to ref. Andrew Ng coursera {classification}
+[^8]: find how to ref. Andrew Ng coursera {classification} Ng,A.;2012;Classification (8 min);[Online];[Accessed 25 February 2015]; Available from: https://class.coursera.org/ml-005/lecture/33
 [^9]: (good read to overview all) https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false
 [^10]: (Fuzzy label case study) http://delivery.acm.org/10.1145/1190000/1180665/p81-yang.pdf?ip=129.31.176.116&id=1180665&acc=ACTIVE%20SERVICE&key=BF07A2EE685417C5%2EF5014A9D3D5CC2D9%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=483894553&CFTOKEN=48367803&__acm__=1425502483_3a9feda291bf75d5741f0ede1ea4b69f
+[^11]: http://www.cs.princeton.edu/~schapire/talks/picasso-minicourse.pdf
+[^12]: (coursera supervised learning) https://class.coursera.org/ml-005/lecture/3
