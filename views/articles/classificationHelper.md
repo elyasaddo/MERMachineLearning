@@ -96,10 +96,10 @@
 [^3]: http://books.google.co.uk/books?hl=en&lr=&id=1bpEifVEi2MC&oi=fnd&pg=PA64&dq=Multi-label+classification:An+overview&ots=WyD83kziKF&sig=P6VHFTT9RycLgfpCDrK0vq5o4hM#v=onepage&q=single-label%20&f=false
 [^4]: Multi-label (I think for a type of PTM) https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf
 [^5]: (greater expansion of methods) https://books.google.co.uk/books?hl=en&lr=&id=Br33IRC3PkQC&oi=fnd&pg=PR3&dq=%5D+R.+Duda,+R.+Hart,+D.+Stork,+Pattern+Classification,+2nd+Edition,+Wiley,+New+York,+2001&ots=2wySQzhbDu&sig=y9BqLIkUho6EhJ00NM_yx-snTxs#v=onepage&q&f=false
-[^6]: (SVM use) http://link.springer.com/chapter/10.1007%2FBFb0026683#page-1
+[^6]: (SVM use for text recognition) http://link.springer.com/chapter/10.1007%2FBFb0026683#page-1
 [^7]: (MIREX emotion labels) http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf
 [^8]: find how to ref. Andrew Ng coursera {classification} Ng,A.;2012;Classification (8 min);[Online];[Accessed 25 February 2015]; Available from: https://class.coursera.org/ml-005/lecture/33
 [^9]: (good read to overview all) https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false
-[^10]: (Fuzzy label case study) http://delivery.acm.org/10.1145/1190000/1180665/p81-yang.pdf?ip=129.31.176.116&id=1180665&acc=ACTIVE%20SERVICE&key=BF07A2EE685417C5%2EF5014A9D3D5CC2D9%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=483894553&CFTOKEN=48367803&__acm__=1425502483_3a9feda291bf75d5741f0ede1ea4b69f
+[^10]: (Fuzzy label case study) http://dl.acm.org/citation.cfm?id=1852851
 [^11]: http://www.cs.princeton.edu/~schapire/talks/picasso-minicourse.pdf
 [^12]: (coursera supervised learning) https://class.coursera.org/ml-005/lecture/3
