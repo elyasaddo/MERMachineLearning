@@ -47,6 +47,5 @@ Regression has proven itself to be a very useful methodology when it comes to gi
 
 
 ##References
-<p style= "line-height: 1">[1] Michal,S. (2013) <I><B>Why Do We Feel Nostalgia? </B>. </I>[Video] Available from: <a href="https://www.youtube.com/watch?v=coGfGmOeLjE" TARGET="_blank">https://www.youtube.com/watch?v=coGfGmOeLjE</a> [Accessed 15/02/2015].
-<p style= "line-height: 1">[2] Yang , Y., Lin , Y., Su , Y. &amp; Chen , H. (2008) A Regression Approach to Music Emotion Recognition. <I>IEEE Transactions on Audio, Speech, and Language Processing. </I>16 (2), 1-1-10.
-<p style= "line-height: 1">
+1. Michal,S. (2013) <I><B>Why Do We Feel Nostalgia? [Video] Available from: <a href="https://www.youtube.com/watch?v=coGfGmOeLjE" TARGET="_blank">https://www.youtube.com/watch?v=coGfGmOeLjE</a> [Accessed 15/02/2015].
+2. Yang , Y., Lin , Y., Su , Y. &amp; Chen , H. (2008) A Regression Approach to Music Emotion Recognition. *IEEE Transactions on Audio, Speech, and Language Processing.* 16 (2), 1-1-10.

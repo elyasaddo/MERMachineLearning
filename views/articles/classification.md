@@ -1,77 +1,46 @@
-## General
- 1. Note the subjects are asked to label the emotion
- based on their feelings of what the music sample is
- trying to evoke, rather than the emotion the subjects
- perceive at the test. We must make this distinction
- clear because perceived emotion and evoking emotion
- are not always the same. For example, a person who
- enjoys sorrowful tone might feel pleased when listening[^3]
- to sorrowful songs. Since MER is developed to help
- people retrieve music samples through a coordinate in the
- emotion plane, it is more natural and adequate that the AV
- values of a song are correspondent with the evoking emotion.
+# Classification
 
- 2. German philosopher Friedrich Nietzsche, who said that
- “without music, life would be a mistake”
+  "Without music, life would be a mistake" Friedrich Nietzsche, German philosopher.[^2]
 
- Note: Supervised Learning: training data has been correctly labeled
-        instead of the machine having to create groups on its own
- Note: Classification provides discrete labels instead of the continuous
-        nature of regression.
- Note: Classification problems will exist in one of two classes
-        Multi-class can have many discrete classes [Andrew Ng Coursera]
+## Introduction
+### What is a classification problem?
 
-### To Look Up
-  - Sigmoid function (theta is column vector of parameters &rarr; transposing
-   turns it on its side)
-  - Decision boundary (decided by theta {theta decided by training set})
-  - Cost function for logistical regression and gradient descent (probably)
-   not necessary
+  A classification problem is one in which the data is to be given some discrete label(s) describing their nature in relation to a given situation. In the context of Music Emotion Recognition (MER) this involves giving a piece of music a label or a set of labels in describing which emotion(s) the music is trying to evoke, e.g. confident, cheerful, aggressive. See the MIREX table of 5 clusters of emotional labels[^7]. It is important to note that what the Machine Learning Algorithms want to retrieve the emotion which the piece of music is trying to evoke, rather than the perceived emotion, as listeners may respond to different pieces of music in different way, e.g. a person may be pleased to hear melancholic music if this is the tone of music they enjoy[^1]. A ground truth is the term given to a label which a certain piece of data actually has. the aim of classification techniques is to suggest a high probability (or in a perfect world 'certainty') of the data having this ground truth label. Note that many ground truths can exist for a given data piece.
+
+### Different types of classification
+
+   In general, if a problem is labeled as a classification problem, it means that all elements in the data set should fall into one of two opposing categories, e.g. in the scenario of determining whether it is day or night in a photograph, each photo should be classified as 'day' or 'not day'.[^(8)FIND REF!!] This is clearly not the case for MER as there are so many emotional label for a piece of music to fall under. In this article, four different forms of classification will be discussed which involve a large set of candidate labels:
+   - Single-label
+   The single-label technique acknowledges the possibility of data belonging to many labels. However, once the algorithm finds labels which it believes the data belongs to, a single label is chosen based on some criterion, e.g. which label has highest calculated probability for this data piece[^4]. The training set of data in this type of classification are associated with one label each.[^2]
+   - Multi-class
+   Multi-class classification involves creating a label which is the combination of two or more labels in the given set. It is like considering each member of the power set of labels as a possible fit for data, e.g. the set of all possible labels for the colour of a car include: white; black; grey; blue; {white + black}; {black + blue + grey}.[FIND REF!!]
+   - Multi-label
+   With multi-label classification, the output for the learning algorithm has such a form that it is possible to see if the data is thought to belong to each set. One way of doing this is by outputting a binary vector (sequence of 0s &amp; 1s) which act as flags to indicate if each label fits[FIND REF!!]. There are two types of classification problems: Problem Transforamtion Methods (PTMs) and Algorithm Adaptation Methods (AAMs). PTMs convert multi-label problem into one or more single-label problems, for which established and efficient algorithms already exist. AAMs take a more direct approach in which it takes a known ML algorithm and enhances it to cope with many labels.[^3]  
+   - Fuzzy label
+   The purpose of the previous the forms mentioned are to output a definite value for whether data should be given a label or not. A fuzzy label, however, provides the probabilities of the data belonging to each category.[^9]
+<!-- don't go too in depth, apart from what strictly ties in with machine learning -->
+
+## Why classification is difficult
 
 
-## Classification
-  1. Traditional
-  single-label classification is concerned with learning from
-  a set of examples that are associated with a single label λ
-  from a set of disjoint labels L, |L| > 1.In multilabel
-  classification, the examples are associated with a set of
-  labels Y ⊆ L
+## How ML helps <!-- (briefly) -->
 
-  2. Multilabel classification methods can be categorized into
-  two different groups: i) problem transformation methods (PTMs),
-  and ii) algorithm adaptation methods.
-  PTMs involve turning a multi-label classification problem into
-  1+ single-label classification/ regression problems
+## Use the machine learning models as paragraphs/sections
+ <!-- in each section then talk about Single/Multi label multi class and fuzzy labelling -->
+ <!-- provide real life studies where the methods have been used, even better if the study used machine learning -->
 
-  3. {Multi-label} When choosing their data sets, most researchers either
-  avoid such images, label them subjectively with the base
-  (single-label) class most obvious to them, or consider
-  “beach+urban” as a new class. The last method is unrealistic
-  in most cases because it would increase the number of
-  classes to be considered substantially and the data in such
-  combined classes is usually sparse. The "rst two methods
-  have limitations as well. For example, in content-based
-  image indexing and retrieval applications, it would be more
-  difficult for a user to retrieve a multiple-class image (e.g.,
-  beach+urban) if we only have exclusive beach or urban labels.
-  It may require that two separate queries be conducted
-  respectively and the intersection of the retrieved images be
-  taken. In a content-sensitive image enhancement application,
-  it may be desirable for the system to have different
-  settings for beach, urban, and beach+urban scenes. This is
-  impossible using exclusive single labels.
-   use of binary vectors
-   In previous work, researchers labeled the multi-label[^2]
-  data with the one class to which the data most likely
-  belonged, by some perhaps subjective criterion. For example,
-  the image of hotels along a beach would be
-  labeled as a beach if the beach covered the majority
-  of the image, or if one happened to be looking
-  for a beach scene at the time of data collection. In
-  our example, part of the ‘*’ data would be labeled as
-  ‘+’, and part would be labeled as ‘x’ (e.g., depending
-  on which class was most dominant). We call this
-  kind of model MODEL-s (s stands for “single-label” class).[^1]
+## Comparative paragraph
+
+## Classification difficulties
+
+## How ML helps
+
+<!--
+#### Non-textual features
+ - Table1 comparison of Multi(class vs Label)
+ - Animation1 (think about one)
+ - Table2 emotional adjectives
+-->
 
 ### References
 
@@ -81,3 +50,6 @@
 [^4]: Multi-label (I think for a type of PTM) https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf
 [^5]: (greater expansion of methods) https://books.google.co.uk/books?hl=en&lr=&id=Br33IRC3PkQC&oi=fnd&pg=PR3&dq=%5D+R.+Duda,+R.+Hart,+D.+Stork,+Pattern+Classification,+2nd+Edition,+Wiley,+New+York,+2001&ots=2wySQzhbDu&sig=y9BqLIkUho6EhJ00NM_yx-snTxs#v=onepage&q&f=false
 [^6]: (SVM use) http://link.springer.com/chapter/10.1007%2FBFb0026683#page-1
+[^7]: (MIREX emotion labels) http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf
+[^8]: find how to ref. Andrew Ng coursera {classification}
+[^9]: (good read to overview all) https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false
