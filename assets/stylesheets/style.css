@@ -90,7 +90,8 @@ h2 {
 
 h3 {
   font-size: 1.5em;
-  line-height: 2em; }
+  line-height: 2em;
+  font-weight: bold; }
 
 h4 {
   font-size: 1em;
@@ -356,6 +357,55 @@ dl:after {
     background: #a4c39c; }
   a.yellow:hover .vertical-bar {
     background: #e3cf56; }
+
+table {
+  /* Remove spacing between table cells (from Normalize.css) */
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb; }
+
+table caption {
+  color: #000;
+  font: italic 85%/1 arial, sans-serif;
+  padding: 1em 0;
+  text-align: center; }
+
+table td,
+table th {
+  border-left: 1px solid #cbcbcb;
+  /*  inner column border */
+  border-width: 0 0 0 1px;
+  font-size: inherit;
+  margin: 0;
+  overflow: visible;
+  /*to make ths where the title is really long work*/
+  padding: 0.5em 1em;
+  /* cell padding */ }
+
+/* Consider removing this next declaration block, as it causes problems when
+there's a rowspan on the first cell. Case added to the tests. issue#432 */
+table td:first-child,
+table th:first-child {
+  border-left-width: 0; }
+
+table thead {
+  background-color: #0e5f9b;
+  color: #edf1f6;
+  text-align: left;
+  vertical-align: bottom; }
+
+/*
+striping:
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+table td {
+  background-color: transparent; }
+
+/* nth-child selector for modern browsers */
+table tr:nth-child(2n) td {
+  background-color: #8baecc; }
 
 @-webkit-keyframes fadeInLeft {
   0% {
