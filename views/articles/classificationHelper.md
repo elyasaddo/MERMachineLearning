@@ -97,6 +97,9 @@
   intolerable to subtle imperfections - too little &rarr; retardedly simplistic
     Use dataShattering.png
 
+    - Decision trees
+    - Boosting
+    - SVM
 
 ### References
 

@@ -95,11 +95,10 @@ figure {
     width:520px;
   }
   figcaption {
-    width: 520px;
-    @extend .left;
+    width: 100%;
+    @extend .center;
     font-size: 75%;
     color: darken($lightGrey, 20%);
-    left: 220px;
     position: relative;
   }
 }
@@ -113,6 +112,12 @@ nav {
     cursor: pointer;
   }
 }
+
+
+li {
+  padding-bottom: 10px;
+}
+
 header ul {
   @extend .a-c;
   float: left;
@@ -121,33 +126,35 @@ header ul {
     padding: 32px 0px 0px 24px;
     position: relative;
     & > ul {
-      display: none;
       float:right;
       height: 24px;
       margin: -9px 16px 0;
       li {
         padding: 0 16px 0 0;
-        color: $black;
+        & .classification {
+          color: $lightPurple;
         }
-    }
-    &:hover{
-      & > ul{
-        & > li {
-          @extend .fadeInLeft;
-          &:nth-child(2) {
-            -webkit-animation-delay: .1s;
-            animation-delay: .1s;
-          }
-          &:nth-child(3) {
-            -webkit-animation-delay: .2s;
-            animation-delay: .2s;
-          }
-          &:nth-child(4) {
-            -webkit-animation-delay: .3s;
-            animation-delay: .3s;
-          }
+        & .regression {
+          color: $lightBlue;
         }
-        display: inline-block;
+        & .techniques {
+          color: $midGreen;
+        }
+        & .summary {
+          color: $midYellow;
+        }
+        &:hover .classification {
+          color: $midPurple;
+        }
+        &:hover .regression {
+          color: $midBlue;
+        }
+        &:hover .techniques {
+          color: $deepGreen;
+        }
+        &:hover .summary {
+          color: $deepYellow;
+        }
       }
     }
   }
@@ -219,17 +226,29 @@ dl:after {
   &.dark-grey {
     background: $darkGrey;
   }
-  a.purple:hover &{
+  &.classification {
     background: $lightPurple;
   }
-  a.blue:hover &{
+  &.regression {
     background: $lightBlue;
   }
+  &.techniques {
+    background: $midGreen;
+  }
+  &.summary {
+    background: $midYellow;
+  }
+  a.purple:hover &{
+    background: $midPurple;
+  }
+  a.blue:hover &{
+    background: $midBlue;
+  }
   a.green:hover &{
-    background: $lightGreen;
+    background: $deepGreen;
   }
   a.yellow:hover &{
-    background: $midYellow;
+    background: $deepYellow;
   }
 
 }
@@ -239,7 +258,6 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     empty-cells: show;
-    border: 1px solid #cbcbcb;
 }
 
 table caption {
@@ -251,9 +269,9 @@ table caption {
 
 table td,
 table th {
-    border-left: 1px solid #cbcbcb;/*  inner column border */
     border-width: 0 0 0 1px;
     font-size: inherit;
+    text-align: center;
     margin: 0;
     overflow: visible; /*to make ths where the title is really long work*/
     padding: 0.5em 1em; /* cell padding */
@@ -267,8 +285,22 @@ table th:first-child {
 }
 
 table thead {
-    background-color: $deepBlue;
-    color: $paleBlue;
+    .classification & {
+      background-color: $deepPurple;
+      color: $palePurple;
+    }
+    .regression & {
+      background-color: $deepBlue;
+      color: $paleBlue;
+    }
+    .techniques & {
+      background-color: $deepGreen;
+      color: $lightGreen;
+    }
+    .summary & {
+      background-color: $deepYellow;
+      color: $lightYellow;
+    }
     text-align: left;
     vertical-align: bottom;
 }
@@ -284,7 +316,18 @@ table td {
 
 /* nth-child selector for modern browsers */
 table tr:nth-child(2n) td {
+  .classification & {
+    background-color: $lightPurple;
+  }
+  .regression & {
     background-color: $lightBlue;
+  }
+  .techniques & {
+    background-color: $midGreen;
+  }
+  .summary & {
+    background-color: $midYellow;
+  }
 }
 
 // Animations

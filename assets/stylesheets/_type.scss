@@ -90,6 +90,7 @@ h3 {
 h4 {
   font-size: 1em;
   line-height: 1.5em;
+  font-weight: bold;
 }
 
 //Links
@@ -141,8 +142,8 @@ em {
 strong {
   font-weight: 700;
 }
-pre {
-  font-family: "Menlo", monospace;
+pre, code {
+  font-family: "prestige-elite-std", "Menlo", monospace;
 }
 sub, sup {
   /* Specified in % so that the sup/sup is the

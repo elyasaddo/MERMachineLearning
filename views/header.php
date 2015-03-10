@@ -12,23 +12,23 @@
         Articles
         <ul>
           <li>
-            <a href="<?php echo $GLOBALS['base'] ?>/articles/classification" class="purple">
-              <span class="vertical-bar dark-grey"></span> Classification
+            <a href="<?php echo $GLOBALS['base'] ?>/articles/techniques" class="green techniques">
+              <span class="vertical-bar techniques"></span> Techniques
             </a>
           </li>
           <li>
-            <a href="<?php echo $GLOBALS['base'] ?>/articles/regression" class="blue">
-              <span class="vertical-bar dark-grey"></span> Regression
+            <a href="<?php echo $GLOBALS['base'] ?>/articles/classification" class="purple classification">
+              <span class="vertical-bar classification"></span> Classification
             </a>
           </li>
           <li>
-            <a href="<?php echo $GLOBALS['base'] ?>/articles/techniques" class="green">
-              <span class="vertical-bar dark-grey"></span> Techniques
+            <a href="<?php echo $GLOBALS['base'] ?>/articles/regression" class="blue regression">
+              <span class="vertical-bar regression"></span> Regression
             </a>
           </li>
           <li>
-            <a href="<?php echo $GLOBALS['base'] ?>/articles/summary" class="yellow">
-              <span class="vertical-bar dark-grey"></span> Summary
+            <a href="<?php echo $GLOBALS['base'] ?>/articles/summary" class="yellow summary">
+              <span class="vertical-bar summary"></span> Summary
             </a>
           </li>
         </ul>
