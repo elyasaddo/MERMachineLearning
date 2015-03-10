@@ -4,11 +4,20 @@ Music emotion recognition is a complicated problem to resolve, but a lot of rese
 <!-- change image to elliot's image -->
 The arousal-valence plane proposed by Thayer. [REF WEBSITE]
 
+<<<<<<< Updated upstream
 ###Miscommunication
 An interesting issue to consider when labelling a music sample with an emotion, is the fact that not everyone will label the same music with the same emotion. For example, elderly people may not appreciate hip hop music as much as their younger counter parts, thus there is a concern that MER machines will provide conflicting emotions for certain samples. Yang et al. (2008) noted problems with applying certain adjectives to music as they can be ambiguous with varying interpretations. Using ambiguous emotions will lead to miscommunication between the machine and the user when it comes to selecting a music sample for a specific emotion.[REF YANG]
 
 ###Psychological Impact
 Another problem we have to consider is the fact that different people will perceive different emotions for a music sample based on experiences they had whilst listening to the music. Michael Stevens (2013) made a video noting the effects of nostalgia and how music triggers different emotions because of emotive memories. He goes on to state: “Music is initially processed in the same regions of the brain that process memories and emotion&hellip;” [REF VSAUCE]. Because of this if something traumatic happens to you whilst listening to a music sample that could be happy in nature, you may perceive it as sad and distressing because it unearths memories you would rather not think about. This is a very subjective topic which machines will not be able to comprehend very well, even humans don’t fully understand the link between music, emotion and memories. These psychological issues make regression complicated to use as machines currently can’t perceive abstract concepts such as memories, thus they will struggle to adapt to problems involving them.
+=======
+Music Emotion Recognition is a complicated problem to resolve, but a lot of research is going into using different methodologies to reason about it. This article will focus on one methodology, *regression*, to help a machine effectively understand emotions connected to different pieces of music. Regression specifies different emotions as having a certain mood (determined by a Valence level) and intensity (determined by an Arousal level). For example, an excited mood will have a positive valence level with a very high arousal level while a sleepy mood will have a slightly negative valence level with a low arousal level. These moods are associated with specific segments of a 2D plane (See Fig. 4.1<!-- we can add a link here when it's finished -->), with valence on the horizontal axis and arousal on the vertical axis. We shall refer to this as the arousal-valence plane of emotion (Thayer, 1989). Using regression, it is a machine's job to match<!-- maybe establish, as match sounds like it's been predetermined? --> musical samples to their correct emotion on this plane. Another important aspect of the machine which is in early days of research, is the ability to improve how it analyses emotions over time. This may seem relatively straight forward but there are some psychological implications that makes this process difficult. <!-- what implications? Or state they will be discussed later on-->
+<!-- make sure you outline to the reader what will be discussed, in what order, later on it will help the reader follow what's going on-->
+
+<img src="http://www.nature.com/srep/2014/140518/srep04998/images_article/srep04998-f1.jpg">
+<!-- change this image and update to markdown syntax, I'll let you know when I've added captions. For now just add it underneath -->
+<!-- Also we'll change this image -->
+>>>>>>> Stashed changes
 
 ###Continuous vs Discrete
 When it comes to working with the arousal-valence plane there are a few problems researchers have to address. We already discussed the problem of emotions being ambiguous in nature. For example, the top right quadrant will contain areas for emotions such as happy, excited and thrilled. Despite their similarities they are still distinctively different emotions. Because of this, when working with the selection of a music sample's emotion on the arousal-valence plane some researchers consider a continuous spectrum of emotions (Yang et al., 2008). This means that each point can be measured in continuous quantities rather discrete one, thus greatly easing the ambiguity issue.
@@ -35,17 +44,39 @@ Learner technique           | Emotion Space | Advantages
 Linear Regression           | Continuous    | works well with speech recognition when little data input is used.
 Support Vector Regression   | Continuous    | Active learning can be utilised to a SVR learner to improve its evaluation process
 
+<<<<<<< Updated upstream
 ###Conclusion
 Regression has proven itself to be a very useful methodology when it comes to giving machines the necessary tools they need to reason about emotions and music. Regression helps progress the applications of MER machines by implementing features such as the analysis of emotions in specific time intervals and the use of an unambiguous arousal-valence plane. The techniques that utilise regression show the possibility for many advancements in the incorporation of machine learning algorithms. Such algorithms that could use active learning to train machines to improve themselves, are still in early days of development. But research into this field shows there are endless possibilities of what could be achieved with regression and music emotion recognition.
 
+=======
+An interesting issue to consider when labelling a music sample with an emotion, is the fact that not everyone will label the same music with the same emotion. For example, elderly people may not appreciate hip hop music as much as their younger counter parts, thus there is a concern a MER machine will provide conflicting emotions for certain samples. Yang et al. (2008) noted problems with applying certain adjectives to music as they can be ambiguous with varying interpretations. Using ambiguous emotions will lead to miscommunication between the machine and the user when it comes to selecting a music sample for a specific emotion.[REF YANG]
+
+Another problem we have to consider is the fact that different people will perceive different emotions for a music sample based on experiences they had whilst listening to the music. Michael Stevens (2013) made a great<!-- great is an opinion --> video noting the effects of nostalgia and how music triggers different emotions because of emotive memories. He goes on to state: “Music is initially processed in the same regions of the brain that process memories and emotion…<!-- ellipses not needed at the end-->” [REF VSAUCE]. Because of this if something traumatic happens to you whilst listening to a music sample that could be happy in nature, you may perceive it as sad and distressing because it unearths memories you would rather not think about. This is a very subjective topic which machines will not be able to comprehend very well<!-- very well or at all? Unless you have a conscious computer lying around somewhere-->, even humans don’t fully understand the link between music, emotion and memories. These psychological issues make regression complicated to use as machines currently can’t perceive abstract concepts such as memories, thus they will struggle to adapt to problems involving them.
+
+There are quite a few systems in place that use regression to analyse emotion in music. Han B. et al. (2009) researched the benefits of using a support vector regression (SVR) technique to perceive the emotion of music. They took a categorical approach by splitting the arousal-valence axis into 11 categories of emotions.[REF HAN B.] Their SVR system analyses seven musical features: pitch, tempo, volume, tonality, key, rhythm and harmonics. The SVR system analyses a specific music sample’s musical features and maps each feature to certain emotion categories on the arousal-valence axis such as calm, nervous, exited and sad. The system then creates vectors out of the evaluated musical features depending on the emotion each feature expressed. These vectors are mapped onto a polar coordinate system (similar in nature to the Cartesian arousal-valence axis). Each vector is associated with a distance from the origin (0, 0) and an angle from the x axis to the vector. The SVR is able to effectively analyse the mood of musical features by evaluating the categories on the arousal-valence axis their vector representation fall upon.
+<!-- this seems like a good section for a flowchart or animation/diagram-->
+>>>>>>> Stashed changes
 
 
 
+<<<<<<< Updated upstream
 *[SVR]: Support Vector Regression.
 *[LR]: Linear Regression.
 *[AEG]: Acoustic Emotion Gaussians.
+=======
+<!-- I believe this already exists: try searching for Active Learning -->
 
+When it comes to working with the arousal-valence plane there are a few problems researchers have to address. We already discussed the problem of emotions being ambiguous in nature. For example the top right quadrant will contain areas for emotions such as happy, excited and thrilled. Despite their similarities they are still distinctively different emotions. Because of this, when working with the selection of a music sample's emotion on the arousal-valence plane some researchers consider a continuous spectrum of emotions (Yang et al, 2008). This means that each point can be measured in continuous quantities rather discrete one, thus greatly easing the ambiguity issue.
+>>>>>>> Stashed changes
+
+<!-- Is this the ending or just where you are up to? -->
+
+<!-- As we discussed you need heading to structure the piece and you need diagrams etc. Again as discussed time regression needs a little more focus, if you are struggling to find information let me know and I'll email Eduardo. Also try to include a bit more on some of the research that's been done and compare SVR with another method - it's the comparisons that will gain the extra marks. Introducing the tables from the other papers will make this easier as you'll have some to reference and discuss --> 
+
+*[SVR]: Support Vector Regression
 
 ##References
 1. Michal,S. (2013) <I><B>Why Do We Feel Nostalgia? [Video] Available from: <a href="https://www.youtube.com/watch?v=coGfGmOeLjE" TARGET="_blank">https://www.youtube.com/watch?v=coGfGmOeLjE</a> [Accessed 15/02/2015].
 2. Yang , Y., Lin , Y., Su , Y. &amp; Chen , H. (2008) A Regression Approach to Music Emotion Recognition. *IEEE Transactions on Audio, Speech, and Language Processing.* 16 (2), 1-1-10.
+
+<!-- the commas and spacing doesn't look quite right in these references -->
