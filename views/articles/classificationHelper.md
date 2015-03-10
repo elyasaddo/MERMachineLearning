@@ -73,14 +73,33 @@
   on which class was most dominant). We call this
   kind of model MODEL-s (s stands for “single-label” class).
 
+  5. Classification is essentially pattern recognition, which humans have
+  taken pretty damn long to be able to do. 'Pattern recognition - the act
+  of taking in raw data and making an action based on the "category" of the
+  pattern'.
+    Image of complicated weight/ height sea-bass and salmon decision graph.
+  Use this to bring up the issue of being too specific for the data set and
+  'generalisation'.
+
   9. Fuzzy labeling is used to accommodate for the subjective
   nature of labeling the emotion of a piece of music (i.e. people
   may label the same piece differently)
-    <!-- case study of this is reference 89 of this reference -->
     Output is fuzzy vector - like the binary vector of multi-label
   classification, but with continuous values in each element
   0 <= x <= 1
   This can be seen as a step towards continuous models like regression
+
+  13. Roughly speaking, for a given learning task, with a given finite amount
+  of training data, the best generalization performance will be achieved if
+  the right balance is struck between the accuracy attained on that particular
+  training set, and the “capacity” of the machine, that is, the ability of the
+  machine to learn any training set without error. - too much capacity means
+  intolerable to subtle imperfections - too little &rarr; retardedly simplistic
+    Use dataShattering.png
+
+    - Decision trees
+    - Boosting
+    - SVM
 
 ### References
 
@@ -89,7 +108,12 @@
 [^3]: http://books.google.co.uk/books?hl=en&lr=&id=1bpEifVEi2MC&oi=fnd&pg=PA64&dq=Multi-label+classification:An+overview&ots=WyD83kziKF&sig=P6VHFTT9RycLgfpCDrK0vq5o4hM#v=onepage&q=single-label%20&f=false
 [^4]: Multi-label (I think for a type of PTM) https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf
 [^5]: (greater expansion of methods) https://books.google.co.uk/books?hl=en&lr=&id=Br33IRC3PkQC&oi=fnd&pg=PR3&dq=%5D+R.+Duda,+R.+Hart,+D.+Stork,+Pattern+Classification,+2nd+Edition,+Wiley,+New+York,+2001&ots=2wySQzhbDu&sig=y9BqLIkUho6EhJ00NM_yx-snTxs#v=onepage&q&f=false
-[^6]: (SVM use) http://link.springer.com/chapter/10.1007%2FBFb0026683#page-1
+[^6]: (SVM use for text recognition) https://dl.acm.org/citation.cfm?id=944790.944793&coll=DL&dl=ACM&CFID=485866018&CFTOKEN=79343228
 [^7]: (MIREX emotion labels) http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf
-[^8]: find how to ref. Andrew Ng coursera {classification}
+[^8]: find how to ref. Andrew Ng coursera {classification} Ng,A.. 2012. Classification (8 min). [Online]. [Accessed 25 February 2015]. Available from: https://class.coursera.org/ml-005/lecture/33
 [^9]: (good read to overview all) https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false
+[^10]: (Fuzzy label case study) http://dl.acm.org/citation.cfm?id=1852851
+[^11]: http://www.cs.princeton.edu/~schapire/talks/picasso-minicourse.pdf
+[^12]: (coursera supervised learning) https://class.coursera.org/ml-005/lecture/3
+[^13]: (SVM Tutorial) http://research.microsoft.com/pubs/67119/svmtutorial.pdf
+[^14]: (another (simpler) SVM explanation) http://docs.opencv.org/doc/tutorials/ml/introduction_to_svm/introduction_to_svm.html

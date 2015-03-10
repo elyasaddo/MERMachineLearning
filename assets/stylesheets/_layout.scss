@@ -58,7 +58,7 @@ body {
   width: 640px;
   margin: 0 auto;
   padding: 0 0 36px;
-  
+
   ol {
     list-style: decimal-leading-zero outside;
   }
@@ -95,11 +95,10 @@ figure {
     width:520px;
   }
   figcaption {
-    width: 520px;
-    @extend .left;
+    width: 100%;
+    @extend .center;
     font-size: 75%;
     color: darken($lightGrey, 20%);
-    left: 220px;
     position: relative;
   }
 }
@@ -113,6 +112,12 @@ nav {
     cursor: pointer;
   }
 }
+
+
+li {
+  padding-bottom: 10px;
+}
+
 header ul {
   @extend .a-c;
   float: left;
@@ -121,33 +126,35 @@ header ul {
     padding: 32px 0px 0px 24px;
     position: relative;
     & > ul {
-      display: none;
       float:right;
       height: 24px;
       margin: -9px 16px 0;
       li {
         padding: 0 16px 0 0;
-        color: $black;
+        & .classification {
+          color: $lightPurple;
         }
-    }
-    &:hover{
-      & > ul{
-        & > li {
-          @extend .fadeInLeft;
-          &:nth-child(2) {
-            -webkit-animation-delay: .1s;
-            animation-delay: .1s;
-          }
-          &:nth-child(3) {
-            -webkit-animation-delay: .2s;
-            animation-delay: .2s;
-          }
-          &:nth-child(4) {
-            -webkit-animation-delay: .3s;
-            animation-delay: .3s;
-          }
+        & .regression {
+          color: $lightBlue;
         }
-        display: inline-block;
+        & .techniques {
+          color: $midGreen;
+        }
+        & .summary {
+          color: $midYellow;
+        }
+        &:hover .classification {
+          color: $midPurple;
+        }
+        &:hover .regression {
+          color: $midBlue;
+        }
+        &:hover .techniques {
+          color: $deepGreen;
+        }
+        &:hover .summary {
+          color: $deepYellow;
+        }
       }
     }
   }
@@ -219,19 +226,108 @@ dl:after {
   &.dark-grey {
     background: $darkGrey;
   }
-  a.purple:hover &{
+  &.classification {
     background: $lightPurple;
   }
-  a.blue:hover &{
+  &.regression {
     background: $lightBlue;
   }
-  a.green:hover &{
-    background: $lightGreen;
+  &.techniques {
+    background: $midGreen;
   }
-  a.yellow:hover &{
+  &.summary {
     background: $midYellow;
   }
+  a.purple:hover &{
+    background: $midPurple;
+  }
+  a.blue:hover &{
+    background: $midBlue;
+  }
+  a.green:hover &{
+    background: $deepGreen;
+  }
+  a.yellow:hover &{
+    background: $deepYellow;
+  }
 
+}
+
+table {
+    /* Remove spacing between table cells (from Normalize.css) */
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+}
+
+table caption {
+    color: #000;
+    font: italic 85%/1 arial, sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+
+table td,
+table th {
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    text-align: center;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+    padding: 0.5em 1em; /* cell padding */
+}
+
+/* Consider removing this next declaration block, as it causes problems when
+there's a rowspan on the first cell. Case added to the tests. issue#432 */
+table td:first-child,
+table th:first-child {
+    border-left-width: 0;
+}
+
+table thead {
+    .classification & {
+      background-color: $deepPurple;
+      color: $palePurple;
+    }
+    .regression & {
+      background-color: $deepBlue;
+      color: $paleBlue;
+    }
+    .techniques & {
+      background-color: $deepGreen;
+      color: $lightGreen;
+    }
+    .summary & {
+      background-color: $deepYellow;
+      color: $lightYellow;
+    }
+    text-align: left;
+    vertical-align: bottom;
+}
+
+/*
+striping:
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+table td {
+    background-color: transparent;
+}
+
+/* nth-child selector for modern browsers */
+table tr:nth-child(2n) td {
+  .classification & {
+    background-color: $lightPurple;
+  }
+  .regression & {
+    background-color: $lightBlue;
+  }
+  .techniques & {
+    background-color: $midGreen;
+  }
+  .summary & {
+    background-color: $midYellow;
+  }
 }
 
 // Animations

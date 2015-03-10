@@ -26,7 +26,8 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <!--[if lte IE 7]><script src="javascript/lte-ie7.js"></script><![endif]-->
-
+  <script src="//use.typekit.net/xvl2gac.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
   <!-- Favicons
   ================================================== -->
   <!-- TODO: create Favicons -->

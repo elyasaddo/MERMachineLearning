@@ -90,11 +90,13 @@ h2 {
 
 h3 {
   font-size: 1.5em;
-  line-height: 2em; }
+  line-height: 2em;
+  font-weight: bold; }
 
 h4 {
   font-size: 1em;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  font-weight: bold; }
 
 a, a:visited {
   color: #050505; }
@@ -131,8 +133,8 @@ em {
 strong, h1, h2, dl dt {
   font-weight: 700; }
 
-pre {
-  font-family: "Menlo", monospace; }
+pre, code {
+  font-family: "prestige-elite-std", "Menlo", monospace; }
 
 sub, sup {
   /* Specified in % so that the sup/sup is the
@@ -178,13 +180,13 @@ header * {
   font-family: "proxima-nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
   font-weight: 900; }
 
-.left, figure figcaption {
+.left {
   text-align: left; }
 
 .right {
   text-align: right; }
 
-.center, figure {
+.center, figure, figure figcaption {
   text-align: center; }
 
 .f-l {
@@ -255,10 +257,9 @@ figure {
     padding: 9px;
     width: 520px; }
   figure figcaption {
-    width: 520px;
+    width: 100%;
     font-size: 75%;
     color: #949494;
-    left: 220px;
     position: relative; }
 
 nav {
@@ -268,6 +269,9 @@ nav {
   nav li {
     cursor: pointer; }
 
+li {
+  padding-bottom: 10px; }
+
 header ul {
   float: left; }
   header ul > li {
@@ -275,24 +279,27 @@ header ul {
     padding: 32px 0px 0px 24px;
     position: relative; }
     header ul > li > ul {
-      display: none;
       float: right;
       height: 24px;
       margin: -9px 16px 0; }
       header ul > li > ul li {
-        padding: 0 16px 0 0;
-        color: #050505; }
-    header ul > li:hover > ul {
-      display: inline-block; }
-      header ul > li:hover > ul > li:nth-child(2) {
-        -webkit-animation-delay: .1s;
-        animation-delay: .1s; }
-      header ul > li:hover > ul > li:nth-child(3) {
-        -webkit-animation-delay: .2s;
-        animation-delay: .2s; }
-      header ul > li:hover > ul > li:nth-child(4) {
-        -webkit-animation-delay: .3s;
-        animation-delay: .3s; }
+        padding: 0 16px 0 0; }
+        header ul > li > ul li .classification {
+          color: #cd9aba; }
+        header ul > li > ul li .regression {
+          color: #8baecc; }
+        header ul > li > ul li .techniques {
+          color: #669c57; }
+        header ul > li > ul li .summary {
+          color: #e3cf56; }
+        header ul > li > ul li:hover .classification {
+          color: #ab568a; }
+        header ul > li > ul li:hover .regression {
+          color: #4d86b4; }
+        header ul > li > ul li:hover .techniques {
+          color: #277512; }
+        header ul > li > ul li:hover .summary {
+          color: #dbbd0b; }
 
 dl {
   clear: both; }
@@ -348,14 +355,85 @@ dl:after {
     margin: 0 16px; }
   .vertical-bar.dark-grey {
     background: #272727; }
-  a.purple:hover .vertical-bar {
+  .vertical-bar.classification {
     background: #cd9aba; }
-  a.blue:hover .vertical-bar {
+  .vertical-bar.regression {
     background: #8baecc; }
-  a.green:hover .vertical-bar {
-    background: #a4c39c; }
-  a.yellow:hover .vertical-bar {
+  .vertical-bar.techniques {
+    background: #669c57; }
+  .vertical-bar.summary {
     background: #e3cf56; }
+  a.purple:hover .vertical-bar {
+    background: #ab568a; }
+  a.blue:hover .vertical-bar {
+    background: #4d86b4; }
+  a.green:hover .vertical-bar {
+    background: #277512; }
+  a.yellow:hover .vertical-bar {
+    background: #dbbd0b; }
+
+table {
+  /* Remove spacing between table cells (from Normalize.css) */
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show; }
+
+table caption {
+  color: #000;
+  font: italic 85%/1 arial, sans-serif;
+  padding: 1em 0;
+  text-align: center; }
+
+table td,
+table th {
+  border-width: 0 0 0 1px;
+  font-size: inherit;
+  text-align: center;
+  margin: 0;
+  overflow: visible;
+  /*to make ths where the title is really long work*/
+  padding: 0.5em 1em;
+  /* cell padding */ }
+
+/* Consider removing this next declaration block, as it causes problems when
+there's a rowspan on the first cell. Case added to the tests. issue#432 */
+table td:first-child,
+table th:first-child {
+  border-left-width: 0; }
+
+table thead {
+  text-align: left;
+  vertical-align: bottom; }
+  .classification table thead {
+    background-color: #881058;
+    color: #faf4f8; }
+  .regression table thead {
+    background-color: #0e5f9b;
+    color: #edf1f6; }
+  .techniques table thead {
+    background-color: #277512;
+    color: #a4c39c; }
+  .summary table thead {
+    background-color: #dbbd0b;
+    color: #ece2a2; }
+
+/*
+striping:
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+table td {
+  background-color: transparent; }
+
+/* nth-child selector for modern browsers */
+.classification table tr:nth-child(2n) td {
+  background-color: #cd9aba; }
+.regression table tr:nth-child(2n) td {
+  background-color: #8baecc; }
+.techniques table tr:nth-child(2n) td {
+  background-color: #669c57; }
+.summary table tr:nth-child(2n) td {
+  background-color: #e3cf56; }
 
 @-webkit-keyframes fadeInLeft {
   0% {
@@ -376,7 +454,7 @@ dl:after {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
-.fadeInLeft, header ul > li:hover > ul > li {
+.fadeInLeft {
   -webkit-animation: fadeInLeft .4s;
   animation: fadeInLeft .4s;
   -webkit-animation-fill-mode: both; }
