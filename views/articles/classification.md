@@ -70,6 +70,8 @@ One particular study into the use of SVMs for MER carried out by Chiang et. al. 
 </figcaption>
 </figure>
 
+This study managed to achieve average accuracies of 86.94% in one data set and 92.33% in another.[^15]
+
  <!-- - Decision trees -->
  <!-- - Boosting -->
  <!-- - neural networks -->

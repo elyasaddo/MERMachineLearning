@@ -112,8 +112,9 @@
 [^7]: (MIREX emotion labels) http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf
 [^8]: find how to ref. Andrew Ng coursera {classification} Ng,A.. 2012. Classification (8 min). [Online]. [Accessed 25 February 2015]. Available from: https://class.coursera.org/ml-005/lecture/33
 [^9]: (good read to overview all) https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false
-[^10]: (Fuzzy label case study) http://dl.acm.org/citation.cfm?id=1852851
+[^10]: (Fuzzy label case study) http://dl.acm.org/citation.cfm?id=1180665
 [^11]: http://www.cs.princeton.edu/~schapire/talks/picasso-minicourse.pdf
 [^12]: (coursera supervised learning) https://class.coursera.org/ml-005/lecture/3
 [^13]: (SVM Tutorial) http://research.microsoft.com/pubs/67119/svmtutorial.pdf
 [^14]: (another (simpler) SVM explanation) http://docs.opencv.org/doc/tutorials/ml/introduction_to_svm/introduction_to_svm.html
+[^15]: (SVM study for MER) http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6846115
