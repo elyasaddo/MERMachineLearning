@@ -10,7 +10,7 @@ We have chosen to study three techniques of ML applied to MER:  Support Vector R
 
 We have chosen to study three techniques of ML applied to MER:  Support Vector Regression (SVR), Support Vector Machine (SVM) and Neural Network. We chose these techniques to cover all MER by classification and by regression.
 
-### Support Vector Regression
+### Support Vector Regression ### {#SVR}
 
 The SVR based music emotion recognition consists of three steps:
 
@@ -23,15 +23,15 @@ The SVR based music emotion recognition consists of three steps:
 SVR was used in an experiment in 2009 supervised by Byeong-jun Han, Seungmin Rho, Roger B. and Dannenberg Eenjun Hwang[^2]. The plane they used was Thayer’s two-dimensional emotional pane which evaluate the valence of an emotion on the x–axis and its arousal on the y–axis. They chose to extract seven music features such as scale, intensity, rhythm and harmonics and selected 165 various music pieces for their experiment.  
 
 <figure markdown="1">
-![Thayer's two-dimensional emotion plane](/assets/images/Thayer's-two-dimensional-diagram.png)
+![Thayer's two-dimensional emotion plane](/assets/images/VADiagram.png)
 <figcaption markdown="1">
-  Figure 2.1: Thayer's two-dimensional emotion plane
+  Figure 2.1: Thayer's two-dimensional emotion plane. Adapted from: Russell, J. A. (1980). A circumplex model of affect. Journal of Personality and Social Psychology, 39, 1161–1178.
 </figcaption>
 </figure>
 
 These features were then used as input for the regression functions; both Cartesian and polar coordinates were used as outputs: 
 
-1. In case of Cartesian representation, the emotion of a song can be represented by (a, v), where a denoting arousal and v denoting valence and their ranges are *a* ∈ [-1,1] and *v* ∈ [-1,1].
+1. In case of Cartesian representation, the emotion of a song can be represented by (a, v), where *a* denoting arousal and *v* denoting valence and their ranges are *a* ∈ [-1,1] and *v* ∈ [-1,1].
 2. In case of polar representation assume that *Emotion<sub>c</sub>* and *Emotion<sub>p</sub>* represent an emotion in Cartesian and polar coordinate systems, respectively. We can calculate the distance and angle values of each emotion and transfer the coordinate system from Cartesian to polar using simple mathematical equations.
 Why use both forms? Well they found out that for the emotions that were hard to differentiate, using Cartesian form gave misclassifications. For example, “Peaceful” and “Bored” were misclassified into the “Calm” on the AV plane. The results they had using polar coordinates were much more accurate as you can see with the following table: 
 
@@ -57,24 +57,25 @@ SVM             | Cartesian        | 32.73%
 GMM             | Cartesian        | 91.52%
 GMM             | Polar            | 92.73%
 <figcaption markdown="1">
-Figure 2.3: Table of different techniques used for experiance and their accuracy[^2]
+Figure 2.3: Table of different techniques used for experience and their accuracy[^2]
 </figcaption>
 </figure>
 
 Misclassifications still occurred as we can see, partly due to the fact that some emotions are too hard to differentiate for a computer (even for us sometimes) such as sleepy, sad, anger, etc. It also is interesting to notice that in general, use of polar coordinates results in a better accuracy of emotion recognition (i.e. misclassifications are significantly reduced).
 
-### Support Vector Machine
+### Support Vector Machine ### {#SVM}
 
 The support vector machine is a supervised classification system that minimises an upper bound on its expected error. It attempts to find the hyper-plane separating two classes of data that will generalise best to future data.
 
-### Neural Network
+
+### Neural Network ### {#NN}
 
 Neural Networks imitates the activity of our biological nervous system. It associates attributes and characteristics of data to emotions amongst other things. For example, certain colours are associated with certain emotions (brightly coloured paintings are usually associated with joy and happiness whereas dark-coloured paintings are associated with sadness, fear, etc.). The principle of this technique is illustrated with the image below. A certain number of inputs are used. These inputs are then analysed by the computer with “tools” that class the information given: the hidden layers. Each input now has a “weight” associated with the hidden layer. The hidden layers with the most weight have a greater activity level. The activity level of each layer then determines the output[^3].
 
 <figure markdown="1">
 ![Neural Network schema](/assets/images/NeuralNetworkSchema.jpg)
 <figcaption markdown="1">
-  Figure 2.4: Neural Network schema
+  Figure 2.4: Neural Network schema[^3]
 </figcaption>
 </figure>
 
