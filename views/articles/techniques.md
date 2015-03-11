@@ -20,7 +20,7 @@ The SVR based music emotion recognition consists of three steps:
 3. Find regression functions that will enable the mapping of the music to a category, i.e. placing it on the plane. When a piece is playing, the computer will retrieve the musical features, then use the regression functions that take these features as inputs, to output the emotion as coordinates (in the form of a vector) of a plane.
 
 
-SVR was used in an experiment in 2009 supervised by Byeong-jun Han, Seungmin Rho, Roger B. and Dannenberg Eenjun Hwang[^2]. The plane they used was Thayer’s two-dimensional emotional pane which evaluate the valence of an emotion on the x – axis and its arousal on the y – axis. They chose to extract seven music features such as scale, intensity, rhythm and harmonics and selected 165 various music pieces for their experiment.  
+SVR was used in an experiment in 2009 supervised by Byeong-jun Han, Seungmin Rho, Roger B. and Dannenberg Eenjun Hwang[^2]. The plane they used was Thayer’s two-dimensional emotional pane which evaluate the valence of an emotion on the x–axis and its arousal on the y–axis. They chose to extract seven music features such as scale, intensity, rhythm and harmonics and selected 165 various music pieces for their experiment.  
 
 <figure markdown="1">
 ![Thayer's two-dimensional emotion plane](/assets/images/Thayer's-two-dimensional-diagram.png)
@@ -30,24 +30,36 @@ SVR was used in an experiment in 2009 supervised by Byeong-jun Han, Seungmin Rho
 </figure>
 
 These features were then used as input for the regression functions; both Cartesian and polar coordinates were used as outputs: 
-1. In case of Cartesian representation, the emotion of a song can be represented by (a, v), where a denoting arousal and v denoting valence and their ranges are E[-1,1] and v E [-1,1]
-2. In case of polar representation assume that *Emotionc* and *Emotionp* represent an emotion in Cartesian and polar coordinate systems, respectively. We can calculate the distance and angle values of each emotion and transfer the coordinate system from Cartesian to polar using simple mathematical equations.
+
+1. In case of Cartesian representation, the emotion of a song can be represented by (a, v), where a denoting arousal and v denoting valence and their ranges are *a* ∈ [-1,1] and *v* ∈ [-1,1].
+2. In case of polar representation assume that *Emotion<sub>c</sub>* and *Emotion<sub>p</sub>* represent an emotion in Cartesian and polar coordinate systems, respectively. We can calculate the distance and angle values of each emotion and transfer the coordinate system from Cartesian to polar using simple mathematical equations.
 Why use both forms? Well they found out that for the emotions that were hard to differentiate, using Cartesian form gave misclassifications. For example, “Peaceful” and “Bored” were misclassified into the “Calm” on the AV plane. The results they had using polar coordinates were much more accurate as you can see with the following table: 
 
+<figure markdown="1">
 Coordinate type           | Accuracy
---------------------------| ------------------------------------------------------------------------------------ 
+--------------------------| -------------
 Cartesian                 | 63.03%    
 Polar                     | 94.55% 
+<figcaption markdown="1">
+Figure 2.2: Table comparing accuracy of SVR using Polar and Cartesian forms[^2]
+</figcaption>
+</figure>
+
 
 They also compared the accuracy of SVR with classification ML techniques such as Gaussian Mixture Model (GMM) and Support Vector Machine (SVM) to try and see which was more effective. These are the results they got: 
 
+<figure markdown="1">
 Technique       | Coordinate type  | Accuracy
-----------------| ---------------- | -----------------------------------------------------------------
+----------------| ---------------- | --------------
 SVR             | Cartesian        | 63.03% 
 SVR             | Polar            | 94.55%
 SVM             | Cartesian        | 32.73%
 GMM             | Cartesian        | 91.52%
 GMM             | Polar            | 92.73%
+<figcaption markdown="1">
+Figure 2.3: Table of different techniques used for experiance and their accuracy[^2]
+</figcaption>
+</figure>
 
 Misclassifications still occurred as we can see, partly due to the fact that some emotions are too hard to differentiate for a computer (even for us sometimes) such as sleepy, sad, anger, etc. It also is interesting to notice that in general, use of polar coordinates results in a better accuracy of emotion recognition (i.e. misclassifications are significantly reduced).
 
@@ -62,7 +74,7 @@ Neural Networks imitates the activity of our biological nervous system. It assoc
 <figure markdown="1">
 ![Neural Network schema](/assets/images/NeuralNetworkSchema.jpg)
 <figcaption markdown="1">
-  Figure 2.2: Neural Network schema
+  Figure 2.4: Neural Network schema
 </figcaption>
 </figure>
 
@@ -74,7 +86,7 @@ Explain with 2 examples of drawn network with this table how the computer will o
 
 This form of neural network does not take in to account the fact that emotion can change throughout a song. Elman neural networks do, however; they utilise the previous time-step context (previous activity of hidden layers). This means that the pieces of music have to be divided into sub-pieces of equal length so the neural network can take into account the previous emotion. This is important because, say a piece of music is sad overall but had some peaceful moments, the previous method would have simply suggested that the piece is sad. This new method’s output should express the existence of the peaceful emotive section as well as the overall sad emotion.  In doing this, the current hidden layer’s activity can be compared to the old one’s to determine if the piece changes the emotion it’s invoking.
 
-Talk about research[^4]
+Note: *Talk about research[^4]*
 
 ### Conclusion
 
@@ -84,13 +96,12 @@ Talk about research[^4]
 *[SVR]: Support Vector Machine
 *[GMM]: Gaussian Mixture Model
 
-## References
+### References
 
-[^1]: Wikipedia (2015) Machine Learning [Online] Available from: [<a href="]http://en.wikipedia.org/wiki/Machine_learning" TARGET="_blank">http://en.wikipedia.org/wiki/Machine_learning</a>  
+[^1]: Wikipedia (2015) Machine Learning [Online] Available from: <a href="http://en.wikipedia.org/wiki/Machine_learning" TARGET="_blank">http://en.wikipedia.org/wiki/Machine_learning</a>  
 
-[^2]: Byeong-jun Han, Seungmin Rho Roger and B. Dannenberg Eenjun Hwang (2009) SMERS: Music Emotion Recognition using Support Vector Recognition [Online] Available from:[http://www.cs.cmu.edu/~rbd/pap&hellip;](http://www.cs.cmu.edu/~rbd/papers/emotion-ismir-09.pdf)
+[^2]: Byeong-jun Han, Seungmin Rho Roger and B. Dannenberg Eenjun Hwang (2009) SMERS: Music Emotion Recognition using Support Vector Recognition [Online] Available from:[ http://www.cs.cmu.edu/~rbd/pap&hellip;](http://www.cs.cmu.edu/~rbd/papers/emotion-ismir-09.pdf)
 
 [^3]: Christos Stergiou and Dimitrios Siganos (-) Neural Networks [Online] Available from: [http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/repo&hellip;](http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/report.html#What%20is%20a%20Neural%20Network)
 
-[^4]: Naresh N. Vempala and Frank A. Russo (2012) Predicting Emotion from Music Audio Features Using Neural Networks [Online] Available from: <a href="file:///Users/florian_emile/Documents/cmmr2012_submission_66.pdf" TARGET="_blank">file:///Users/florian_emile/Documents/cmmr2012_submission_66.pdf</a> 
-
+[^4]: Naresh N. Vempala and Frank A. Russo (2012) Predicting Emotion from Music Audio Features Using Neural Networks [Online] Available from:[ http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eec&hellip;](http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_66.pdf )
