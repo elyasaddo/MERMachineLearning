@@ -94,4 +94,18 @@ In a study carried out by Yang et. al., each piece in the training set were spli
 -->
 
 ### References
-<!-- DONT FORGET TO COPY OVER REFERENCES -->
+[^1]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1655&rep=rep1&type=pdf
+[^2]: http://ismir2008.ismir.net/papers/ISMIR2008_275.pdf
+[^3]: http://books.google.co.uk/books?hl=en&lr=&id=1bpEifVEi2MC&oi=fnd&pg=PA64&dq=Multi-label+classification:An+overview&ots=WyD83kziKF&sig=P6VHFTT9RycLgfpCDrK0vq5o4hM#v=onepage&q=single-label%20&f=false
+[^4]: Multi-label (I think for a type of PTM) https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf
+[^5]: (greater expansion of methods) https://books.google.co.uk/books?hl=en&lr=&id=Br33IRC3PkQC&oi=fnd&pg=PR3&dq=%5D+R.+Duda,+R.+Hart,+D.+Stork,+Pattern+Classification,+2nd+Edition,+Wiley,+New+York,+2001&ots=2wySQzhbDu&sig=y9BqLIkUho6EhJ00NM_yx-snTxs#v=onepage&q&f=false
+[^6]: (SVM use for text recognition) https://dl.acm.org/citation.cfm?id=944790.944793&coll=DL&dl=ACM&CFID=485866018&CFTOKEN=79343228
+[^7]: (MIREX emotion labels) http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf
+[^8]: find how to ref. Andrew Ng coursera {classification} Ng,A.. 2012. Classification (8 min). [Online]. [Accessed 25 February 2015]. Available from: https://class.coursera.org/ml-005/lecture/33
+[^9]: (good read to overview all) https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false
+[^10]: (Fuzzy label case study) http://dl.acm.org/citation.cfm?id=1180665
+[^11]: http://www.cs.princeton.edu/~schapire/talks/picasso-minicourse.pdf
+[^12]: (coursera supervised learning) https://class.coursera.org/ml-005/lecture/3
+[^13]: (SVM Tutorial) http://research.microsoft.com/pubs/67119/svmtutorial.pdf
+[^14]: (another (simpler) SVM explanation) http://docs.opencv.org/doc/tutorials/ml/introduction_to_svm/introduction_to_svm.html
+[^15]: (SVM study for MER) http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6846115
