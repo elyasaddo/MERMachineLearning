@@ -275,7 +275,8 @@ nav {
     cursor: pointer; }
 
 li {
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  line-height: 1.4em; }
 
 header ul {
   float: left; }
