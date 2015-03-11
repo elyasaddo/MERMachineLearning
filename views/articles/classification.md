@@ -42,6 +42,7 @@ Classification is in essence pattern recognition <!-- quote --> 'the act of taki
 
 ## Machine learning models
 
+#### Support Vector Machines
 Support Vector Machines take training data (a.k.a. observations) and represent them as a pair; the first part of the pair is a vector, and the second is the ground truth. The vectors for each observation have n dimensions and are plot in a set space also of n dimensions (*R*<sup>n</sup>) where n is the number of elements/ features used to compare the observations. Using one of the observations as the origin, a hyper-planes are created to shatter the points (divide the points into two groups, data points which exist in the class and those which don't). If the data are not falling into the correct partition of the space, a vector of weighting coefficients is adjusted and applied to the the vectors to shift the data round in order to fit into the partition which matches their ground truth.[^13]
 
 <figure markdown="1">
@@ -54,11 +55,23 @@ Figure 3.2: Examples of data shattering in 2 dimensions.[^13]
 Many hyper-planes can exist which shatter the data points correctly, SVMs choose the hyper-plane which maximises the distance to the closest points in order to generate the most general model. The vectors closest to the hyper plane are known as the support vectors.[^14] It is important to use a more general model as it is more resilient against subtle changes in test data and in real life applications.
 
 <figure markdown="1">
-![Demonstration of strongest Hyperplane](/assets/images/manyHyperPlanes.png) {#Fig33}
+![Demonstration of strongest Hyper-plane](/assets/images/manyHyperPlanes.png) {#Fig33}
 <figcaption markdown="1">
-  Figure 3.3: Demonstration of strongest Hyperplane.[^14]
+  Figure 3.3: Demonstration of strongest Hyper-plane.[^14]
 </figcaption>
 </figure>
+
+One particular study into the use of SVMs for MER carried out by Chiang et. al. used 35 features such as rhythm, dynamics and pitch to determine a model to fit pieces of music into four categories: happy, sad, peaceful and tensional. Once the relevant features had been extracted and selected, the intensity (arousal level) of the piece is classified as low or high using one SVM node, then the mood (valance level) of the piece is determined to decide which of the categories it belongs to. Flowchart for this system can be seen in [Fig 3.4](#Fig34). As we can see, SVMs can be used in traditional binary classification problems and part of PTMs for multi-label classification.[^15]
+
+<figure markdown="1">
+![Flowchart of SVM usage in study by Chiang et. al.](/assets/images/ClassificationExampleFlowChart.png) {#Fig34}
+<figcaption markdown="1">
+  Figure 3.4: Flowchart of SVM usage in study by Chiang et. al.[^15]
+</figcaption>
+</figure>
+
+ <!-- - Decision trees -->
+ <!-- - Boosting -->
  <!-- - neural networks -->
  <!-- - nearest neighbour algorithms -->
  <!-- - Naive Bayes -->
@@ -74,18 +87,3 @@ Many hyper-planes can exist which shatter the data points correctly, SVMs choose
 
 ### References
 <!-- DONT FORGET TO COPY OVER REFERENCES -->
-
-[^1]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1655&rep=rep1&type=pdf
-[^2]: http://ismir2008.ismir.net/papers/ISMIR2008_275.pdf
-[^3]: http://books.google.co.uk/books?hl=en&lr=&id=1bpEifVEi2MC&oi=fnd&pg=PA64&dq=Multi-label+classification:An+overview&ots=WyD83kziKF&sig=P6VHFTT9RycLgfpCDrK0vq5o4hM#v=onepage&q=single-label%20&f=false
-[^4]: https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf
-[^5]: https://books.google.co.uk/books?hl=en&lr=&id=Br33IRC3PkQC&oi=fnd&pg=PR3&dq=%5D+R.+Duda,+R.+Hart,+D.+Stork,+Pattern+Classification,+2nd+Edition,+Wiley,+New+York,+2001&ots=2wySQzhbDu&sig=y9BqLIkUho6EhJ00NM_yx-snTxs#v=onepage&q&f=false
-[^6]: https://dl.acm.org/citation.cfm?id=944790.944793&coll=DL&dl=ACM&CFID=485866018&CFTOKEN=79343228
-[^7]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf
-[^8]: Ng,A.. 2012. Classification (8 min). [Online]. [Accessed 25 February 2015]. Available from: https://class.coursera.org/ml-005/lecture/33
-[^9]: https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false
-[^10]: http://dl.acm.org/citation.cfm?id=1852851
-[^11]: http://www.cs.princeton.edu/~schapire/talks/picasso-minicourse.pdf
-[^12]: https://class.coursera.org/ml-005/lecture/3
-[^13]: http://research.microsoft.com/pubs/67119/svmtutorial.pdf
-[^14]: http://docs.opencv.org/doc/tutorials/ml/introduction_to_svm/introduction_to_svm.html
