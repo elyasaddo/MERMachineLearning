@@ -1,10 +1,12 @@
-<!-- <img src="" alt="Large waveform image" width="960" height="480"/> -->
-<h1 class="center">
-  Music Emotion Recognition
-</h1>
-<h2 class="center">
-  Machine Learning
-</h2>
+<img src="assets/images/homepage-background.png" alt="Large graph image" width="960"/>
+<div class="titles">
+  <h1 class="center">
+    Music Emotion Recognition
+  </h1>
+  <h2 class="center">
+    Machine Learning
+  </h2>
+</div>
 <?php
 
   spl_autoload_register(function($class){

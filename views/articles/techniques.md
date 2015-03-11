@@ -29,29 +29,29 @@ SVR was used in an experiment in 2009 supervised by Byeong-jun Han, Seungmin Rho
 </figcaption>
 </figure>
 
-These features were then used as input for the regression functions; both Cartesian and polar coordinates were used as outputs: 
+These features were then used as input for the regression functions; both Cartesian and polar coordinates were used as outputs:
 
 1. In case of Cartesian representation, the emotion of a song can be represented by (a, v), where a denoting arousal and v denoting valence and their ranges are *a* ∈ [-1,1] and *v* ∈ [-1,1].
 2. In case of polar representation assume that *Emotion<sub>c</sub>* and *Emotion<sub>p</sub>* represent an emotion in Cartesian and polar coordinate systems, respectively. We can calculate the distance and angle values of each emotion and transfer the coordinate system from Cartesian to polar using simple mathematical equations.
-Why use both forms? Well they found out that for the emotions that were hard to differentiate, using Cartesian form gave misclassifications. For example, “Peaceful” and “Bored” were misclassified into the “Calm” on the AV plane. The results they had using polar coordinates were much more accurate as you can see with the following table: 
+Why use both forms? Well they found out that for the emotions that were hard to differentiate, using Cartesian form gave misclassifications. For example, “Peaceful” and “Bored” were misclassified into the “Calm” on the AV plane. The results they had using polar coordinates were much more accurate as you can see with the following table:
 
 <figure markdown="1">
 Coordinate type           | Accuracy
 --------------------------| -------------
-Cartesian                 | 63.03%    
-Polar                     | 94.55% 
+Cartesian                 | 63.03%             
+Polar                     | 94.55%
 <figcaption markdown="1">
 Figure 2.2: Table comparing accuracy of SVR using Polar and Cartesian forms[^2]
 </figcaption>
 </figure>
 
 
-They also compared the accuracy of SVR with classification ML techniques such as Gaussian Mixture Model (GMM) and Support Vector Machine (SVM) to try and see which was more effective. These are the results they got: 
+They also compared the accuracy of SVR with classification ML techniques such as Gaussian Mixture Model (GMM) and Support Vector Machine (SVM) to try and see which was more effective. These are the results they got:
 
 <figure markdown="1">
 Technique       | Coordinate type  | Accuracy
 ----------------| ---------------- | --------------
-SVR             | Cartesian        | 63.03% 
+SVR             | Cartesian        | 63.03%
 SVR             | Polar            | 94.55%
 SVM             | Cartesian        | 32.73%
 GMM             | Cartesian        | 91.52%

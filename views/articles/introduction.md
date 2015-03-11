@@ -16,7 +16,7 @@ Over the last decade the availability of music has increased dramatically. Gone 
 Music Emotion Recognition (MER) has stemmed from a group of research called Music Information Retrieval (MIR) which is a rapidly expanding community spanning across a myriad of disciplines including: information science, musicology, audio engineering, computer science and business[^1] [^2]. MER has been identified as a &ldquo;powerful&rdquo; way of organising the sheer amount of ever increasing music information in a way that can be easily accessed[^2], and to be able to accurately categorise this musical information we need to have a machine that is capable of processing the volume of information that gets created everyday; it would be simply too much work for humans to do. This is where applying the Machine Learning (ML) models to the MER processes comes in.
 
 <!-- Techniques and problems -->
-On this website we will cover two of the most common MER processes *[Classification](articles/classification)* &amp; *[Regression](articles/regression)*. We will also discuss three ML methods on the  *[Techniques](articles/techniques)* page: Support Vector Regression (SVR), Support Vector Machines (SVM) &amp; Neural Networks. SVR works by taking the musical properties, such as harmonics & rhythm etc. and maps them onto a Valence-Arousal Diagram (See [Fig. 1.1](#Fig11))
+On this website we will cover two of the most common MER processes *[Classification](articles/classification)* &amp; *[Regression](articles/regression)*. We will also discuss three ML methods on the  *[Techniques](articles/techniques)* page: [Support Vector Regression (SVR)](articles/techniques#SVR), [Support Vector Machines (SVM)](articles/techniques#SVM) &amp; [Neural Networks](articles/techniques#NN). SVR works by taking the musical properties, such as harmonics & rhythm etc. and maps them onto a Valence-Arousal Diagram (See [Fig. 1.1](#Fig11)). The emotion that has been chosen by the machine is then represented as 2D Vector in the form (a, v).
 
 #### Valence-Arousal Diagram #### {#Fig11 .center}
 <figure markdown="1">
@@ -26,11 +26,17 @@ On this website we will cover two of the most common MER processes *[Classificat
 </figcaption>
 </figure>
 
+*Discuss SVM and NN here*
+
+More information on the three methods can be found by reading our [techniques](articles/techniques) page.
+
 *[MER]: Music Emotion Recognition
 *[MIR]: Music Information Retrieval
 *[ML]: Machine Learning
 *[SVM]: Support Vector Machines
 *[SVR]: Support Vector Regression
+
+*NB: Top background image adapted from a series of experiments described in Bachorik et al. (2009).*
 
 ### References
 
