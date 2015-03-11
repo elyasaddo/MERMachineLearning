@@ -75,7 +75,12 @@ html {
 p {
   margin: 0 0 18px 0;
   font-size: 1em;
-  line-height: 1.4em; }
+  line-height: 1.4em;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
   p.lead {
     font-size: 1em;
     line-height: 1.5em; }
@@ -186,7 +191,7 @@ header * {
 .right {
   text-align: right; }
 
-.center, figure, figure figcaption {
+.center, figure, figure figcaption, figure figcaption p {
   text-align: center; }
 
 .f-l {
@@ -372,11 +377,33 @@ dl:after {
   a.yellow:hover .vertical-bar {
     background: #dbbd0b; }
 
+hr {
+  border: none;
+  border-top: 1px solid #3e3e3e; }
+  .classification hr {
+    border-color: #881058; }
+  .regression hr {
+    border-color: #0e5f9b; }
+  .techniques hr {
+    border-color: #277512; }
+  .summary hr {
+    border-color: #dbbd0b; }
+
 table {
   /* Remove spacing between table cells (from Normalize.css) */
   border-collapse: collapse;
   border-spacing: 0;
-  empty-cells: show; }
+  empty-cells: show;
+  border: 2px solid #3e3e3e;
+  margin: 15px auto; }
+  .classification table {
+    border-color: #881058; }
+  .regression table {
+    border-color: #0e5f9b; }
+  .techniques table {
+    border-color: #277512; }
+  .summary table {
+    border-color: #dbbd0b; }
 
 table caption {
   color: #000;
