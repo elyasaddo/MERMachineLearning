@@ -94,12 +94,12 @@ As you can see from the case studied above, Machine Learning is clearly far more
 <figure markdown="1">
 ### Classification Form Comparison ### {#Fig35}
 
-Form         | Advantages  | Disadvantages
------------- | ----------- | --------------
-Single-label | &#945;      | &#945;
-Multi-class  | &#945;      | &#945;
-Multi-label  | &#945;      | &#945;
-Fuzzy-label  | &#945;      | &#945;
+Form         | Advantages                                                                   | Disadvantages
+------------ | ---------------------------------------------------------------------------- | --------------
+Single-label | It is clear to see what the primary emotion of the piece is                  | All other emotions the music evoke are lost in the result
+Multi-class  | No emotional information is lost in the label given                          | The possible set of labels grows exponentially with the number of classes. Also the labels are often sparse
+Multi-label  | The membership to each class is easily read and understood                   | A lot of computational power is required for this as the membership to each class must be calculated
+Fuzzy-label  | The likelihood of membership to classes can make sorting by relevance easier | The result may be less clear to read when working out if each piece belongs to a certain class
 
 <figcaption markdown="1">
 Figure 3.5: Comparison table for the different forms of classification in the context of MER.
