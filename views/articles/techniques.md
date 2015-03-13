@@ -63,8 +63,51 @@ Misclassifications still occurred as we can see, partly due to the fact that som
 
 ### Support Vector Machine ### {#SVM}
 
-The support vector machine is a supervised classification system that minimises an upper bound on its expected error. It attempts to find the hyper-plane separating two classes of data that will generalise best to future data.
+The job of a SVM is to creates a separation boundary (not necessarily linear) in a feature space such that subsequent observations can be automatically classified into separate groups. For MER, these groups correspond to emotions. A good example of such a system is classifying emails into spam or non-spam. The seperation boundary is produced by an optimal separating hyperplane. Consider a p-dimensional space. An separating hyperplane is essentially an affine p−1-dimensional space that lives within the larger p-dimensional space. 
 
+<figure markdown="1">
+![One- and two-dimensional hyperplanes](/assets/images/seperating_hyperplane.png)
+<figcaption markdown="1">
+  Figure 2.4: One- and two-dimensional hyperplanes[^5]
+</figcaption>
+</figure>
+
+
+An *optimal* seperating plane is the separating hyperplane that is farthest from any training observations also called Maximal Margin Myperplane (MMH). To find an MMH, we first compute the perpendicular distance from each training observation xi for a given separating hyperplane. The smallest perpendicular distance to a training observation from the hyperplane is known as the margin. The MMH is the separating hyperplane where the margin is the largest. We can see on the figure below that the MMH is the mid-line of the widest "block" (i.e. margin) that we can insert between the two classes such that they are perfectly separated. 
+
+<figure markdown="1">
+![ Maximal margin hyperplane with support vectors (A, B and C)](/assets/images/MMH.png)
+<figcaption markdown="1">
+  Figure 2.5: Maximal margin hyperplane with support vectors (A, B and C)[^5]
+</figcaption>
+</figure>
+
+This is how a Soft Margin Classifier (SVC) works. A SVC allows some observations to be on the incorrect side of the margin or hyperplane. The following figures below demonstrate observations being on the wrong side of the margin and the wrong side of the hyperplane respectively. 
+
+<figure markdown="1">
+![Observations on the wrong side of the margin and hyperplane, respectively](/assets/images/SVC.png)
+<figcaption markdown="1">
+  Figure 2.6: Observations on the wrong side of the margin and hyperplane, respectively[^5]
+</figcaption>
+</figure>
+
+SVM is an extension of a SVC which allows non-linear decision boundaries. Consider the following figures below. In such a situation a purely linear SVC will be useless, simply because the data has no clear linear separation.
+
+<figure markdown="1">
+![No clear linear separation between classes and thus poor SVC performance](/assets/images/nonlinear.png)
+<figcaption markdown="1">
+  Figure 2.7: No clear linear separation between classes and thus poor SVC performance[^5]
+</figcaption>
+</figure>
+
+SVM results from enlargening the feature space through the use of speical functions known as kernels[^5]. 
+
+<figure markdown="1">
+![A d-degree polynomial kernel and a radial kernel](/assets/images/SVM.png)
+<figcaption markdown="1">
+  Figure 2.8: A d-degree polynomial kernel and a radial kernel[^5]
+</figcaption>
+</figure>
 
 ### Neural Network ### {#NN}
 
@@ -73,7 +116,7 @@ Neural Networks imitates the activity of our biological nervous system. It assoc
 <figure markdown="1">
 ![Neural Network schema](/assets/images/NeuralNetworkSchema.jpg)
 <figcaption markdown="1">
-  Figure 2.4: Neural Network schema[^3]
+  Figure 2.9: Neural Network schema[^3]
 </figcaption>
 </figure>
 
@@ -86,7 +129,7 @@ Naresh N. Vempala and Frank A. Russo led an experimentof MER using Neural Networ
 <figure markdown="1">
 ![Neural Network schema](/assets/images/NN_explanation.png)
 <figcaption markdown="1">
-  Figure 2.4: Neural Network of the Experience[^4]
+  Figure 2.10: Neural Network of the Experience[^4]
 </figcaption>
 </figure> 
 
@@ -97,7 +140,7 @@ This is the final result of the experiment:
 <figure markdown="1">
 ![Neural Network schema](/assets/images/NNresult1.png)
 <figcaption markdown="1">
-  Figure 2.5: Result of experiment[^4]
+  Figure 2.11: Result of experiment[^4]
 </figcaption>
 </figure> 
 
@@ -107,9 +150,12 @@ We can see from the graph that overall, Neural Networks accurately predict emoti
 
 *[ML]: Machine Learning
 *[MER]: Music Emotion Recognition
-*[SVR]: Support Vector Machine
+*[SVR]: Support Vector Regression
+*[SVM]: Support Vector Machine
 *[GMM]: Gaussian Mixture Model
 *[AV]: Arousal Valence
+*[MMH]: Maximal Margin Hyperplane
+*[SVC]: Soft Margin Classifier
 
 ### References
 
@@ -119,4 +165,6 @@ We can see from the graph that overall, Neural Networks accurately predict emoti
 
 [^3]: Christos Stergiou and Dimitrios Siganos (-) Neural Networks [Online] Available from: [http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/repo&hellip;](http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/report.html#What%20is%20a%20Neural%20Network)
 
-[^4]: Naresh N. Vempala and Frank A. Russo (2012) Predicting Emotion from Music Audio Features Using Neural Networks [Online] Available from:[ http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eec&hellip;](http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_66.pdf )
+[^4]: Naresh N. Vempala and Frank A. Russo (2012) Predicting Emotion from Music Audio Features Using Neural Networks [Online] Available from:[http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eec&hellip;](http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_66.pdf)
+
+[^5]: Michael Halls-Moore (2014) Predicting Support Vector Machines: A guide for beginners [Online] Available from:[http://www.quantstart.com/articles/Support-Vector-Mach&hellip;](http://www.quantstart.com/articles/Support-Vector-Machines-A-Guide-for-Beginners)
