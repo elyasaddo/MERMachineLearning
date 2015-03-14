@@ -12,7 +12,6 @@ We have chosen to study three techniques of ML applied to MER:  Support Vector R
 
 The SVR based music emotion recognition consists of three steps:
 
-
 1. Extraction of music features such as the overall energy of the music, the rhythm and harmonics.
 2. These features and their combination must then be mapped into emotion categories on a plane; this technique quantifies emotions.
 3. Find regression functions that will enable the mapping of the music to a category, i.e. placing it on the plane. When a piece is playing, the computer will retrieve the musical features, then use the regression functions that take these features as inputs, to output the emotion as coordinates (in the form of a vector) of a plane.
@@ -72,7 +71,6 @@ The job of a SVM is to creates a separation boundary (not necessarily linear) in
 </figcaption>
 </figure>
 
-
 An *optimal* seperating plane is the separating hyperplane that is farthest from any training observations also called Maximal Margin Myperplane (MMH). To find an MMH, we first compute the perpendicular distance from each training observation xi for a given separating hyperplane. The smallest perpendicular distance to a training observation from the hyperplane is known as the margin. The MMH is the separating hyperplane where the margin is the largest. We can see on the figure below that the MMH is the mid-line of the widest "block" (i.e. margin) that we can insert between the two classes such that they are perfectly separated. 
 
 <figure markdown="1">
@@ -109,6 +107,32 @@ SVM results from enlargening the feature space through the use of speical functi
 </figcaption>
 </figure>
 
+An experiment to study SVM was lead by Cyril Laurier and Perfecto Herrera[^6]. They chose 133 music features such as energy band ratio, flatnessDB, beats per minute, etc. Five clusters, shown below, were selected. The hyperpanes were therefore 4-dimensional as a 5-dimensional plane was used (five clusters &rarr; 5-dimensional plane). 
+
+<figure markdown="1">
+![Description of the mood clusters](/assets/images/SWMclusters.png)
+<figcaption markdown="1">
+  Figure 2.9: Description of the mood clusters[^6]
+</figcaption>
+</figure>
+
+As you can see, the emotions in each cluster are deliberately vague for the SVM to cover as many emotions as possible. 
+
+The experience shows three main points :
+
+1. Cluster 3 and 5 are the most predictable
+2. There is a problem to predict Cluster 1 because it is close to Cluster 5 due to accoustic similarities. Both are energetic, loud and many of both use electric guitar. So the computer will have difficulties to evaluate the difference of the two Clusters. 
+3. There is a confusion between Cluster 2 and 4 because the emotions in these two Clusters sometimes overlap: fun (Cluster 2) and humurous(Cluster 4). 
+
+The results of the experience is summarised in the table below:
+
+<figure markdown="1">
+![Confusion Matrix, horizontally the distribution of the prediction for a given Cluster](/assets/images/SVMresults.png)
+<figcaption markdown="1">
+  Figure 2.10: Confusion Matrix, horizontally the distribution of the prediction for a given Cluster[^6]
+</figcaption>
+</figure>
+
 ### Neural Network ### {#NN}
 
 Neural Networks imitates the activity of our biological nervous system. It associates attributes and characteristics of data to emotions amongst other things. For example, certain colours are associated with certain emotions (brightly coloured paintings are usually associated with joy and happiness whereas dark-coloured paintings are associated with sadness, fear, etc.). The principle of this technique is illustrated with the image below. A certain number of inputs are used. These inputs are then analysed by the computer with “tools” that class the information given: the hidden layers. Each input now has a “weight” associated with the hidden layer. The hidden layers with the most weight have a greater activity level. The activity level of each layer then determines the output[^3]. Although neural networks have been applied extensively in domains such as object recognition, speech and text recognition, they have been relatively underutilized in music cognition and music informatics.
@@ -119,7 +143,6 @@ Neural Networks imitates the activity of our biological nervous system. It assoc
   Figure 2.9: Neural Network schema[^3]
 </figcaption>
 </figure>
-
 
 In MER application, the hidden layers correspond to music features. You also need a set of data beforehand for the computer to work with (i.e. data that depending on the activity of the features outputs the corresponding emotion). It is also necessary to find a concrete way to represent emotions. Usually researchers will use coordinates with x-axis representing some general aspect of emotion and y-axis another aspect of emotion such as valence and arousal.
 Just like your nervous system associates musical attributes to certain emotions (high energy music, fast rhythm&hellip; &rarr; agitated; slow rhythm, no energy, long sound opposed to short, brief sounds &rarr; sad&hellip;), the neural network does the same thing.
@@ -165,6 +188,9 @@ We can see from the graph that overall, Neural Networks accurately predict emoti
 
 [^3]: Christos Stergiou and Dimitrios Siganos (-) Neural Networks [Online] Available from: [http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/repo&hellip;](http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/report.html#What%20is%20a%20Neural%20Network)
 
-[^4]: Naresh N. Vempala and Frank A. Russo (2012) Predicting Emotion from Music Audio Features Using Neural Networks [Online] Available from:[http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eec&hellip;](http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_66.pdf)
+[^4]: Naresh N. Vempala and Frank A. Russo (2012) Predicting Emotion from Music Audio Features Using Neural Networks [Online] Available from: [http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eec&hellip;](http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_66.pdf)
 
-[^5]: Michael Halls-Moore (2014) Predicting Support Vector Machines: A guide for beginners [Online] Available from:[http://www.quantstart.com/articles/Support-Vector-Mach&hellip;](http://www.quantstart.com/articles/Support-Vector-Machines-A-Guide-for-Beginners)
+[^5]: Michael Halls-Moore (2014) Predicting Support Vector Machines: A guide for beginners [Online] Available from: [http://www.quantstart.com/articles/Support-Vector-Mach&hellip;](http://www.quantstart.com/articles/Support-Vector-Machines-A-Guide-for-Beginners)
+
+[^6]: Cyril Laurier and Perfecto Herrera (-) Audio Music Mood Classification
+Using Support Vecotor Machine [Online] Available from: [http://www.mtg.upf.edu/files/publications/b6c06&hellip;](http://www.mtg.upf.edu/files/publications/b6c067-ISMIR-MIREX-2007-Laurier-Herrera.pdf)
