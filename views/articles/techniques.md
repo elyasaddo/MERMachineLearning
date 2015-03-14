@@ -36,7 +36,7 @@ Why use both forms? Well they found out that for the emotions that were hard to 
 <figure markdown="1">
 Coordinate type           | Accuracy
 --------------------------| -------------
-Cartesian                 | 63.03%             
+Cartesian                 | 63.03%
 Polar                     | 94.55%
 <figcaption markdown="1">
 Figure 2.2: Table comparing accuracy of SVR using Polar and Cartesian forms[^2]
@@ -111,7 +111,7 @@ SVM results from enlargening the feature space through the use of speical functi
 
 ### Neural Network ### {#NN}
 
-Neural Networks imitates the activity of our biological nervous system. It associates attributes and characteristics of data to emotions amongst other things. For example, certain colours are associated with certain emotions (brightly coloured paintings are usually associated with joy and happiness whereas dark-coloured paintings are associated with sadness, fear, etc.). The principle of this technique is illustrated with the image below. A certain number of inputs are used. These inputs are then analysed by the computer with “tools” that class the information given: the hidden layers. Each input now has a “weight” associated with the hidden layer. The hidden layers with the most weight have a greater activity level. The activity level of each layer then determines the output[^3]. Although neural networks have been applied extensively in domains such as object recognition, speech and text recognition, they have been relatively underutilized in music cognition and music informatics. 
+Neural Networks imitates the activity of our biological nervous system. It associates attributes and characteristics of data to emotions amongst other things. For example, certain colours are associated with certain emotions (brightly coloured paintings are usually associated with joy and happiness whereas dark-coloured paintings are associated with sadness, fear, etc.). The principle of this technique is illustrated with the image below. A certain number of inputs are used. These inputs are then analysed by the computer with “tools” that class the information given: the hidden layers. Each input now has a “weight” associated with the hidden layer. The hidden layers with the most weight have a greater activity level. The activity level of each layer then determines the output[^3]. Although neural networks have been applied extensively in domains such as object recognition, speech and text recognition, they have been relatively underutilized in music cognition and music informatics.
 
 <figure markdown="1">
 ![Neural Network schema](/assets/images/NeuralNetworkSchema.jpg)
@@ -124,27 +124,27 @@ Neural Networks imitates the activity of our biological nervous system. It assoc
 In MER application, the hidden layers correspond to music features. You also need a set of data beforehand for the computer to work with (i.e. data that depending on the activity of the features outputs the corresponding emotion). It is also necessary to find a concrete way to represent emotions. Usually researchers will use coordinates with x-axis representing some general aspect of emotion and y-axis another aspect of emotion such as valence and arousal.
 Just like your nervous system associates musical attributes to certain emotions (high energy music, fast rhythm&hellip; &rarr; agitated; slow rhythm, no energy, long sound opposed to short, brief sounds &rarr; sad&hellip;), the neural network does the same thing.
 
-Naresh N. Vempala and Frank A. Russo led an experimentof MER using Neural Network. They conducted a network that predicted the emotion for the entire music. Twelve music experts were used to give the emotions they felt whiles listening to pieces. The data that was retrieved was then used as the "actual" emotion of the song even though emotions are subjective. Then thirteen music features were extracted used as inputs and hidden layers  and the ouputs were again AV coordinates (because it is an simple way to represent emotions) as shown on the image below. It is also important to note that he wight between input units and hidden layers and between hidden layers and outputs were set to random numbers close to 0. 
+Naresh N. Vempala and Frank A. Russo led an experimentof MER using Neural Network. They conducted a network that predicted the emotion for the entire music. Twelve music experts were used to give the emotions they felt whiles listening to pieces. The data that was retrieved was then used as the "actual" emotion of the song even though emotions are subjective. Then thirteen music features were extracted used as inputs and hidden layers  and the ouputs were again AV coordinates (because it is an simple way to represent emotions) as shown on the image below. It is also important to note that he wight between input units and hidden layers and between hidden layers and outputs were set to random numbers close to 0.
 
 <figure markdown="1">
 ![Neural Network schema](/assets/images/NN_explanation.png)
 <figcaption markdown="1">
   Figure 2.10: Neural Network of the Experience[^4]
 </figcaption>
-</figure> 
+</figure>
 
 Inputs were passed through a sigmoidal function, multiplied with the connection weights *W<sub>hi</sub>*, and summed at each hidden unit. Hidden unit values were obtained by passing the summed value at each hidden unit through a sigmoidal function. These values were multiplied with the connection weights *W<sub>oh</sub>*, summed at each output unit, and passed through a sigmoidal function to arrive at the final output value for each output unit. Network outputs were compared to desired outputs and the error was computed. The machine then computed the weight changes that had to be done. At the end, connection weights were updated with the sum of all stored weight changes. 
 
-This is the final result of the experiment: 
+This is the final result of the experiment:
 
 <figure markdown="1">
 ![Neural Network schema](/assets/images/NNresult1.png)
 <figcaption markdown="1">
   Figure 2.11: Result of experiment[^4]
 </figcaption>
-</figure> 
+</figure>
 
-We can see from the graph that overall, Neural Networks accurately predict emotions. However Stravinsky "actual" emotions and predicted emotions are quite far off. What could be done is to create a Neural Network for each music attribute and then use the ones that contribute the most to the AV prediction. 
+We can see from the graph that overall, Neural Networks accurately predict emotions. However Stravinsky "actual" emotions and predicted emotions are quite far off. What could be done is to create a Neural Network for each music attribute and then use the ones that contribute the most to the AV prediction.
 
 ### Conclusion
 
