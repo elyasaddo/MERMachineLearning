@@ -62,7 +62,7 @@ Misclassifications still occurred as we can see, partly due to the fact that som
 
 ### Support Vector Machine ### {#SVM}
 
-The job of a SVM is to creates a separation boundary (not necessarily linear) in a feature space such that subsequent observations can be automatically classified into separate groups. For MER, these groups correspond to emotions. A good example of such a system is classifying emails into spam or non-spam. The seperation boundary is produced by an optimal separating hyperplane. Consider a p-dimensional space. An separating hyperplane is essentially an affine p−1-dimensional space that lives within the larger p-dimensional space[^5]. 
+The job of a SVM is to creates a separation boundary (not necessarily linear) in a feature space such that subsequent observations can be automatically classified into separate groups. For MER, these groups correspond to emotions. A good example of such a system is classifying emails into spam or non-spam. The seperation boundary is produced by an optimal separating hyperplane. Consider a p-dimensional space. A separating hyperplane is essentially an affine p−1-dimensional space that lives within the larger p-dimensional space[^5]. 
 
 <figure markdown="1">
 ![One- and two-dimensional hyperplanes](/assets/images/seperating_hyperplane.png)
@@ -80,7 +80,7 @@ An *optimal* seperating plane is the separating hyperplane that is farthest from
 </figcaption>
 </figure>
 
-This is how a Soft Margin Classifier (SVC) works. A SVC allows some observations to be on the incorrect side of the margin or hyperplane. The following figures below demonstrate observations being on the wrong side of the margin and the wrong side of the hyperplane respectively. 
+This is how a Soft Margin Classifier (SVC) works. A SVC allows some observations to be on the incorrect side of the margin or hyperplane. The following figures below demonstrate observations being on the wrong side of the margin and the wrong side of the hyperplane respectively.
 
 <figure markdown="1">
 ![Observations on the wrong side of the margin and hyperplane, respectively](/assets/images/SVC.png)
@@ -98,7 +98,7 @@ SVM is an extension of a SVC which allows non-linear decision boundaries. Consid
 </figcaption>
 </figure>
 
-SVM results from enlargening the feature space through the use of speical functions known as kernels[^5]. 
+SVM results from enlargening the feature space through the use of special functions known as kernels[^5].
 
 <figure markdown="1">
 ![A d-degree polynomial kernel and a radial kernel](/assets/images/SVM.png)
@@ -107,11 +107,10 @@ SVM results from enlargening the feature space through the use of speical functi
 </figcaption>
 </figure>
 
-An experiment to study SVM was lead by Cyril Laurier and Perfecto Herrera[^6]. They chose 133 music features such as energy band ratio, flatnessDB, beats per minute, etc. Five clusters, shown below, were selected. The hyperpanes were therefore 4-dimensional as a 5-dimensional plane was used (five clusters &rarr; 5-dimensional plane). 
+An experiment to study SVM was lead by Cyril Laurier and Perfecto Herrera[^6]. They chose 133 music features such as energy band ratio, flatnessDB, beats per minute, etc. Five clusters, shown below, were selected. The hyperplanes were therefore 4-dimensional as a 5-dimensional plane was used (five clusters &rarr; 5-dimensional plane).
 
 <figure markdown="1">
-  
-  Cluster 1  | Cluster 2  | Cluster 3   | Cluster 4 | Cluster 5
+Cluster 1  | Cluster 2  | Cluster 3   | Cluster 4 | Cluster 5
 ---------- | ---------- | ----------- | --------- | ----------
 Rowdy      | Amiable    | Literate    | Witty     | Volatile
 Rousing    | Sweet      | Wistful     | Humorous  | Fiery
@@ -122,28 +121,30 @@ Passionate | Cheerful   | Brooding    | Campy     | Tense/Anxious
            |            |             | Silly     |
 
 <figcaption markdown="1">
-  Figure 2.9: Description of the mood clusters[^6]
+Figure 2.9: MIREX table of 5 clusters of emotions.[^6]
 </figcaption>
 </figure>
 
-As you can see, the emotions in each cluster are deliberately vague for the SVM to cover as many emotions as possible. 
+As you can see, the emotions in each cluster are deliberately vague for the SVM to cover as many emotions as possible.
 
 The experience shows three main points :
 
 1. Cluster 3 and 5 are the most predictable
-2. There is a problem to predict Cluster 1 because it is close to Cluster 5 due to accoustic similarities. Both are energetic, loud and many of both use electric guitar. So the computer will have difficulties to evaluate the difference of the two Clusters. 
-3. There is a confusion between Cluster 2 and 4 because the emotions in these two Clusters sometimes overlap: fun (Cluster 2) and humurous(Cluster 4). 
+2. There is a problem to predict Cluster 1 because it is close to Cluster 5 due to acoustic similarities. Both are energetic, loud and many of both use electric guitar. So the computer will have difficulties to evaluate the difference of the two Clusters.
+3. There is a confusion between Cluster 2 and 4 because the emotions in these two Clusters sometimes overlap: fun (Cluster 2) and humorous (Cluster 4).
 
 The results of the experience is summarised in the table below:
 
 <figure markdown="1">
-Truth/Predicted  | 1     | 2     | 3     | 4     | 5
----------------- | ----- | ----- | ----- | ----- | ------
-Cluster 1        | 45.8  | 11.7  | 5     | 17.5  | 20.0
-Cluster 2        | 10.8  | 50.0  | 11.7  | 27.5  | 0.0
-Cluster 3        | 1.7   | 11.7  | 82.5  | 4.1   | 0.0
-Cluster 4        | 10.0  | 31.7  | 4.2   | 53.3  | 0.8
-Cluster 5        | 18.3  | 1.7   | 2.5   | 6.7   | 70.8
+
+Truth/Predicted  | 1        | 2        | 3        | 4        | 5
+---------------- | -------- | -------- | -------- | -------- | --------
+Cluster 1        | **45.8** | 11.7     | 5.0      | 17.5     | 20.0
+Cluster 2        | 10.8     | **50.0** | 11.7     | 27.5     | 0.0
+Cluster 3        | 1.7      | 11.7     | **82.5** | 4.1      | 0.0
+Cluster 4        | 10.0     | 31.7     | 4.2      | **53.3** | 0.8
+Cluster 5        | 18.3     | 1.7      | 2.5      | 6.7      | **70.8**
+
 <figcaption markdown="1">
   Figure 2.10: Confusion Matrix, horizontally the distribution of the prediction for a given Cluster[^6]
 </figcaption>
@@ -172,7 +173,7 @@ Naresh N. Vempala and Frank A. Russo led an experimentof MER using Neural Networ
 </figcaption>
 </figure>
 
-Inputs were passed through a sigmoidal function, multiplied with the connection weights *W<sub>hi</sub>*, and summed at each hidden unit. Hidden unit values were obtained by passing the summed value at each hidden unit through a sigmoidal function. These values were multiplied with the connection weights *W<sub>oh</sub>*, summed at each output unit, and passed through a sigmoidal function to arrive at the final output value for each output unit. Network outputs were compared to desired outputs and the error was computed. The machine then computed the weight changes that had to be done. At the end, connection weights were updated with the sum of all stored weight changes. 
+Inputs were passed through a sigmoidal function, multiplied with the connection weights *W<sub>hi</sub>*, and summed at each hidden unit. Hidden unit values were obtained by passing the summed value at each hidden unit through a sigmoidal function. These values were multiplied with the connection weights *W<sub>oh</sub>*, summed at each output unit, and passed through a sigmoidal function to arrive at the final output value for each output unit. Network outputs were compared to desired outputs and the error was computed. The machine then computed the weight changes that had to be done. At the end, connection weights were updated with the sum of all stored weight changes.
 
 This is the final result of the experiment:
 

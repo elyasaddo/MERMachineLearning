@@ -9,20 +9,21 @@
   - Schematic of one of the techniques (Flow diagram)
   -->
 #### "Without music, life would be a mistake" Friedrich Nietzsche, German philosopher.[^3] #### {.center}
-### Introduction
 
-Over the last decade the availability of music has increased dramatically.[^5] Gone are the days of hovering over the record button on a tape deck to record this week's hits from the radio, nowadays people can have multiple music libraries synced across multiple devices sometimes using multiple applications. Due to the increased public use of music applications the research in the music field has also increased in the last few years,<!-- This sentence is a bit vague and long in my opinion. could be restructured and cut down --> not only into the applications but into how we can use machines to automate the laborious, expensive work humans would otherwise have to do. Although the techniques aren't perfect yet<!-- ,? --> users are starting to see the research <!-- Use a better word for research, i wouldnt use it in this context --> appear in everyday applications, iTunes has &lsquo;Genius&rsquo;, Rdio has a &lsquo;Browse&rsquo; by feeling or mood section and there are countless more examples to add to the list. On this website we will talk about the techniques used to allow these new features to be used by users, but more specifically how we can use machines to do our work, and not only that but act&shy;ually take a small amount of data and use all of its previous efforts to make increasingly more accurate predictions. <!-- could be cut down into smaller sentences -->
+ <br>
+
+Over the last decade the availability of music has increased dramatically.[^5] Gone are the days of hovering over the record button on a tape deck to record this week's hits from the radio, nowadays people can have multiple music libraries synced across multiple devices sometimes using multiple applications. Due to the increased public use of music applications the research in the music field has also increased in the last few years. Research has been focused into applications of MER and also into how we can use machines to automate the laborious, expensive work humans would otherwise have to do. Although the techniques aren't perfect yet users are starting to see the research appear in everyday applications, iTunes has &lsquo;Genius&rsquo;, Rdio has a &lsquo;Browse&rsquo; by feeling or mood section and there are countless more examples to add to the list. On this website we will talk about the techniques used to allow these new features to be used by users. More specifically how we can use machines to do our work, and not only do the work but act&shy;ually take a small amount of data and use all of its previous efforts to make increasingly more accurate predictions.
 
 #### Full MER Process #### {#Fig11 .center}
 <figure markdown="1">
 ![MER Process](/assets/images/MER-Flowchart.png)
 <figcaption markdown="1">
-  Figure 1.1: Above is the entire process of Music Emotion Recognition, with our concentration, Machine Learning, highlighted in blue.[^6]
+  Figure 1.1: Above is the entire process of Music Emotion Recognition, with our concentration, Machine Learning, highlighted in&nbsp;blue.[^6]
 </figcaption>
 </figure>
 
 <!-- History -->
-Music Emotion Recognition (MER) has stemmed from a group of research called Music Information Retrieval (MIR) which is <!-- which has? --> a rapidly expanding community spanning across a myriad of disciplines including: information science, musicology, audio engineering, computer science and business[^1] [^2]. MER has been identified as a &ldquo;powerful&rdquo; way of organising the sheer amount of ever increasing music information in a way that can be easily accessed[^2],<!-- could slice the sentence here --> and to be able to accurately categorise this musical information we need to have a <!-- consider changing to plural #machines --> machine that is capable of processing the volume of information that gets created everyday; it would be simply too much work for humans to do. This is where applying the Machine Learning (ML) models to the MER processes comes in.
+Music Emotion Recognition (MER) has stemmed from a group of research called Music Information Retrieval (MIR) which has a rapidly expanding community spanning across a myriad of disciplines including: information science, musicology, audio engineering, computer science and business[^1] [^2]. MER has been identified as a &ldquo;powerful&rdquo; way of organising the sheer amount of ever increasing music information in a way that can be easily accessed[^2]. To be able to accurately categorise this musical information we need to have machines that are capable of processing the volume of information that gets created everyday; it would be simply too much work for humans to do. This is where applying the Machine Learning (ML) models to the MER processes comes in.
 
 <!-- Techniques and problems -->
 On this website we will cover two of the most common MER processes *[Classification](articles/classification)* &amp; *[Regression](articles/regression)*. We will also discuss three ML methods on the  *[Techniques](articles/techniques)* page: [Support Vector Regression (SVR)](articles/techniques#SVR), [Support Vector Machines (SVM)](articles/techniques#SVM) &amp; [Neural Networks](articles/techniques#NN).
@@ -40,13 +41,13 @@ Support Vector Regression works by taking the musical properties, such as harmon
 </figure>
 
 #### Support Vector Machines
-Support Vector Machines is a supervised learning technique, meaning it takes training data, called *observations*, and uses this data to make better predictions about data <!-- restructure entire sentence --> that given to the machine without ground truths. SVM work by plotting the test vectors in a `n` dimensional set space, where the number of dimensions, `n`, comes from the number of music <!-- musical? --> features (in this case) taken into consideration; tempo, rhythm, volume, lyrics etc. A hyper-plane is then created to split the data into 2 classifications (`+1` or `-1`), the hyper-plane must create the maximum margin between itself and the closest vectors (*Support Vectors*) on the positive side and the negative side - [Figure 1.2](#Fig12) demonstrates this process. The machine then looks at the data to see if it matches the ground truth and alters a weighting coefficient until the partitioned data matches the ground truth.
+Support Vector Machines take training data, called *observations*. This data to make better predictions about future data that is given to the machine without ground truths. SVM work by plotting the test vectors in a `n` dimensional set space, where the number of dimensions, `n`, comes from the number of musical features (in this case) taken into consideration; tempo, rhythm, volume, lyrics etc. A hyper-plane is then created to split the data into 2 classifications (`+1` or `-1`), the hyper-plane must create the maximum margin between itself and the closest vectors (*Support Vectors*) on the positive side and the negative side - [Figure 1.3](#Fig13) demonstrates this process. The machine then looks at the data to see if it matches the ground truth and alters a weighting coefficient until the partitioned data matches the ground truth.
 
-#### Creating the Hyperplane #### {#Fig12 .center}
+#### Creating the Hyperplane #### {#Fig13 .center}
 <figure markdown="1">
 ![Creating the Hyperplane](/assets/images/MER-SVM-Process.gif)
 <figcaption markdown="1">
-  Figure 1.1: The Process of creating the Hyperplane[^7]
+  Figure 1.3: The Process of creating the Hyperplane[^7]
 </figcaption>
 </figure>
 
@@ -58,11 +59,12 @@ Neural Networks is modelled on our biological nervous system. It works by associ
 <figure markdown="1">
 ![Neural Network schema](/assets/images/NN_explanation.png)
 <figcaption markdown="1">
-  Figure 2.10: Neural Network of the Experience[^4]
+  Figure 1.4: Neural Network of the Experience[^4]
 </figcaption>
 </figure>
 
 The output is then compared to the correct values, a backpropagation algorithm is then applied which reduces the errors. The machine is then trained by repeating the above steps, which can be around 10,&nbsp;000 cycles.[^4]
+
 
 More information on the three methods can be found by reading our *[Techniques](articles/techniques)* page.
 
