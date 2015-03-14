@@ -62,7 +62,7 @@ Misclassifications still occurred as we can see, partly due to the fact that som
 
 ### Support Vector Machine ### {#SVM}
 
-The job of a SVM is to creates a separation boundary (not necessarily linear) in a feature space such that subsequent observations can be automatically classified into separate groups. For MER, these groups correspond to emotions. A good example of such a system is classifying emails into spam or non-spam. The seperation boundary is produced by an optimal separating hyperplane. Consider a p-dimensional space. An separating hyperplane is essentially an affine p−1-dimensional space that lives within the larger p-dimensional space. 
+The job of a SVM is to creates a separation boundary (not necessarily linear) in a feature space such that subsequent observations can be automatically classified into separate groups. For MER, these groups correspond to emotions. A good example of such a system is classifying emails into spam or non-spam. The seperation boundary is produced by an optimal separating hyperplane. Consider a p-dimensional space. An separating hyperplane is essentially an affine p−1-dimensional space that lives within the larger p-dimensional space[^5]. 
 
 <figure markdown="1">
 ![One- and two-dimensional hyperplanes](/assets/images/seperating_hyperplane.png)
@@ -71,7 +71,7 @@ The job of a SVM is to creates a separation boundary (not necessarily linear) in
 </figcaption>
 </figure>
 
-An *optimal* seperating plane is the separating hyperplane that is farthest from any training observations also called Maximal Margin Myperplane (MMH). To find an MMH, we first compute the perpendicular distance from each training observation xi for a given separating hyperplane. The smallest perpendicular distance to a training observation from the hyperplane is known as the margin. The MMH is the separating hyperplane where the margin is the largest. We can see on the figure below that the MMH is the mid-line of the widest "block" (i.e. margin) that we can insert between the two classes such that they are perfectly separated. 
+An *optimal* seperating plane is the separating hyperplane that is farthest from any training observations also called Maximal Margin Myperplane (MMH). To find an MMH, we first compute the perpendicular distance from each training observation x<sub>i</sub> for a given separating hyperplane. The smallest perpendicular distance to a training observation from the hyperplane is known as the margin. The MMH is the separating hyperplane where the margin is the largest. We can see on the figure below that the MMH is the mid-line of the widest "block" (i.e. margin) that we can insert between the two classes such that they are perfectly separated. 
 
 <figure markdown="1">
 ![ Maximal margin hyperplane with support vectors (A, B and C)](/assets/images/MMH.png)
@@ -110,7 +110,17 @@ SVM results from enlargening the feature space through the use of speical functi
 An experiment to study SVM was lead by Cyril Laurier and Perfecto Herrera[^6]. They chose 133 music features such as energy band ratio, flatnessDB, beats per minute, etc. Five clusters, shown below, were selected. The hyperpanes were therefore 4-dimensional as a 5-dimensional plane was used (five clusters &rarr; 5-dimensional plane). 
 
 <figure markdown="1">
-![Description of the mood clusters](/assets/images/SWMclusters.png)
+  
+  Cluster 1  | Cluster 2  | Cluster 3   | Cluster 4 | Cluster 5
+---------- | ---------- | ----------- | --------- | ----------
+Rowdy      | Amiable    | Literate    | Witty     | Volatile
+Rousing    | Sweet      | Wistful     | Humorous  | Fiery
+Confident  | Fun        | Bittersweet | Whimsical | Visceral
+Boisterous | Rollicking | Autumnal    | Wry       | Aggressive
+Passionate | Cheerful   | Brooding    | Campy     | Tense/Anxious
+           |            | Poignant    | Quirky    | Intense
+           |            |             | Silly     |
+
 <figcaption markdown="1">
   Figure 2.9: Description of the mood clusters[^6]
 </figcaption>
@@ -127,7 +137,13 @@ The experience shows three main points :
 The results of the experience is summarised in the table below:
 
 <figure markdown="1">
-![Confusion Matrix, horizontally the distribution of the prediction for a given Cluster](/assets/images/SVMresults.png)
+Truth/Predicted  | 1     | 2     | 3     | 4     | 5
+---------------- | ----- | ----- | ----- | ----- | ------
+Cluster 1        | 45.8  | 11.7  | 5     | 17.5  | 20.0
+Cluster 2        | 10.8  | 50.0  | 11.7  | 27.5  | 0.0
+Cluster 3        | 1.7   | 11.7  | 82.5  | 4.1   | 0.0
+Cluster 4        | 10.0  | 31.7  | 4.2   | 53.3  | 0.8
+Cluster 5        | 18.3  | 1.7   | 2.5   | 6.7   | 70.8
 <figcaption markdown="1">
   Figure 2.10: Confusion Matrix, horizontally the distribution of the prediction for a given Cluster[^6]
 </figcaption>
