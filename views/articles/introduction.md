@@ -44,9 +44,9 @@ Support Vector Machines is a supervised learning technique, meaning it takes tra
 
 #### Creating the Hyperplane #### {#Fig12 .center}
 <figure markdown="1">
-![Thayer's two-dimensional emotion plane](/assets/images/VADiagram.png)
+![Creating the Hyperplane](/assets/images/MER-SVM-Process.gif)
 <figcaption markdown="1">
-  Figure 1.1: Adapted from: Russell, J. A. (1980). A circumplex model of affect. Journal of Personality and Social Psychology, 39, 1161–1178.
+  Figure 1.1: The Process of creating the Hyperplane[^7]
 </figcaption>
 </figure>
 
@@ -87,3 +87,5 @@ More information on the three methods can be found by reading our *[Techniques](
 [^5]: Kim, Y., Schmidt, E., Migneco, R., Morton, B., Richardson, P., Scott, J., Speck, J. and Turnbull, D. (2015). Music Emotion Recognition: A State of the Art Review. [Online] Available at: [http://citeseerx.ist.psu.edu/viewdoc/downlo&hellip;](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.231.7740&rep=rep1&type=pdf) [Accessed 13 Mar. 2015].
 
 [^6]: Adapted from: Figure 1.1 of Schmidt, E. and Kim, Y. (2015). Modeling and Predicting Emotion in Music. [Online] Available at: [http://www.tcnj.edu/~mmi/papers/Paper52.pdf](http://www.tcnj.edu/~mmi/papers/Paper52.pdf) [Accessed 13 Mar. 2015].
+
+[^7]: Adapted from: Moore, A. (2003) Support Vector Machines [Online] Available at: [http://www.cs.cmu.edu/~cga/ai-course/svm.pdf](http://www.cs.cmu.edu/~cga/ai-course/svm.pdf) Slides 5-9
