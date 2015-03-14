@@ -17,7 +17,7 @@ The SVR based music emotion recognition consists of three steps:
 3. Find regression functions that will enable the mapping of the music to a category, i.e. placing it on the plane. When a piece is playing, the computer will retrieve the musical features, then use the regression functions that take these features as inputs, to output the emotion as coordinates (in the form of a vector) of a plane.
 
 
-SVR was used in an experiment in 2009 supervised by Byeong-jun Han, Seungmin Rho, Roger B. and Dannenberg Eenjun Hwang[^2]. The plane they used was Thayer’s two-dimensional emotional pane which evaluate the valence of an emotion on the x–axis and its arousal on the y–axis. They chose to extract seven music features such as scale, intensity, rhythm and harmonics and selected 165 various music pieces for their experiment.  
+SVR was used in an experiment in 2009 supervised by Byeong-jun Han, Seungmin Rho, Roger B. and Dannenberg Eenjun Hwang[^2]. The plane they used was Thayer’s two-dimensional emotional pane which evaluates the valence of an emotion on the x–axis and its arousal on the y–axis. Representing emotions with coordinates is called *[Regression](regression)*, which we will look at later on. They chose to extract seven music features such as scale, intensity, rhythm and harmonics and selected 165 various music pieces for their experiment.  
 
 <figure markdown="1">
 ![Thayer's two-dimensional emotion plane](/assets/images/VADiagram.png)
@@ -107,7 +107,7 @@ SVM results from enlargening the feature space through the use of special functi
 </figcaption>
 </figure>
 
-An experiment to study SVM was lead by Cyril Laurier and Perfecto Herrera[^6]. They chose 133 music features such as energy band ratio, flatnessDB, beats per minute, etc. Five clusters, shown below, were selected. The hyperplanes were therefore 4-dimensional as a 5-dimensional plane was used (five clusters &rarr; 5-dimensional plane).
+An experiment to study SVM was lead by Cyril Laurier and Perfecto Herrera[^6]. They chose 133 music features such as energy band ratio, flatnessDB, beats per minute, etc. Five clusters, shown below, were selected (clusters/labels are another way to represent emotions: it's called *[Classification](classification)*). The hyperplanes were therefore 4-dimensional as a 5-dimensional plane was used (five clusters &rarr; 5-dimensional plane).
 
 <figure markdown="1">
 Cluster 1  | Cluster 2  | Cluster 3   | Cluster 4 | Cluster 5
@@ -136,7 +136,6 @@ The experience shows three main points :
 The results of the experience is summarised in the table below:
 
 <figure markdown="1">
-
 Truth/Predicted  | 1        | 2        | 3        | 4        | 5
 ---------------- | -------- | -------- | -------- | -------- | --------
 Cluster 1        | **45.8** | 11.7     | 5.0      | 17.5     | 20.0
@@ -188,6 +187,23 @@ We can see from the graph that overall, Neural Networks accurately predict emoti
 
 ### Conclusion
 
+There exists many ML techniques applied to MER. We have seen three: SVR, SWM, Neural Networks. Dome other techniques worth mentionning are Gaussian Mixture Models, Decision Tree Learnong, Clustering, K-Nearest Neighbors, etc.  
+
+<figure markdown="1">
+Technique       | Accuracy
+----------------| --------------
+SVR             | 78.8%
+SVM             | 60.5%
+GMM             | 92.1%
+Neural Network  | 85.6%
+KNN[^7]         | 38.9%
+<figcaption markdown="1">
+  Figure 2.10: Comparative Table of Various ML Techniques Applied in MER
+</figcaption>
+</figure>
+
+From the table above, we can see that the researches and experiments on MER are promising because generally emotions are recognised by the computer. However all of these techniques have yet to be perfected and therefore need a lot of work.  
+
 *[ML]: Machine Learning
 *[MER]: Music Emotion Recognition
 *[SVR]: Support Vector Regression
@@ -211,3 +227,5 @@ We can see from the graph that overall, Neural Networks accurately predict emoti
 
 [^6]: Cyril Laurier and Perfecto Herrera (-) Audio Music Mood Classification
 Using Support Vecotor Machine [Online] Available from: [http://www.mtg.upf.edu/files/publications/b6c06&hellip;](http://www.mtg.upf.edu/files/publications/b6c067-ISMIR-MIREX-2007-Laurier-Herrera.pdf)
+
+[^7]: Ricardo Malheiro, Renato Panda, Paulo Gomes and Rui Pedro Paiva (2013) Music Emotion Recognition from Lyrics: A Comparative Study [Online] Available from: [http://www.academia.edu/8516120/Music_Emotion_Recogn&hellip;](http://www.academia.edu/8516120/Music_Emotion_Recognition_from_Lyrics_A_Comparative_Study._6th_International_Workshop_on_Machine_Learning_and_Music_MML13_._Praga)
