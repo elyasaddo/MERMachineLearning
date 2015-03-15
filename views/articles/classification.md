@@ -84,9 +84,6 @@ For the machine to create a model, it must first learn the values of the trainin
 
 In a study carried out by Yang et al., each piece in the training set were split into segments. When labeling the segments, if the classifications were not a<!--?-- > majority, the segment was withdrawn from the training data. This particular study found an accuracy of 70.88%[^10]
 
- <!-- - Naive Bayes -->
- <!-- - bagging -->
- <!-- - random forests -->
 
 ## Conclusion
 As you can see from the case studied above, Machine Learning is clearly far more effective in determining if a piece of music expresses a certain emotion than just flipping a coin. The problem of classification is greatly decreased by using ML techniques on large data sets. Humans would di a better job classifying a short list of songs; however, there is a greater efficiency introduced when a mathematical model is applied to the data. [Fig. 3.5](#Fig35) shows the advantages and disadvantages of using each of the four previously mentioned forms of classification in the context of MER.
@@ -94,12 +91,12 @@ As you can see from the case studied above, Machine Learning is clearly far more
 <figure markdown="1">
 ### Classification Form Comparison ### {#Fig35}
 
-Form         | Advantages  | Disadvantages
------------- | ----------- | --------------
-Single-label | &#945;      | &#945;
-Multi-class  | &#945;      | &#945;
-Multi-label  | &#945;      | &#945;
-Fuzzy-label  | &#945;      | &#945;
+Form         | Advantages                                                                   | Disadvantages
+------------ | ---------------------------------------------------------------------------- | --------------
+Single-label | It is clear to see what the primary emotion of the piece is                  | All other emotions the music evoke are lost in the result
+Multi-class  | No emotional information is lost in the label given                          | The possible set of labels grows exponentially with the number of classes. Also the labels are often sparse
+Multi-label  | The membership to each class is easily read and understood                   | A lot of computational power is required for this as the membership to each class must be calculated
+Fuzzy-label  | The likelihood of membership to classes can make sorting by relevance easier | The result may be less clear to read when working out if each piece belongs to a certain class
 
 <figcaption markdown="1">
 Figure 3.5: Comparison table for the different forms of classification in the context of MER.
