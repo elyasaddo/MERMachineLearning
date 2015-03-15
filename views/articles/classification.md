@@ -84,9 +84,6 @@ For the machine to create a model, it must first learn the values of the trainin
 
 In a study carried out by Yang et al., each piece in the training set were split into segments. When labeling the segments, if the classifications were not a<!--?-- > majority, the segment was withdrawn from the training data. This particular study found an accuracy of 70.88%[^10]
 
- <!-- - Naive Bayes -->
- <!-- - bagging -->
- <!-- - random forests -->
 
 ## Conclusion
 As you can see from the case studied above, Machine Learning is clearly far more effective in determining if a piece of music expresses a certain emotion than just flipping a coin. The problem of classification is greatly decreased by using ML techniques on large data sets. Humans would di a better job classifying a short list of songs; however, there is a greater efficiency introduced when a mathematical model is applied to the data. [Fig. 3.5](#Fig35) shows the advantages and disadvantages of using each of the four previously mentioned forms of classification in the context of MER.
