@@ -17,7 +17,7 @@ The SVR based music emotion recognition consists of three steps:
 3. Find regression functions that will enable the mapping of the music to a category, i.e. placing it on the plane. When a piece is playing, the computer will retrieve the musical features, then use the regression functions that take these features as inputs, to output the emotion as coordinates (in the form of a vector) of a plane.
 
 
-SVR was used in an experiment in 2009 supervised by Byeong-jun Han, Seungmin Rho, Roger B. and Dannenberg Eenjun Hwang[^2]. The plane they used was Thayer’s two-dimensional emotional pane which evaluate the valence of an emotion on the x–axis and its arousal on the y–axis. They chose to extract seven music features such as scale, intensity, rhythm and harmonics and selected 165 various music pieces for their experiment.  
+SVR was used in an experiment in 2009 supervised by Byeong-jun Han, Seungmin Rho, Roger B. and Dannenberg Eenjun Hwang[^2]. The plane they used was Thayer’s two-dimensional emotional pane which evaluates the valence of an emotion on the x–axis and its arousal on the y–axis. Representing emotions with coordinates is called *[Regression](regression)*, which we will look at later on. They chose to extract seven music features such as scale, intensity, rhythm and harmonics and selected 165 various music pieces for their experiment.  
 
 <figure markdown="1">
 ![Thayer's two-dimensional emotion plane](/assets/images/VADiagram.png)
@@ -62,7 +62,7 @@ Misclassifications still occurred as we can see, partly due to the fact that som
 
 ### Support Vector Machine ### {#SVM}
 
-The job of a SVM is to creates a separation boundary (not necessarily linear) in a feature space such that subsequent observations can be automatically classified into separate groups. For MER, these groups correspond to emotions. A good example of such a system is classifying emails into spam or non-spam. The seperation boundary is produced by an optimal separating hyperplane. Consider a p-dimensional space. An separating hyperplane is essentially an affine p−1-dimensional space that lives within the larger p-dimensional space.
+The job of a SVM is to creates a separation boundary (not necessarily linear) in a feature space such that subsequent observations can be automatically classified into separate groups. For MER, these groups correspond to emotions. A good example of such a system is classifying emails into spam or non-spam. The seperation boundary is produced by an optimal separating hyperplane. Consider a p-dimensional space. A separating hyperplane is essentially an affine p−1-dimensional space that lives within the larger p-dimensional space[^5]. 
 
 <figure markdown="1">
 ![One- and two-dimensional hyperplanes](/assets/images/seperating_hyperplane.png)
@@ -71,7 +71,7 @@ The job of a SVM is to creates a separation boundary (not necessarily linear) in
 </figcaption>
 </figure>
 
-An *optimal* separating plane is the separating hyperplane that is farthest from any training observations also called Maximal Margin Hyperplane (MMH). To find an MMH, we first compute the perpendicular distance from each training observation xi for a given separating hyperplane. The smallest perpendicular distance to a training observation from the hyperplane is known as the margin. The MMH is the separating hyperplane where the margin is the largest. We can see on the figure below that the MMH is the mid-line of the widest "block" (i.e. margin) that we can insert between the two classes such that they are perfectly separated.
+An *optimal* seperating plane is the separating hyperplane that is farthest from any training observations also called Maximal Margin Myperplane (MMH). To find an MMH, we first compute the perpendicular distance from each training observation x<sub>i</sub> for a given separating hyperplane. The smallest perpendicular distance to a training observation from the hyperplane is known as the margin. The MMH is the separating hyperplane where the margin is the largest. We can see on the figure below that the MMH is the mid-line of the widest "block" (i.e. margin) that we can insert between the two classes such that they are perfectly separated. 
 
 <figure markdown="1">
 ![ Maximal margin hyperplane with support vectors (A, B and C)](/assets/images/MMH.png)
@@ -107,7 +107,7 @@ SVM results from enlargening the feature space through the use of special functi
 </figcaption>
 </figure>
 
-An experiment to study SVM was lead by Cyril Laurier and Perfecto Herrera[^6]. They chose 133 music features such as energy band ratio, flatnessDB, beats per minute, etc. Five clusters, shown below, were selected. The hyperplanes were therefore 4-dimensional as a 5-dimensional plane was used (five clusters &rarr; 5-dimensional plane).
+An experiment to study SVM was lead by Cyril Laurier and Perfecto Herrera[^6]. They chose 133 music features such as energy band ratio, flatnessDB, beats per minute, etc. Five clusters, shown below, were selected (clusters/labels are another way to represent emotions: it's called *[Classification](classification)*). The hyperplanes were therefore 4-dimensional as a 5-dimensional plane was used (five clusters &rarr; 5-dimensional plane).
 
 <figure markdown="1">
 Cluster 1  | Cluster 2  | Cluster 3   | Cluster 4 | Cluster 5
@@ -143,6 +143,7 @@ Cluster 2        | 10.8     | **50.0** | 11.7     | 27.5     | 0.0
 Cluster 3        | 1.7      | 11.7     | **82.5** | 4.1      | 0.0
 Cluster 4        | 10.0     | 31.7     | 4.2      | **53.3** | 0.8
 Cluster 5        | 18.3     | 1.7      | 2.5      | 6.7      | **70.8**
+
 <figcaption markdown="1">
   Figure 2.10: Confusion Matrix, horizontally the distribution of the prediction for a given Cluster[^6]
 </figcaption>
@@ -186,6 +187,23 @@ We can see from the graph that overall, Neural Networks accurately predict emoti
 
 ### Conclusion
 
+There exists many ML techniques applied to MER. We have seen three: SVR, SWM, Neural Networks. Dome other techniques worth mentionning are Gaussian Mixture Models, Decision Tree Learnong, Clustering, K-Nearest Neighbors, etc.  
+
+<figure markdown="1">
+Technique       | Accuracy
+----------------| --------------
+SVR             | 78.8%
+SVM             | 60.5%
+GMM             | 92.1%
+Neural Network  | 85.6%
+KNN[^7]         | 38.9%
+<figcaption markdown="1">
+  Figure 2.10: Comparative Table of Various ML Techniques Applied in MER
+</figcaption>
+</figure>
+
+From the table above, we can see that the researches and experiments on MER are promising because generally emotions are recognised by the computer. However all of these techniques have yet to be perfected and therefore need a lot of work.  
+
 *[ML]: Machine Learning
 *[MER]: Music Emotion Recognition
 *[SVR]: Support Vector Regression
@@ -209,3 +227,5 @@ We can see from the graph that overall, Neural Networks accurately predict emoti
 
 [^6]: Cyril Laurier and Perfecto Herrera (-) Audio Music Mood Classification
 Using Support Vecotor Machine [Online] Available from: [http://www.mtg.upf.edu/files/publications/b6c06&hellip;](http://www.mtg.upf.edu/files/publications/b6c067-ISMIR-MIREX-2007-Laurier-Herrera.pdf)
+
+[^7]: Ricardo Malheiro, Renato Panda, Paulo Gomes and Rui Pedro Paiva (2013) Music Emotion Recognition from Lyrics: A Comparative Study [Online] Available from: [http://www.academia.edu/8516120/Music_Emotion_Recogn&hellip;](http://www.academia.edu/8516120/Music_Emotion_Recognition_from_Lyrics_A_Comparative_Study._6th_International_Workshop_on_Machine_Learning_and_Music_MML13_._Praga)
