@@ -36,18 +36,26 @@ There are quite a few systems in place that uses regression to analyse emotion i
 Support vector regression could be improved if more sophisticated machine learning elements were integrated into SVR systems. If the results of music emotion evaluations were stored, the system could use this bank when determining the nature of a new data piece. This method of machine learning is usually referred to as Active Learning. Simon Tong (2001) investigated the benefits of active learning. He noted that when analysing large sets of data, it can be quite time consuming for a machine to look through all features.[^7] Active learning features can allow machines to query results from previous data to evaluate future data. This vastly improves a MER machine as it is able to produce results with greater speed and learn how to analyse data more effectively at the same time.
 
 ## Linear Regression <!-- flag -->
-Linear regression (LR) is another technique that utilises regression. Yu-An Chen et al. (2014) used a linear regression based learner for their MER machine.[^3] As noted before, different people can give varying emotions for the same music. Because of this, LR usually models the emotions a music sample expresses through Gaussian distribution. Techniques involving Gaussian distributions are other ways of mapping musical signals to their respective points on an Arousal-Valence plane. Yang et al. (2012) produced a technique <!--check --> called Acoustic Emotion Gaussians (AEG) which can be used to train a LR machine.[^9] This approach creates a set of acoustic features that, in MER, would map on to a set of VA values with the same number of elements using AEG. The VA values from the second set are used to plot points on the Arousal-Valence plane which is then used to determine an overall emotion.
+Linear regression (LR) is another technique that utilises regression. Yu-An Chen et al. (2014) used a linear regression based learner for their MER machine.[^3] As noted before, different people can give varying emotions for the same music. Because of this, LR usually models the emotions a music sample expresses through Gaussian distribution. Techniques involving Gaussian distributions are other ways of mapping musical signals to their respective points on an Arousal-Valence plane. Yang et al. (2012) produced a technique <!--recheck --> called Acoustic Emotion Gaussians (AEG) which can be used to train a LR machine.[^9] This approach creates a set of acoustic features that, in MER, would map on to a set of VA values with the same number of elements using AEG. The VA values from the second set are used to plot points on the Arousal-Valence plane which is then used to determine an overall emotion.
 
 ## Regression Techniques Comparison
-I have looked into 2 techniques that use regression to implement MER machines.  They are similar in the fact they both use a continuous model and Thayer’s Arousal-Valence plane. The table below will list a few advantages tied to these techniques.
+I have looked into 2 techniques that use regression to implement MER machines.  They are similar in the fact they both use a continuous model and Thayer’s Arousal-Valence plane. The table below will list a few advantages and disadvantages tied to these techniques.
 
-Learner technique           | Emotion Space | Advantages | Disadvantages
---------------------------- | ------------- | --------------------------- | --
-Linear Regression           | Continuous    | Works well with speech recognition when little data input is used.[^3] This will aid the machine when analysing vocal features. | ab
-Support Vector Regression   | Continuous    | Active learning could be used alongside an SVR learner to improve its evaluation process. SVR use of a polar plane to represent the Arousal-Valence plane has greatly increased the accuracy of MER machines.[^10] | The use of discrete emotion segments on the Arousal-Valence plane introduces a level of ambiguity which can prove problematic.
+                                  Linear Regression
+
+ Emotion Space | Advantages | Disadvantages
+ ------------- | --------------------------- | --
+ Continuous    | Works well with speech recognition when little data input is used.[^3] This will aid the machine when analysing vocal features. | Support Vector Regression has a higher prediction accuracy.[^2] AEG is still in the process of implementing more features (such as lyric analysis) to aid Linear Regression systems.[^9]
+
+                                  Support Vector Regression
+
+ Emotion Space | Advantages | Disadvantages
+ ------------- | --------------------------- | --
+ Continuous    | Active learning could be used alongside an SVR learner to improve its evaluation process. SVR use of a polar plane to represent the Arousal-Valence plane has greatly increased the accuracy of MER machines.[^10] | The use of discrete emotion segments on the Arousal-Valence plane introduces a level of ambiguity which can prove problematic.
 
 ## Conclusion
-Regression has proven itself to be a very useful methodology when it comes to giving machines the necessary tools to reason about emotions and music. Regression helps advance the applications of MER machines by implementing features such as time interval analysis. The techniques show the possibility for advancements in the incorporation of machine learning algorithms such those which use active learning. Though the practice of using ML algorithms in MER is in its early stages, it is clear that ML could go on to improve our understanding of the relationship between music and emotions.
+Regression has proven itself to be a very useful methodology when it comes to giving machines the necessary tools to reason about emotions and music. It addresses problems on clarity of results (miscommunication between users) through a continuous plane. Regression helps improve the applications of MER machines by implementing features such as time interval analysis. SVR and LR are regression techniques which apply quite different processes. They both show promising results brought about by the implementation of regression .[^5][^3] These technique show the possibility for advancements in the incorporation of machine learning algorithms such as those which use active learning. Though the practice of using ML algorithms in MER is in its early stages, it is clear that ML could go on to improve our understanding of the relationship between music and emotions.
+
 
 
 *[SVR]: Support Vector Regression.
