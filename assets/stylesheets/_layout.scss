@@ -65,6 +65,19 @@ body {
   ul {
     float:none;
     list-style: disc outside;
+    li {
+      padding-bottom: 10px;
+      line-height: 1.4em;
+      & > ul {
+        padding-left: 24px;
+        padding-top:6px;
+        & > li {
+          list-style: circle;
+          padding-bottom:4px;
+        }
+      }
+    }
+
   }
 }
 
@@ -111,6 +124,14 @@ figure {
   }
 }
 
+#top {
+  @extend h3;
+  @extend .f-r;
+  position: fixed;
+  bottom: 24px;
+  right: 12%;
+}
+
 //Lists
 nav {
   display: inline-block;
@@ -121,11 +142,6 @@ nav {
   }
 }
 
-
-li {
-  padding-bottom: 10px;
-  line-height: 1.4em;
-}
 
 header ul {
   @extend .a-c;
@@ -335,11 +351,11 @@ table thead {
     }
     .techniques & {
       background-color: $deepGreen;
-      color: $lightGreen;
+      color: $white;
     }
     .summary & {
       background-color: $deepYellow;
-      color: $lightYellow;
+      color: $white;
     }
     text-align: left;
     vertical-align: bottom;

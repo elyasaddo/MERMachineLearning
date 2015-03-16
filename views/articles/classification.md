@@ -1,12 +1,10 @@
 # Classification
-
-  "Without music, life would be a mistake" Friedrich Nietzsche, German philosopher.[^2]
-
+<br>
 ## Introduction
 ### What is a classification problem?
 
 A classification problem is one in which the data is to be given some discrete label(s) describing their nature in relation to a given situation. In the context of Music Emotion Recognition (MER) this involves giving a piece of music a label or a set of labels which describe which emotion(s) the music is trying to evoke, e.g. confident, cheerful, aggressive. See [Fig. 3.1](#Fig31) for the MIREX table of 5 clusters of emotional labels.[^7] It is important to note that what the Machine Learning Algorithms want to retrieve is the emotion which the piece of music is trying to evoke, rather than the perceived emotion, as listeners may respond to different pieces of music in different way, e.g. a person may be pleased to hear melancholic music if this is the tone of music they enjoy.[^1]
-<-- note about ground truth and accuracy -->
+<!-- note about ground truth and accuracy -->
 Ground truth is the term given to a label which a certain piece of data actually has. the aim of classification techniques is to suggest a high probability (or in a perfect world 'certainty') of the data having this ground truth label. Note that many ground truths can exist for a given data piece.
 
 <figure markdown="1">
@@ -86,9 +84,13 @@ In a study carried out by Yang et al., each piece in the training set were split
 
 
 ## Conclusion
+<<<<<<< Updated upstream
 As you can see from the case studied above, Machine Learning is clearly far more effective in determining if a piece of music expresses a certain emotion than just flipping a coin. The problem of classification is greatly decreased by using ML techniques on large data sets. Humans would do a better job classifying a short list of songs; however, there is a greater efficiency introduced when a mathematical model is applied to the data.
 
 As shown by the techniques above, there are different techniques to deal with the different forms of classification problems. [Fig. 3.5](#Fig35) shows the advantages and disadvantages of using each of the four previously mentioned forms of classification in the context of MER.
+=======
+As you can see from the case studied above, Machine Learning is clearly far more effective in determining if a piece of music expresses a certain emotion than just flipping a coin. The problem of classification is greatly decreased by using ML techniques on large data sets. Humans would do a better job classifying a short list of songs; however, there is a greater efficiency introduced when a mathematical model is applied to the data. [Fig. 3.5](#Fig35) shows the advantages and disadvantages of using each of the four previously mentioned forms of classification in the context of MER.
+>>>>>>> Stashed changes
 
 <figure markdown="1">
 ### Classification Form Comparison ### {#Fig35}

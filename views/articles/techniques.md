@@ -2,17 +2,17 @@
 
 ### Introduction
 
-Machine learning is a subfield of Computer Science originating from research into artificial intelligence. It explores the construction and study of algorithms that can learn from data. Such algorithms operate by building a model from example inputs and using that to make predictions or decisions, rather than following strictly static program instructions[^1].
+Machine learning (ML) is a subfield of Computer Science originating from research into artificial intelligence. It explores the construction and study of algorithms that can learn from data. Such algorithms operate by building a model from example inputs and using that to make predictions or decisions, rather than following strictly static program instructions[^1].
 
-It plays an important role in MER as it is with Machine Learning (ML) that the computer predicts the emotions we feel depending on the music. There exist many techniques, which each have their own pros and cons. However as ML is a relatively new science they are not all very effective, and even the most effective techniques are not extremely reliable.
+It plays an important role in MER as it is with ML that the computer predicts the emotions we feel depending on the music. There exist many techniques, which each have their own pros and cons. However as ML is a relatively new science they are not all very effective, and even the most effective techniques are not extremely reliable.
 
-We have chosen to study three techniques of ML applied to MER:  Support Vector Regression (SVR), Support Vector Machine (SVM) and Neural Network. We chose these techniques to cover all MER by classification and by regression.
+We have chosen to study three techniques of ML applied to MER:  Support Vector Regression (SVR), Support Vector Machine (SVM) and Neural Networks. We chose these techniques to cover all MER by classification and by regression.
 
 ### Support Vector Regression ### {#SVR}
 
 The SVR based music emotion recognition consists of three steps:
 
-1. Extraction of music features such as the overall energy of the music, the rhythm and harmonics.
+1. Extraction of musical features such as the overall energy of the music, the rhythm and harmonics.
 2. These features and their combination must then be mapped into emotion categories on a plane; this technique quantifies emotions.
 3. Find regression functions that will enable the mapping of the music to a category, i.e. placing it on the plane. When a piece is playing, the computer will retrieve the musical features, then use the regression functions that take these features as inputs, to output the emotion as coordinates (in the form of a vector) of a plane.
 
@@ -62,7 +62,7 @@ Misclassifications still occurred as we can see, partly due to the fact that som
 
 ### Support Vector Machine ### {#SVM}
 
-The job of a SVM is to creates a separation boundary (not necessarily linear) in a feature space such that subsequent observations can be automatically classified into separate groups. For MER, these groups correspond to emotions. A good example of such a system is classifying emails into spam or non-spam. The seperation boundary is produced by an optimal separating hyperplane. Consider a p-dimensional space. A separating hyperplane is essentially an affine p−1-dimensional space that lives within the larger p-dimensional space[^5]. 
+The job of a SVM is to creates a separation boundary (not necessarily linear) in a feature space such that subsequent observations can be automatically classified into separate groups. For MER, these groups correspond to emotions. A good example of such a system is classifying emails into spam or non-spam. The seperation boundary is produced by an optimal separating hyperplane. Consider a p-dimensional space. A separating hyperplane is essentially an affine p&#8209;1&#8209;dimensional space that lives within the larger p-dimensional space[^5].
 
 <figure markdown="1">
 ![One- and two-dimensional hyperplanes](/assets/images/seperating_hyperplane.png)
@@ -71,7 +71,7 @@ The job of a SVM is to creates a separation boundary (not necessarily linear) in
 </figcaption>
 </figure>
 
-An *optimal* seperating plane is the separating hyperplane that is farthest from any training observations also called Maximal Margin Myperplane (MMH). To find an MMH, we first compute the perpendicular distance from each training observation x<sub>i</sub> for a given separating hyperplane. The smallest perpendicular distance to a training observation from the hyperplane is known as the margin. The MMH is the separating hyperplane where the margin is the largest. We can see on the figure below that the MMH is the mid-line of the widest "block" (i.e. margin) that we can insert between the two classes such that they are perfectly separated. 
+An *optimal* separating plane is the separating hyperplane that is farthest from any training observations also called Maximal Margin Hyperplane (MMH). To find an MMH, we first compute the perpendicular distance from each training observation x<sub>i</sub> for a given separating hyperplane. The smallest perpendicular distance to a training observation from the hyperplane is known as the margin. The MMH is the separating hyperplane where the margin is the largest. We can see on the figure below that the MMH is the mid-line of the widest "block" (i.e. margin) that we can insert between the two classes such that they are perfectly separated.
 
 <figure markdown="1">
 ![ Maximal margin hyperplane with support vectors (A, B and C)](/assets/images/MMH.png)
@@ -151,7 +151,7 @@ Cluster 5        | 18.3     | 1.7      | 2.5      | 6.7      | **70.8**
 
 ### Neural Network ### {#NN}
 
-Neural Networks imitates the activity of our biological nervous system. It associates attributes and characteristics of data to emotions amongst other things. For example, certain colours are associated with certain emotions (brightly coloured paintings are usually associated with joy and happiness whereas dark-coloured paintings are associated with sadness, fear, etc.). The principle of this technique is illustrated with the image below. A certain number of inputs are used. These inputs are then analysed by the computer with “tools” that class the information given: the hidden layers. Each input now has a “weight” associated with the hidden layer. The hidden layers with the most weight have a greater activity level. The activity level of each layer then determines the output[^3]. Although neural networks have been applied extensively in domains such as object recognition, speech and text recognition, they have been relatively underutilized in music cognition and music informatics.
+Neural Networks imitates the activity of our biological nervous system. It associates attributes and characteristics of data to emotions amongst other things. For example, certain colours are associated with certain emotions (brightly coloured paintings are usually associated with joy and happiness whereas dark-coloured paintings are associated with sadness, fear, etc.). The principle of this technique is illustrated with the image below. A certain number of inputs are used. These inputs are then analysed by the computer with “tools” that class the information given: the hidden layers. Each input now has a “weight” associated with the hidden layer. The hidden layers with the most weight have a greater activity level. The activity level of each layer then determines the output[^3]. Although neural networks have been applied extensively in domains such as object recognition, speech and text recognition, they have been relatively under-utilised in music cognition and music informatics.
 
 <figure markdown="1">
 ![Neural Network schema](/assets/images/NeuralNetworkSchema.jpg)
@@ -160,7 +160,7 @@ Neural Networks imitates the activity of our biological nervous system. It assoc
 </figcaption>
 </figure>
 
-In MER application, the hidden layers correspond to music features. You also need a set of data beforehand for the computer to work with (i.e. data that depending on the activity of the features outputs the corresponding emotion). It is also necessary to find a concrete way to represent emotions. Usually researchers will use coordinates with x-axis representing some general aspect of emotion and y-axis another aspect of emotion such as valence and arousal.
+In MER application, the hidden layers correspond to musical features. You also need a set of data beforehand for the computer to work with (i.e. data that depending on the activity of the features outputs the corresponding emotion). It is also necessary to find a concrete way to represent emotions. Usually researchers will use coordinates with x-axis representing some general aspect of emotion and y-axis another aspect of emotion such as valence and arousal.
 Just like your nervous system associates musical attributes to certain emotions (high energy music, fast rhythm&hellip; &rarr; agitated; slow rhythm, no energy, long sound opposed to short, brief sounds &rarr; sad&hellip;), the neural network does the same thing.
 
 Naresh N. Vempala and Frank A. Russo led an experimentof MER using Neural Network. They conducted a network that predicted the emotion for the entire music. Twelve music experts were used to give the emotions they felt whiles listening to pieces. The data that was retrieved was then used as the "actual" emotion of the song even though emotions are subjective. Then thirteen music features were extracted used as inputs and hidden layers  and the ouputs were again AV coordinates (because it is an simple way to represent emotions) as shown on the image below. It is also important to note that he wight between input units and hidden layers and between hidden layers and outputs were set to random numbers close to 0.
@@ -187,9 +187,10 @@ We can see from the graph that overall, Neural Networks accurately predict emoti
 
 ### Conclusion
 
-There exists many ML techniques applied to MER. We have seen three: SVR, SWM, Neural Networks. Dome other techniques worth mentionning are Gaussian Mixture Models, Decision Tree Learnong, Clustering, K-Nearest Neighbors, etc.  
+There exists many ML techniques applied to MER. We have seen three: SVR, SVM, Neural Networks. Some other techniques worth mentioning are Gaussian Mixture Models, Decision Tree Learning, Clustering and K-Nearest Neighbours.  
 
 <figure markdown="1">
+#### Accuracy #### {#Fig210}
 Technique       | Accuracy
 ----------------| --------------
 SVR             | 78.8%
