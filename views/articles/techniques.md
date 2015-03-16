@@ -62,7 +62,7 @@ Misclassifications still occurred as we can see, partly due to the fact that som
 
 ### Support Vector Machine ### {#SVM}
 
-The job of a SVM is to creates a separation boundary (not necessarily linear) in a feature space such that subsequent observations can be automatically classified into separate groups. For MER, these groups correspond to emotions. A good example of such a system is classifying emails into spam or non-spam. The seperation boundary is produced by an optimal separating hyperplane. Consider a p-dimensional space. A separating hyperplane is essentially an affine p&#8209;1&#8209;dimensional space that lives within the larger p-dimensional space[^5].
+The job of a SVM is to create a separation boundary (not necessarily linear) in a feature space such that subsequent observations can be automatically classified into separate groups. For MER, these groups correspond to emotions. A good example of such a system is classifying emails into spam or non-spam. The seperation boundary is produced by an optimal separating hyperplane. Consider a p-dimensional space. A separating hyperplane is essentially an affine p&#8209;1&#8209;dimensional space that lives within the larger p-dimensional space[^5].
 
 <figure markdown="1">
 ![One- and two-dimensional hyperplanes](/assets/images/seperating_hyperplane.png)
