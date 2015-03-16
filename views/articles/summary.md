@@ -9,12 +9,12 @@ We shall begin by looking at accuracy of the methods. Recall from the [technique
 <figure markdown="1">
 #### Accuracy #### {#Fig51}
 Technique       | Accuracy
-----------------| --------------
+--------------- | --------------
 SVR             | 78.8%
 SVM             | 60.5%
 **GMM**         | **92.1%**
 Neural Network  | 85.6%
-KNN[^7]         | 38.9%
+KNN             | 38.9%
 <figcaption markdown="1">
   Figure 5.1: Comparative Table of Various ML Techniques Applied in MER
 </figcaption>
@@ -24,7 +24,7 @@ From the table we can see that NN's accuracy is not too dissimilar from GMM's, ~
 
 The issue with some of these methods, however, is that the output is a vector; most commonly a Valence and Arousal value, from the Thayer's 2D emotional plane. This is difficult for humans to understand, for this reason it can be argued that [classification](classification) is preferable to [regression](regression) as when used in applications the user can directly and instinctively know what the output means, viz. out of "Sad" and "(-0.6, -0.25)", "Sad" is instantly more recognisable.
 
-Within classification: 
+Within classification:
 <!--
 - Potential Machine Learning techniques that haven't been used a great deal, but may be useful in solving certain problems
   - GMM

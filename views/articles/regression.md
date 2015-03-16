@@ -41,20 +41,22 @@ Linear regression (LR) is another technique that utilises regression. Yu-An Chen
 ## Regression Techniques Comparison
 I have looked into 2 techniques that use regression to implement MER machines.  They are similar in the fact they both use a continuous model and Thayer’s Arousal-Valence plane. The table below will list a few advantages and disadvantages tied to these techniques.
 
-                                  Linear Regression
+#### Linear Regression #### {.center}
 
- Emotion Space | Advantages | Disadvantages
- ------------- | --------------------------- | --
- Continuous    | Works well with speech recognition when little data input is used.[^3] This will aid the machine when analysing vocal features. | Support Vector Regression has a higher prediction accuracy.[^2] AEG is still in the process of implementing more features (such as lyric analysis) to aid Linear Regression systems.[^9]
+Advantages | Disadvantages
+---------- | -------------
+Works well with speech recognition when little data input is used.[^3] This will aid the machine when analysing vocal features. | Support Vector Regression has a higher prediction accuracy.[^2]
+ | AEG is still in the process of implementing more features (such as lyric analysis) to aid Linear Regression systems.[^9]
 
-                                  Support Vector Regression
+#### Support Vector Regression #### {.center}
 
- Emotion Space | Advantages | Disadvantages
- ------------- | --------------------------- | --
- Continuous    | Active learning could be used alongside an SVR learner to improve its evaluation process. SVR use of a polar plane to represent the Arousal-Valence plane has greatly increased the accuracy of MER machines.[^10] | The use of discrete emotion segments on the Arousal-Valence plane introduces a level of ambiguity which can prove problematic.
+Advantages | Disadvantages
+---------- | -------------
+Active learning could be used alongside an SVR learner to improve its evaluation process. | The use of discrete emotion segments on the Arousal-Valence plane introduces a level of ambiguity which can prove problematic.
+SVR use of a polar plane to represent the Arousal-Valence plane has greatly increased the accuracy of MER machines.[^10] |
 
 ## Conclusion
-Regression has proven itself to be a very useful methodology when it comes to giving machines the necessary tools to reason about emotions and music. It addresses problems on clarity of results (miscommunication between users) through a continuous plane. Regression helps improve the applications of MER machines by implementing features such as time interval analysis. SVR and LR are regression techniques which apply quite different processes. They both show promising results brought about by the implementation of regression .[^5][^3] These technique show the possibility for advancements in the incorporation of machine learning algorithms such as those which use active learning. Though the practice of using ML algorithms in MER is in its early stages, it is clear that ML could go on to improve our understanding of the relationship between music and emotions.
+Regression has proven itself to be a very useful methodology when it comes to giving machines the necessary tools to reason about emotions and music. It addresses problems on clarity of results (miscommunication between users) through a continuous plane. Regression helps improve the applications of MER machines by implementing features such as time interval analysis. SVR and LR are regression techniques which apply quite different processes. They both show promising results brought about by the implementation of regression.[^5] [^3] These technique show the possibility for advancements in the incorporation of machine learning algorithms such as those which use active learning. Though the practice of using ML algorithms in MER is in its early stages, it is clear that ML could go on to improve our understanding of the relationship between music and emotions.
 
 
 
