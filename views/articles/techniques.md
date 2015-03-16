@@ -1,5 +1,5 @@
 # Techniques
-
+<hr>
 ### Introduction
 
 Machine learning (ML) is a subfield of Computer Science originating from research into artificial intelligence. It explores the construction and study of algorithms that can learn from data. Such algorithms operate by building a model from example inputs and using that to make predictions or decisions, rather than following strictly static program instructions[^1].
