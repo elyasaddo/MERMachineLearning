@@ -86,7 +86,9 @@ In a study carried out by Yang et al., each piece in the training set were split
 
 
 ## Conclusion
-As you can see from the case studied above, Machine Learning is clearly far more effective in determining if a piece of music expresses a certain emotion than just flipping a coin. The problem of classification is greatly decreased by using ML techniques on large data sets. Humans would di a better job classifying a short list of songs; however, there is a greater efficiency introduced when a mathematical model is applied to the data. [Fig. 3.5](#Fig35) shows the advantages and disadvantages of using each of the four previously mentioned forms of classification in the context of MER.
+As you can see from the case studied above, Machine Learning is clearly far more effective in determining if a piece of music expresses a certain emotion than just flipping a coin. The problem of classification is greatly decreased by using ML techniques on large data sets. Humans would do a better job classifying a short list of songs; however, there is a greater efficiency introduced when a mathematical model is applied to the data.
+
+As shown by the techniques above, there are different techniques to deal with the different forms of classification problems. [Fig. 3.5](#Fig35) shows the advantages and disadvantages of using each of the four previously mentioned forms of classification in the context of MER.
 
 <figure markdown="1">
 ### Classification Form Comparison ### {#Fig35}
