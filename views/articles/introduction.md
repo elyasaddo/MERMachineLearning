@@ -26,11 +26,11 @@ Over the last decade the availability of music has increased dramatically.[^5] G
 Music Emotion Recognition (MER) has stemmed from a group of research called Music Information Retrieval (MIR) which has a rapidly expanding community spanning across a myriad of disciplines including: information science, musicology, audio engineering, computer science and business[^1] [^2]. MER has been identified as a &ldquo;powerful&rdquo; way of organising the sheer amount of ever increasing music information in a way that can be easily accessed[^2]. To be able to accurately categorise this musical information we need to have machines that are capable of processing the volume of information that gets created everyday; it would be simply too much work for humans to do. This is where applying the Machine Learning (ML) models to the MER processes comes in.
 
 <!-- Techniques and problems -->
-On this website we will cover two of the most common MER processes *[Classification](articles/classification)* &amp; *[Regression](articles/regression)*. We will also discuss three ML methods on the  *[Techniques](articles/techniques)* page: [Support Vector Regression (SVR)](articles/techniques#SVR), [Support Vector Machines (SVM)](articles/techniques#SVM) &amp; [Neural Networks](articles/techniques#NN).
+On this website we will cover two of the most common MER processes *[Classification](articles/classification)* &amp; *[Regression](articles/regression)*. We will also discuss three ML methods on the  *[Techniques](articles/techniques)* page: [Support Vector Regression (SVR)](articles/techniques#SVR), [Support Vector Machines (SVM)](articles/techniques#SVM) &amp; [Neural Networks](articles/techniques#NN) (NN).
 
 #### Support Vector Regression
 
-Support Vector Regression works by taking the musical properties, such as harmonics & rhythm etc. and maps them onto a Valence-Arousal Diagram (See [Fig. 1.2](#Fig12)). The emotion that has been chosen by the machine is then represented as 2D Vector in the form (a, v).
+Support Vector Regression works by taking the musical properties, such as harmonics & rhythm etc. and maps them onto a Valence-Arousal Diagram (See [Fig. 1.2](#Fig12)). The emotion that has been chosen by the machine is then represented as 2D Vector in the form (*a*, *v*).
 
 #### Valence-Arousal Diagram #### {#Fig12 .center}
 <figure markdown="1">
@@ -41,7 +41,7 @@ Support Vector Regression works by taking the musical properties, such as harmon
 </figure>
 
 #### Support Vector Machines
-Support Vector Machines take training data, called *observations*. This data to make better predictions about future data that is given to the machine without ground truths. SVM work by plotting the test vectors in a `n` dimensional set space, where the number of dimensions, `n`, comes from the number of musical features (in this case) taken into consideration; tempo, rhythm, volume, lyrics etc. A hyper-plane is then created to split the data into 2 classifications (`+1` or `-1`), the hyper-plane must create the maximum margin between itself and the closest vectors (*Support Vectors*) on the positive side and the negative side - [Figure 1.3](#Fig13) demonstrates this process. The machine then looks at the data to see if it matches the ground truth and alters a weighting coefficient until the partitioned data matches the ground truth.
+Support Vector Machines take training data, called *observations*. This data to make better predictions about future data that is given to the machine without ground truths. SVM work by plotting the test vectors in a `n` dimensional set space, where the number of dimensions, `n`, comes from the number of musical features (in this case) taken into consideration; tempo, rhythm, volume, lyrics etc. A hyperplane is then created to split the data into 2 classifications (`+1` or `-1`), the hyperplane must create the maximum margin between itself and the closest vectors (*Support Vectors*) on the positive side and the negative side - [Figure 1.3](#Fig13) demonstrates this process. The machine then looks at the data to see if it matches the ground truth and alters a weighting coefficient until the partitioned data matches the ground truth.
 
 #### Creating the Hyperplane #### {#Fig13 .center}
 <figure markdown="1">
