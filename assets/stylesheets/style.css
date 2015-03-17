@@ -3,7 +3,7 @@
 * http://cssreset.com
 */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, #top, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, h1, h2, dl dt, sub, sup, tt, var,
@@ -93,7 +93,7 @@ h2 {
   font-size: 2.25em;
   line-height: 1.5em; }
 
-h3 {
+h3, #top {
   font-size: 1.5em;
   line-height: 2em;
   font-weight: bold; }
@@ -197,7 +197,7 @@ header * {
 .f-l {
   float: left; }
 
-.f-r {
+.f-r, #top {
   float: right; }
 
 .c-l {
@@ -242,6 +242,15 @@ body {
   .post-html ul {
     float: none;
     list-style: disc outside; }
+    .post-html ul li {
+      padding-bottom: 10px;
+      line-height: 1.4em; }
+      .post-html ul li > ul {
+        padding-left: 24px;
+        padding-top: 6px; }
+        .post-html ul li > ul > li {
+          list-style: circle;
+          padding-bottom: 4px; }
 
 header {
   margin: 10px 0 26px;
@@ -271,16 +280,17 @@ figure {
     color: #949494;
     position: relative; }
 
+#top {
+  position: fixed;
+  bottom: 24px;
+  right: 12%; }
+
 nav {
   display: inline-block;
   height: 80px;
   float: left; }
   nav li {
     cursor: pointer; }
-
-li {
-  padding-bottom: 10px;
-  line-height: 1.4em; }
 
 header ul {
   float: left; }
@@ -444,10 +454,10 @@ table thead {
     color: #edf1f6; }
   .techniques table thead {
     background-color: #277512;
-    color: #a4c39c; }
+    color: #f3f3f3; }
   .summary table thead {
     background-color: #dbbd0b;
-    color: #ece2a2; }
+    color: #f3f3f3; }
 
 /*
 striping:

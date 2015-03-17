@@ -1,6 +1,5 @@
 <?php
-  //TODO: Create article class for all of this stuff
-  
+
   spl_autoload_register(function($class){
     require preg_replace('{\\\\|_(?!.*\\\\)}', DIRECTORY_SEPARATOR, ltrim($class, '\\')).'.php';
   });
@@ -15,3 +14,8 @@
     Flight::notFound();
   }
 ?>
+
+
+<a href="#" id="top">
+  &uarr;
+</a>
