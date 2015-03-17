@@ -4,20 +4,19 @@
 
 Machine learning (ML) is a subfield of Computer Science originating from research into artificial intelligence. It explores the construction and study of algorithms that can learn from data. Such algorithms operate by building a model from example inputs and using that to make predictions or decisions, rather than following strictly static program instructions[^1].
 
-It plays an important role in MER as it is with ML that the computer predicts the emotions we feel depending on the music. There exist many techniques, which each have their own pros and cons. However as ML is a relatively new science they are not all very effective, and even the most effective techniques are not extremely reliable.
+Machine Learning(ML) plays an important role in MER as it is with ML that the computer predicts the emotions we feel depending on the music. There exist many techniques, which each have their own pros and cons. However as ML is a relatively new science they are not all very effective, and even the most effective techniques are not extremely reliable.
 
-We have chosen to study three techniques of ML applied to MER:  Support Vector Regression (SVR), Support Vector Machine (SVM) and Neural Networks. We chose these techniques to cover all MER by classification and by regression.
+We have chosen to study three techniques of ML applied to MER:  Support Vector Regression (SVR), Support Vector Machine (SVM) and Neural Network. These techniques will span over MER by classification and by regression.
 
 ### Support Vector Regression ### {#SVR}
 
 The SVR based music emotion recognition consists of three steps:
 
-1. Extraction of musical features such as the overall energy of the music, the rhythm and harmonics.
-2. These features and their combination must then be mapped into emotion categories on a plane; this technique quantifies emotions.
-3. Find regression functions that will enable the mapping of the music to a category, i.e. placing it on the plane. When a piece is playing, the computer will retrieve the musical features, then use the regression functions that take these features as inputs, to output the emotion as coordinates (in the form of a vector) of a plane.
+1. Extraction of music features such as the overall energy of the music, the rhythm and harmonics.
+2. These features and their combination must then be mapped into emotion categories on a plane; this technique therefore quantifies emotions.
+3. Find regression functions that will enable the mapping of the music to a category, i.e. placing it on the plane. When a piece is playing, the computer will retrieve the musical features, then use the regression functions that take these features as inputs, to output the emotion as coordinates (in the form of a vector) of the plane.
 
-
-SVR was used in an experiment in 2009 supervised by Byeong-jun Han, Seungmin Rho, Roger B. and Dannenberg Eenjun Hwang[^2]. The plane they used was Thayer’s two-dimensional emotional pane which evaluates the valence of an emotion on the x–axis and its arousal on the y–axis. Representing emotions with coordinates is called *[Regression](regression)*, which we will look at later on. They chose to extract seven music features such as scale, intensity, rhythm and harmonics and selected 165 various music pieces for their experiment.  
+SVR was used in an experiment in 2009 supervised by Byeong-jun Han, Seungmin Rho, Roger B. and Dannenberg Eenjun Hwang[^2]. The plane they used was Thayer’s two-dimensional emotional plane which evaluates the valence (i.e the mood) of an emotion on the x–axis and its arousal (i.e the intensity) on the y–axis. Representing emotions with coordinates is called *[Regression](regression)*, which we will look at later on. They chose to extract seven music features such as scale, intensity, rhythm and harmonics and selected 165 various music pieces for their experiment.  
 
 <figure markdown="1">
 ![Thayer's two-dimensional emotion plane](/assets/images/VADiagram.png)
@@ -151,7 +150,7 @@ Cluster 5        | 18.3     | 1.7      | 2.5      | 6.7      | **70.8**
 
 ### Neural Network ### {#NN}
 
-Neural Networks imitates the activity of our biological nervous system. It associates attributes and characteristics of data to emotions amongst other things. For example, certain colours are associated with certain emotions (brightly coloured paintings are usually associated with joy and happiness whereas dark-coloured paintings are associated with sadness, fear, etc.). The principle of this technique is illustrated with the image below. A certain number of inputs are used. These inputs are then analysed by the computer with “tools” that class the information given: the hidden layers. Each input now has a “weight” associated with the hidden layer. The hidden layers with the most weight have a greater activity level. The activity level of each layer then determines the output[^3]. Although neural networks have been applied extensively in domains such as object recognition, speech and text recognition, they have been relatively under-utilised in music cognition and music informatics.
+Neural Networks imitate the activity of our biological nervous system. It associates attributes and characteristics of data to emotions amongst other things. For example, certain colours are associated with certain emotions (brightly coloured paintings are usually associated with joy and happiness whereas dark-coloured paintings are associated with sadness, fear, etc.). The principle of this technique is illustrated with the image below. A certain number of inputs are used. These inputs are then analysed by the computer with “tools” that class the information given: the hidden layers. Each input now has a “weight” associated with the hidden layer. The hidden layers with the most weight have a greater activity level. The activity level of each layer then determines the output[^3]. Although neural networks have been applied extensively in domains such as object recognition, speech and text recognition, they have been relatively underutilised in music cognition and music informatics.
 
 <figure markdown="1">
 ![Neural Network schema](/assets/images/NeuralNetworkSchema.jpg)
@@ -160,10 +159,10 @@ Neural Networks imitates the activity of our biological nervous system. It assoc
 </figcaption>
 </figure>
 
-In MER application, the hidden layers correspond to musical features. You also need a set of data beforehand for the computer to work with (i.e. data that depending on the activity of the features outputs the corresponding emotion). It is also necessary to find a concrete way to represent emotions. Usually researchers will use coordinates with x-axis representing some general aspect of emotion and y-axis another aspect of emotion such as valence and arousal.
-Just like your nervous system associates musical attributes to certain emotions (high energy music, fast rhythm&hellip; &rarr; agitated; slow rhythm, no energy, long sound opposed to short, brief sounds &rarr; sad&hellip;), the neural network does the same thing.
+In MER application, the hidden layers correspond to music features. You also need a training set of data for the computer to work with (i.e. data that depending on the activity of the features outputs the corresponding emotion). It is also necessary to find a concrete way to represent emotions. Usually researchers will use coordinates with x-axis representing some general aspect of emotion and y-axis another aspect of emotion such as valence and arousal.
+Just like your nervous system associates musical attributes to certain emotions (high energy music, fast rhythm&hellip; &rarr; agitated; slow rhythm, no energy, long sounds as opposed to short, brief sounds &rarr; sad&hellip;), the neural network does the same thing.
 
-Naresh N. Vempala and Frank A. Russo led an experimentof MER using Neural Network. They conducted a network that predicted the emotion for the entire music. Twelve music experts were used to give the emotions they felt whiles listening to pieces. The data that was retrieved was then used as the "actual" emotion of the song even though emotions are subjective. Then thirteen music features were extracted used as inputs and hidden layers  and the ouputs were again AV coordinates (because it is an simple way to represent emotions) as shown on the image below. It is also important to note that he wight between input units and hidden layers and between hidden layers and outputs were set to random numbers close to 0.
+Naresh N. Vempala and Frank A. Russo led an experiment of MER using Neural Networks. They conducted a network that predicted the emotion for the entire piece of music. Twelve music experts were used to give the emotions they felt whilst listening to pieces. The data that was retrieved was then used as the "actual" emotion of the song even though emotions are subjective. Then thirteen music features were extracted used as inputs and hidden layers  and the ouputs were again AV coordinates (because it is an simple way to represent emotions) as shown on the image below. It is also important to note that the weight between input units and hidden layers and between hidden layers and outputs were set to random numbers close to 0.
 
 <figure markdown="1">
 ![Neural Network schema](/assets/images/NN_explanation.png)
@@ -172,7 +171,7 @@ Naresh N. Vempala and Frank A. Russo led an experimentof MER using Neural Networ
 </figcaption>
 </figure>
 
-Inputs were passed through a sigmoidal function, multiplied with the connection weights *W<sub>hi</sub>*, and summed at each hidden unit. Hidden unit values were obtained by passing the summed value at each hidden unit through a sigmoidal function. These values were multiplied with the connection weights *W<sub>oh</sub>*, summed at each output unit, and passed through a sigmoidal function to arrive at the final output value for each output unit. Network outputs were compared to desired outputs and the error was computed. The machine then computed the weight changes that had to be done. At the end, connection weights were updated with the sum of all stored weight changes.
+Inputs were passed through a "sigmoidal" function, multiplied with the connection weights *W<sub>hi</sub>*, and summed at each hidden unit. Hidden unit values were obtained by passing the summed value at each hidden unit through a sigmoidal function. These values were multiplied with the connection weights *W<sub>oh</sub>*, summed at each output unit, and passed through a "sigmoidal" function to arrive at the final output value for each output unit. Network outputs were compared to desired outputs and the error was computed. The machine then computed the weight changes that had to be done. At the end, connection weights were updated with the sum of all stored weight changes.
 
 This is the final result of the experiment:
 
