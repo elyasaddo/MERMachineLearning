@@ -109,14 +109,15 @@ Some may argue that, since certain emotions are so similar to each other and yet
 
 
 ### References
-[^1]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1655&rep=rep1&type=pdf
-[^2]: http://ismir2008.ismir.net/papers/ISMIR2008_275.pdf
-[^3]: http://books.google.co.uk/books?hl=en&lr=&id=1bpEifVEi2MC&oi=fnd&pg=PA64&dq=Multi-label+classification:An+overview&ots=WyD83kziKF&sig=P6VHFTT9RycLgfpCDrK0vq5o4hM#v=onepage&q=single-label%20&f=false
-[^4]: Multi-label (I think for a type of PTM) https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf
-[^5]: (greater expansion of methods) https://books.google.co.uk/books?hl=en&lr=&id=Br33IRC3PkQC&oi=fnd&pg=PR3&dq=%5D+R.+Duda,+R.+Hart,+D.+Stork,+Pattern+Classification,+2nd+Edition,+Wiley,+New+York,+2001&ots=2wySQzhbDu&sig=y9BqLIkUho6EhJ00NM_yx-snTxs#v=onepage&q&f=false
-[^6]: (SVM use for text recognition) https://dl.acm.org/citation.cfm?id=944790.944793&coll=DL&dl=ACM&CFID=485866018&CFTOKEN=79343228
-[^7]: (MIREX emotion labels) http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf
-[^8]: find how to ref. Andrew Ng coursera {classification} Ng,A.. 2012. Classification (8 min). [Online]. [Accessed 25 February 2015]. Available from: https://class.coursera.org/ml-005/lecture/33
+[^1]: Yang, Y., Lin, Y., Su, Y. and Chen, H. (2008). A Regression Approach to Music Emotion Recognition. IEEE Transactions on Audio, Speech, and Language Processing, [online] 16(2), pp.448-457. Available at: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1655&rep=rep1&type=pdf [Accessed 12 Feb. 2015].
+[^2]: Trohidis, K., Tsoumakas, G., Kalliris, G. and Vlahavas, I. (2011). Multi-label classification of music by emotion. EURASIP Journal on Audio, Speech, and Music Processing, [online] 2011(1), p.4. Available at: http://ismir2008.ismir.net/papers/ISMIR2008_275.pdf [Accessed 13 Feb. 2015].
+[^3]: Tsoumakas, G. and Katakis, I. (2007). Multi-Label Classification. International Journal of Data Warehousing and Mining, [online] 3(3), pp.1-13. Available at: http://books.google.co.uk/books?hl=en&lr=&id=1bpEifVEi2MC&oi=fnd&pg=PA64&dq=Multi-label+classification:An+overview&ots=WyD83kziKF&sig=P6VHFTT9RycLgfpCDrK0vq5o4hM#v=onepage&q=single-label%20&f=false [Accessed 15 Feb. 2015].
+[^4]: Boutell, M. (2004). Learning multi-label scene classification*1. Pattern Recognition. [online] Available at: https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf [Accessed 3 Mar. 2015].
+[^5]: Duda, R., Hart, P. and Stork, D. (2001). Pattern classification. 2nd ed. New York: Wiley.
+[^6]: <!-- not used -->(SVM use for text recognition) https://dl.acm.org/citation.cfm?id=944790.944793&coll=DL&dl=ACM&CFID=485866018&CFTOKEN=79343228
+[^7]: X., Downie, J., Laurier, C., Bay, M. and Ehmann, A. (2008). The 2007 MIREX audio mood classification task: Lessons learned. Proceedings of the International Conference on Music Information Retrieval. [online] Available at : http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf [Accessed 5 Mar. 2015].
+
+[^8]: Ng,A.. 2012. Classification (8 min). [Online]. [Accessed 25 February 2015]. Available from: https://class.coursera.org/ml-005/lecture/33
 [^9]: (good read to overview all) https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false
 [^10]: (Fuzzy label case study) http://dl.acm.org/citation.cfm?id=1180665
 [^11]: http://www.cs.princeton.edu/~schapire/talks/picasso-minicourse.pdf
