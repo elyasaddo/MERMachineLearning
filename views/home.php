@@ -23,3 +23,6 @@
     Flight::notFound();
   }
 ?>
+<a href="#" id="top">
+  &uarr;
+</a>
