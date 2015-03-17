@@ -22,7 +22,7 @@ Another problem we have to consider is the fact that different people will perce
 ### Continuous vs. Discrete
 When it comes to working with the Arousal-Valence plane there are a few problems researchers have to address. For example, the top right quadrant will contain areas for emotions such as happy, excited and thrilled. Despite their similarities they are still distinctively different emotions. Because of this, when working with the selection of a music sample's emotion on the Arousal-Valence plane, some researchers consider a continuous spectrum of emotions (Yang et al., 2008). Though it is significantly easier for humans to select emotions discretely (e.g. stating an emotion is happy rather than a coordinate on a plane), having each point measured in continuous quantities greatly eases the ambiguity issue.
 
-### Time Intervals
+### Time Intervals ### {#TimeCont}
 The emotion of music can greatly vary over time. A piece of music could express a sad emotion, then change to a joyful one later on in the song. This problem can be remedied if we consider the emotions of different intervals of a piece of music, rather than one emotion for the whole duration.[^6] The VA values, corresponding to points on Thayer’s Arousal-Valence Plane, of set time intervals of a music sample (say 5 seconds) is recorded throughout the duration of the song. A song with a duration of 60 will have 12 associated VA values for each time interval (If a 5 second interval is used). A mean VA value is calculated from each interval’s VA values and used to calculate the overall emotion of the song.
 
 ### Support Vector Regression
@@ -34,7 +34,7 @@ There are quite a few systems in place that uses regression to analyse emotion i
 </figcaption>
 </figure>
 
-### Active Machine Learning
+### Active Machine Learning ### {#ActLearning}
 Support vector regression could be improved if more sophisticated machine learning elements were integrated into SVR systems. If the results of music emotion evaluations were stored, the system could use this bank when determining the nature of a new data piece. This method of machine learning is usually referred to as Active Learning. Simon Tong (2001) investigated the benefits of active learning. He noted that when analysing large sets of data, it can be quite time consuming for a machine to look through all features.[^7] Active learning features can allow machines to query results from previous data to evaluate future data. This vastly improves a MER machine as it is able to produce results with greater speed and learn how to analyse data more effectively at the same time.
 
 ### Linear Regression <!-- flag -->
