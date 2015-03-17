@@ -198,7 +198,7 @@ GMM             | 92.1%
 Neural Network  | 85.6%
 KNN[^7]         | 38.9%
 <figcaption markdown="1">
-  Figure 2.10: Comparative Table of Various ML Techniques Applied in MER
+  Figure 2.10: Comparative Table of Various ML Techniques Applied in MER (Calculated from average of [^2], [^6], [^4], [^7])
 </figcaption>
 </figure>
 
