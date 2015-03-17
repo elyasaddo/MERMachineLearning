@@ -75,7 +75,7 @@ This study managed to achieve average accuracies of 86.94% in one data set and 9
  <!-- - Decision trees -->
  <!-- - Boosting -->
  <!-- - neural networks -->
-#### Fuzzy k-Nearest Neighbour Classifiers (FKNN)
+#### Fuzzy k-Nearest Neighbour Classifiers (FKNN) #### {#FKNN}
 In regular k-Nearest Neighbour algorithms, the input data is predicted to exist in the category which it's k- Nearest Neighbours belong to. The 'fuzzy' introduces the notion of likelihood in belonging to this category, and all categories.  To find the fuzzy membership &#956;<!-- mu --> to a particular class of an input data, <br>you take &#931;<!-- capital sigma -->(&#956;<sub>i</sub> / (distance from input data to data point i)<sup>2</sup> ) : 1 <= i <= k, <br>and divide by &#931; distances<sup>-2</sup>.
 
 For the machine to create a model, it must first learn the values of the training set. These values are fuzzy vectors, of which, each component is calculated from the mean of the f<sup>th</sup> feature in each class. The machine learning part of this is when the error is calculated for each test data point and removes the weakest features are removed in order until the output vector accuracy converges. <!-- restructure this part #remove remove -->

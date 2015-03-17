@@ -26,11 +26,17 @@ From the table we can see that NN's accuracy is not too dissimilar from GMM's, ~
 
 The issue with some of these methods, however, is that the output is a vector; most commonly a Valence and Arousal value, from the Thayer's 2D emotional plane. This is difficult for humans to understand, for this reason it can be argued that [classification](classification) is preferable to [regression](regression) as when used in applications the user can directly and instinctively know what the output means, viz. out of "Sad" and "(-0.6, -0.25)", "Sad" is instantly more recognisable.
 
-Within classification:
+<!-- Regression -->
+
 
 ### Other Machine Learning Techniques
 
+Fuzzy labelling appears to be a promising method of emotional taxonomy. It offers both the advantages of being able to offer output that can be easily understood by humans as well as the psuedo-continuous nature of the output lending itself nicely to being ordered. This orderable property of the output means when used in applications it offers up alternatives. In the majority of cases the top result will correlate with the users opinion, however the other [30%](classification#FKNN) of the time it may be one of the other outputs offered by the machine; meaning you reduce the *apparent* error, due to [Miscommunication](regression#MisC) &amp; [Psychological Impact](regression#PsyI), that the end user perceives because of their personal tastes and experiences. While there is further work to be done on the Fuzzy K-Nearest Neighbour (FKNN) ML technique, before it has similar accuracy levels as something like SVM &amp; GMM, it still has potential to be a strong candidate if incorporated into applications. This is similarly true for other fuzzy ML techniques such as Fuzzy Nearest-Mean which actually has a slightly better accuracy of 78.33%[^2].
+
 ### Conclusion
+
+On this website, we have discussed Machine Learning and how it aids Music Emotion Recognition in establishing the emotion/mood of a song segment. We've looked at how these ML techniques can overcome several problems including: human perception by looking into [fuzzy labelling](classification#FKNN), generating accurate results from very little data by learning from similar examples it has seen previously using [active learning](regression#ActLearning), and detecting changes in emotion throughout the course of a song using [time-continuous regression](regression#TimeCont).
+
 <!--
 - Potential Machine Learning techniques that haven't been used a great deal, but may be useful in solving certain problems
   - GMM
@@ -41,6 +47,8 @@ Within classification:
 ### References
 
 [^1]: Bing Xiang, and Berger, T. (2003). Efficient text-independent speaker verification with structu&shy;ral gaussian mixture models and neural network. IEEE Transactions on Speech and Audio Processing, [online] 11(5), pp.447-456. Available at: [http://ieeexplore.ieee.org/xpls/abs_all&hellip;](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1223594&tag=1) [Acc&shy;essed 16 Mar. 2015].
+
+[^2]: Yang, Y., Liu, C. and Chen, H. (2006). Music emotion classification. Proceedings of the 14th annual ACM international conference on Multimedia - MULTIMEDIA '06. [online] Available at: [http://delivery.acm.org/10.1145/11&hellip;](http://delivery.acm.org/10.1145/1190000/1180665/p81-yang.pdf?ip=129.31.74.197&id=1180665&acc=ACTIVE%20SERVICE&key=BF07A2EE685417C5%2EF5014A9D3D5CC2D9%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=640746836&CFTOKEN=80988680&__acm__=1426551374_0a116eecd6560832218d5b22b6b2c4dd) [Accessed 17 Mar. 2015].
 
 *[ML]: Machine Learning
 *[GMM]: Gaussian Mixture Model

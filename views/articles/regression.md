@@ -13,10 +13,10 @@ Music emotion recognition (MER) is a complicated problem to resolve, but a lot o
 
 Using regression, it is a machine's job to map musical samples to their correct emotion on this plane. Another aspect of MER currently being looked into is the ability to improve how a machine analyses emotions over time. Throughout this article, I will look into the importance of communication between machines and humans, psychological issues related to emotions and properties of regression. I will then compare techniques that use regression and analyse how an MER machine can improve its evaluation process.
 
-### Miscommunication
+### Miscommunication ### {#MisC}
 An interesting issue to consider when labelling a music sample with an emotion is the fact that not everyone will label the same music with the same emotion. For example, elderly people may not appreciate hip hop music as much as their younger counter parts, thus there is a concern that MER machines will provide conflicting emotions for certain samples. Yang et al. (2008) noted problems with applying certain adjectives to music as they can be ambiguous. Using ambiguous emotions will lead to miscommunication between the machine and the user when it comes to selecting a music sample for a specific emotion.[^2]
 
-### Psychological Impact
+### Psychological Impact ### {#PsyIm}
 Another problem we have to consider is the fact that different people will perceive different emotions for a music sample based on the experiences they had whilst listening to the music. Michael Stevens (2013) made a video noting the effects of nostalgia, and how music triggers different emotions because of certain memories. He goes on to state: &ldquo;Music is initially processed in the same regions of the brain that process memories and emotion&hellip;&rdquo;.[^1] Because of this, if something traumatic happens to you whilst listening to a music sample that could be happy in nature, you may perceive it as sad and distressing because it unearths memories you would rather not think about. This is a very subjective topic which machines will not be able to comprehend very well, even humans don’t fully understand the link between music, emotion and memories. These psychological issues make regression complicated to use as machines currently can’t perceive abstract concepts such as memories, thus they will struggle to adapt to problems involving them.
 
 ### Continuous vs. Discrete
