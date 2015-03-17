@@ -16,7 +16,8 @@
   <!-- Mobile Specific Metas
   ================================================== -->
   <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
-
+<script src ="//use.typekit.net/xvl2gac.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 
   <!-- CSS
   ================================================== -->
@@ -30,15 +31,59 @@
 
 
 </head>
-<body class="regression">
-<div id="post-regression" class="post-html"><h1>Regression</h1>
 
-<p>Music emotion recognition is a complicated problem to resolve, but a lot of research is going into using different methodologies to reason about it. This article will focus on one methodology, <em>regression</em>, to help a machine effectively understand emotions connected to different kinds of music. Regression specifies different emotions as having a certain mood (determined by a Valence level) and intensity (determined by an Arousal level). For example, an excited mood will have a positive valence level with a very high arousal level while a sleepy mood will have a slightly negative valence level with a low arousal level. These moods are associated with specific segments of a 2D plane, with valence on the horizontal axis and arousal on the vertical axis. (see <a href="#Fig41">Fig. 4.1</a>) We shall refer to this as the arousal-valence plane of emotion (Thayer, 1989). Using regression, it is a machine's job to establish the correct emotions on this plane to their respective musical samples. Another important aspect of the machine which is in early days of research, is the ability to improve how it analyses emotions over time. Throughout this article I will look into the importance of communication between machines and humans, Psychological issues related to emotions, properties of regression, a comparison of techniques that use regression and an analysis of how a MER machine can improve its evaluation process.</p>
+    <header class="f-l">
+  <img src="/MERXAMP/assets/images/mer-main-logo-bw.png" alt="MER Machine Learning" class="f-l" height="80" width="300">
+  <span class="vertical-bar tall dark-grey f-l"></span>
+  <nav>
+    <ul>
+      <li>
+        <a href="/MERXAMP/">
+          Home
+        </a>
+      </li>
+      <li>
+        Articles
+        <ul>
+          <li>
+            <a href="/MERXAMP/articles/techniques" class="green techniques">
+              <span class="vertical-bar techniques"></span> Techniques
+            </a>
+          </li>
+          <li>
+            <a href="/MERXAMP/articles/classification" class="purple classification">
+              <span class="vertical-bar classification"></span> Classification
+            </a>
+          </li>
+          <li>
+            <a href="/MERXAMP/articles/regression" class="blue regression">
+              <span class="vertical-bar regression"></span> Regression
+            </a>
+          </li>
+          <li>
+            <a href="/MERXAMP/articles/summary" class="yellow summary">
+              <span class="vertical-bar summary"></span> Summary
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div class="c-b"></div>
+  <div class="container">
+    <div id="post-regression" class="post-html"><h1>Regression</h1>
+
+<hr>
+
+<h3>Introduction</h3>
+
+<p>Music emotion recognition (MER) is a complicated problem to resolve, but a lot of research is going into using different methodologies to reason about it. This article will focus on one methodology, <em>regression</em>, to help a machine effectively understand emotions connected to different kinds of music. Regression places data values on a continuous plane. In terms of MER, this plane contains many different emotions which have having a certain mood (determined by a Valence level) and intensity (determined by an Arousal level). For example, an excited mood will have a positive valence level with a very high arousal level whereas a sleepy mood will have a slightly negative valence level with a low arousal level. These moods are associated with specific segments of a 2D plane, with valence on the horizontal axis and arousal on the vertical axis. (see <a href="#Fig41">Fig. 4.1</a>) We shall refer to this as the Arousal-Valence plane of emotion (Thayer, 1989).</p>
 
 <h4 id="Fig41" class="center">Valence-Arousal Diagram</h4>
 
 <p></p><figure markdown="1">
-<img src="/MERMachineLearning/assets/images/VADiagram.png" alt="Thayer's two-dimensional emotion plane"><p></p>
+<img src="nanaImages/VADiagram.png" alt="Thayer's two-dimensional emotion plane"><p></p>
 
 <figcaption>
 
@@ -48,27 +93,29 @@
 
 <p></p></figure><p></p>
 
-<h3>Miscommunication</h3>
+<p>Using regression, it is a machine's job to map musical samples to their correct emotion on this plane. Another aspect of MER currently being looked into is the ability to improve how a machine analyses emotions over time. Throughout this article, I will look into the importance of communication between machines and humans, psychological issues related to emotions and properties of regression. I will then compare techniques that use regression and analyse how an MER machine can improve its evaluation process.</p>
 
-<p>An interesting issue to consider when labelling a music sample with an emotion, is the fact that not everyone will label the same music with the same emotion. For example, elderly people may not appreciate hip hop music as much as their younger counter parts, thus there is a concern that MER machines will provide conflicting emotions for certain samples. Yang et al. (2008) noted problems with applying certain adjectives to music as they can be ambiguous with varying interpretations. Using ambiguous emotions will lead to miscommunication between the machine and the user when it comes to selecting a music sample for a specific emotion.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref">1</a></sup></p>
+<h3 id="MisC">Miscommunication</h3>
 
-<h3>Psychological Impact</h3>
+<p>An interesting issue to consider when labelling a music sample with an emotion is the fact that not everyone will label the same music with the same emotion. For example, elderly people may not appreciate hip hop music as much as their younger counter parts, thus there is a concern that MER machines will provide conflicting emotions for certain samples. Yang et al. (2008) noted problems with applying certain adjectives to music as they can be ambiguous. Using ambiguous emotions will lead to miscommunication between the machine and the user when it comes to selecting a music sample for a specific emotion.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref">1</a></sup></p>
 
-<p>Another problem we have to consider is the fact that different people will perceive different emotions for a music sample based on experiences they had whilst listening to the music. Michael Stevens (2013) made a video noting the effects of nostalgia and how music triggers different emotions because of emotive memories. He goes on to state: “Music is initially processed in the same regions of the brain that process memories and emotion…” <sup id="fnref:1"><a href="#fn:1" class="footnote-ref">2</a></sup>. Because of this if something traumatic happens to you whilst listening to a music sample that could be happy in nature, you may perceive it as sad and distressing because it unearths memories you would rather not think about. This is a very subjective topic which machines will not be able to comprehend very well, even humans don’t fully understand the link between music, emotion and memories. These psychological issues make regression complicated to use as machines currently can’t perceive abstract concepts such as memories, thus they will struggle to adapt to problems involving them.</p>
+<h3 id="PsyIm">Psychological Impact</h3>
+
+<p>Another problem we have to consider is the fact that different people will perceive different emotions for a music sample based on the experiences they had whilst listening to the music. Michael Stevens (2013) made a video noting the effects of nostalgia, and how music triggers different emotions because of certain memories. He goes on to state: “Music is initially processed in the same regions of the brain that process memories and emotion…”.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref">2</a></sup> Because of this, if something traumatic happens to you whilst listening to a music sample that could be happy in nature, you may perceive it as sad and distressing because it unearths memories you would rather not think about. This is a very subjective topic which machines will not be able to comprehend very well, even humans don’t fully understand the link between music, emotion and memories. These psychological issues make regression complicated to use as machines currently can’t perceive abstract concepts such as memories, thus they will struggle to adapt to problems involving them.</p>
 
 <h3>Continuous vs. Discrete</h3>
 
-<p>When it comes to working with the arousal-valence plane there are a few problems researchers have to address. We already discussed the problem of emotions being ambiguous in nature. For example, the top right quadrant will contain areas for emotions such as happy, excited and thrilled. Despite their similarities they are still distinctively different emotions. Because of this, when working with the selection of a music sample's emotion on the arousal-valence plane some researchers consider a continuous spectrum of emotions (Yang et al., 2008). This means that each point can be measured in continuous quantities rather discrete one, thus greatly easing the ambiguity issue.</p>
+<p>When it comes to working with the Arousal-Valence plane there are a few problems researchers have to address. For example, the top right quadrant will contain areas for emotions such as happy, excited and thrilled. Despite their similarities they are still distinctively different emotions. Because of this, when working with the selection of a music sample's emotion on the Arousal-Valence plane, some researchers consider a continuous spectrum of emotions (Yang et al., 2008). Though it is significantly easier for humans to select emotions discretely (e.g. stating an emotion is happy rather than a coordinate on a plane), having each point measured in continuous quantities greatly eases the ambiguity issue.</p>
 
-<h3>Time Intervals</h3>
+<h3 id="TimeCont">Time Intervals</h3>
 
-<p>The emotion of music can greatly vary over time. A piece of music could express a sad emotion and change to a joyful one later on in the song. This problem can be remedied if we consider the emotions of different intervals of a piece of music rather than one emotion for the whole song <sup id="fnref:6"><a href="#fn:6" class="footnote-ref">3</a></sup>. The <abbr title="Valence-Arousal">VA</abbr> values, corresponding to points on Thayer’s arousal-valence place, of set time intervals of a music sample (say 5 seconds) is recorded throughout the duration of the song. A song with a duration of 60 will have 12 associated <abbr title="Valence-Arousal">VA</abbr> values for each time interval (If a 5 second interval is used). A mean <abbr title="Valence-Arousal">VA</abbr> value is calculated from each interval’s <abbr title="Valence-Arousal">VA</abbr> values and used to calculate the overall emotion of the song.</p>
+<p>The emotion of music can greatly vary over time. A piece of music could express a sad emotion, then change to a joyful one later on in the song. This problem can be remedied if we consider the emotions of different intervals of a piece of music, rather than one emotion for the whole duration.<sup id="fnref:6"><a href="#fn:6" class="footnote-ref">3</a></sup> The <abbr title="Arousal-Valence">AV</abbr> values, corresponding to points on Thayer’s Arousal-Valence Plane, of set time intervals of a music sample (say 5 seconds) is recorded throughout the duration of the song. A song with a duration of 60 will have 12 associated <abbr title="Arousal-Valence">AV</abbr> values for each time interval (If a 5 second interval is used). A mean <abbr title="Arousal-Valence">AV</abbr> value is calculated from each interval’s <abbr title="Arousal-Valence">AV</abbr> values and used to calculate the overall emotion of the song.</p>
 
 <h3>Support Vector Regression</h3>
 
-<p>There are quite a few systems in place that uses regression to analyse emotion in music. Han B. et al. (2009) researched the benefits of using a support vector regression (<abbr title="Support Vector Regression.">SVR</abbr>) technique to perceive the emotion of music. They took a categorical approach by splitting the arousal-valence axis into 11 categories of emotions <sup id="fnref:5"><a href="#fn:5" class="footnote-ref">4</a></sup>. Their <abbr title="Support Vector Regression.">SVR</abbr> system analyses seven musical features: pitch, tempo, volume, tonality, key, rhythm and harmonics. The <abbr title="Support Vector Regression.">SVR</abbr> system analyses a specific music sample’s musical features and maps each feature to certain emotion categories on the arousal-valence axis such as calm, nervous, exited and sad. The system then creates vectors out of the evaluated musical features depending on the emotion each feature expressed. These vectors are mapped onto a polar coordinate system (similar in nature to the Cartesian arousal-valence axis). Each vector is associated with a distance from the origin (0, 0) and an angle from the x axis to the vector. The <abbr title="Support Vector Regression.">SVR</abbr> is able to effectively analyse the mood of musical features by evaluating the categories on the arousal-valence axis their vector representation fall upon.
+<p>There are quite a few systems in place that uses regression to analyse emotion in music. Han B. et al. (2009) researched the benefits of using a support vector regression (<abbr title="Support Vector Regression.">SVR</abbr>) technique to perceive the emotion of music. They took a categorical approach by splitting the Arousal-Valence axis into 11 categories of emotions.<sup id="fnref:5"><a href="#fn:5" class="footnote-ref">4</a></sup> Their <abbr title="Support Vector Regression.">SVR</abbr> system analyses seven musical features: pitch, tempo, volume, tonality, key, rhythm and harmonics. The <abbr title="Support Vector Regression.">SVR</abbr> system processes a specific music sample’s musical features and maps each feature to certain emotion categories on the Arousal-Valence plane such as calm, nervous, exited and sad. The system then creates vectors out of the evaluated musical features depending on the emotion each feature expressed. These vectors are mapped onto a polar coordinate system (similar in nature to the Cartesian Arousal-Valence plane). The <abbr title="Support Vector Regression.">SVR</abbr> is able to effectively determine the mood of musical features by evaluating the categories on the Arousal-Valence plane their vector representation fall upon.
 </p><figure markdown="1">
-<img src="/MERMachineLearning/assets/images/SVRFlowChart.png" alt="Flow Chart"><p></p>
+<img src="/nanaImages/SVRFlowChart.png" alt="Flow Chart"><p></p>
 
 <figcaption>
   Figure 4.2: SVR flow chart
@@ -76,56 +123,76 @@
 
 <p></p></figure><p></p>
 
-<h3>Active Machine Learning</h3>
+<h3 id="ActLearning">Active Machine Learning</h3>
 
-<p>Support vector regression could be improved if more sophisticated machine learning features were implemented into <abbr title="Support Vector Regression.">SVR</abbr> systems. As these systems constantly analyse emotions of a sample’s musical features, it could be possible for the system to memorise results of music emotion evaluations. Next time the system tries to analyse a sample it could reference a bank of memorised results to produce more accurate predictions of any sample’s emotion. This method of machine learning is usually referred to as Active learning. Simon Tong (2001) investigated the many benefits of active learning. He notes that when analysing large sets of data, musical features in the case of <abbr title="Support Vector Regression.">SVR</abbr>, it can be quite time consuming for a machine to look through them all <sup id="fnref:7"><a href="#fn:7" class="footnote-ref">5</a></sup>. Active learning features can allow machines to query results from previous data to evaluate future data. This vastly improves a MER machine as it is able to produce results with greater speed and learn how to analyse data more effectively at the same time.</p>
+<p>Support vector regression could be improved if more sophisticated machine learning elements were integrated into <abbr title="Support Vector Regression.">SVR</abbr> systems. If the results of music emotion evaluations were stored, the system could use this bank when determining the nature of a new data piece. This method of machine learning is usually referred to as Active Learning. Simon Tong (2001) investigated the benefits of active learning. He noted that when analysing large sets of data, it can be quite time consuming for a machine to look through all features.<sup id="fnref:7"><a href="#fn:7" class="footnote-ref">5</a></sup> Active learning features can allow machines to query results from previous data to evaluate future data. This vastly improves a MER machine as it is able to produce results with greater speed and learn how to analyse data more effectively at the same time.</p>
 
 <h3>Linear Regression</h3>
 
-<p>Linear regression (<abbr title="Linear Regression.">LR</abbr>) is another technique that utilises regression. Yu-An Chen et al. (2014) used a linear regression based learner for their MER machine <sup id="fnref:3"><a href="#fn:3" class="footnote-ref">6</a></sup>. As noted before, different people can give varying emotions for the same music. Because of this <abbr title="Linear Regression.">LR</abbr> usually models the emotions a music sample expresses through Gaussian distribution. Techniques involving Gaussian distributions is another way of mapping musical signals to their respective points on an arousal-valence plane. Yang et al (2012) produced an approach called Acoustic Emotion Gaussians (<abbr title="Acoustic Emotion Gaussians.">AEG</abbr>) that can be used to train a <abbr title="Linear Regression.">LR</abbr> machine <sup id="fnref:9"><a href="#fn:9" class="footnote-ref">7</a></sup>. This approach creates a set of acoustic features that maps on to a set of <abbr title="Valence-Arousal">VA</abbr> emotion values with the same number of elements. The acoustic features are mapped into a vector using <abbr title="Acoustic Emotion Gaussians.">AEG</abbr> which is then mapped onto an arousal-valence plane. The coordinates on the plane make up the <abbr title="Valence-Arousal">VA</abbr> emotion values of the second set which is used to produce the overall emotion of the song.</p>
+<p>Linear regression (<abbr title="Linear Regression.">LR</abbr>) is another technique that utilises regression. Yu-An Chen et al. (2014) used a linear regression based learner for their MER machine.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref">6</a></sup> As noted before, different people can give varying emotions for the same music. Because of this, <abbr title="Linear Regression.">LR</abbr> usually models the emotions a music sample expresses through Gaussian distribution. Techniques involving Gaussian distributions are other ways of mapping musical signals to their respective points on an Arousal-Valence plane. Yang et al. (2012) produced a technique called Acoustic Emotion Gaussians (<abbr title="Acoustic Emotion Gaussians.">AEG</abbr>) which can be used to train a <abbr title="Linear Regression.">LR</abbr> machine.<sup id="fnref:9"><a href="#fn:9" class="footnote-ref">7</a></sup> This approach creates a set of acoustic features that, in MER, would map on to a set of <abbr title="Arousal-Valence">AV</abbr> values with the same number of elements using <abbr title="Acoustic Emotion Gaussians.">AEG</abbr>. The <abbr title="Arousal-Valence">AV</abbr> values from the second set are used to plot points on the Arousal-Valence plane which is then used to determine an overall emotion.</p>
 
 <h3>Regression Techniques Comparison</h3>
 
-<p>I have looked into 2 techniques that use regression to implement MER machines. They both strive to achieve the same goal with different processes. They are similar in the fact they both use a continuous model and Thayer’s arousal-valence plane. The table below will list a few advantages tied to these techniques.</p>
+<p>I have looked into two techniques that use regression to implement MER machines.  They are similar in the fact they both use a continuous model and Thayer’s Arousal-Valence plane. The table below will list a few advantages and disadvantages tied to these techniques.</p>
+
+<h4 class="center">Linear Regression</h4>
 
 <table>
 <thead>
 <tr>
-  <th>Learner technique</th>
-  <th>Emotion Space</th>
   <th>Advantages</th>
+  <th>Disadvantages</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-  <td>Linear Regression</td>
-  <td>Continuous</td>
-  <td>Works well with speech recognition when little data input is used.</td>
+  <td>Works well with speech recognition when little data input is used.<sup id="fnref2:3"><a href="#fn:3" class="footnote-ref">6</a></sup> This will aid the machine when analysing vocal features.</td>
+  <td>Support Vector Regression has a higher prediction accuracy.<sup id="fnref2:2"><a href="#fn:2" class="footnote-ref">1</a></sup></td>
 </tr>
 <tr>
-  <td>Support Vector Regression</td>
-  <td>Continuous</td>
-  <td>Active learning can be utilised to a <abbr title="Support Vector Regression.">SVR</abbr> learner to improve its evaluation process</td>
+  <td></td>
+  <td><abbr title="Acoustic Emotion Gaussians.">AEG</abbr> is still in the process of implementing more features (such as lyric analysis) to aid Linear Regression systems.<sup id="fnref2:9"><a href="#fn:9" class="footnote-ref">7</a></sup></td>
+</tr>
+</tbody>
+</table>
+
+<h4 class="center">Support Vector Regression</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Advantages</th>
+  <th>Disadvantages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Active learning could be used alongside an <abbr title="Support Vector Regression.">SVR</abbr> learner to improve its evaluation process.</td>
+  <td>The use of discrete emotion segments on the Arousal-Valence plane introduces a level of ambiguity which can prove problematic.</td>
+</tr>
+<tr>
+  <td><abbr title="Support Vector Regression.">SVR</abbr> use of a polar plane to represent the Arousal-Valence plane has greatly increased the accuracy of MER machines.<sup id="fnref:10"><a href="#fn:10" class="footnote-ref">8</a></sup></td>
+  <td></td>
 </tr>
 </tbody>
 </table>
 
 <h3>Conclusion</h3>
 
-<p>Regression has proven itself to be a very useful methodology when it comes to giving machines the necessary tools they need to reason about emotions and music. Regression helps progress the applications of MER machines by implementing features such as the analysis of emotions in specific time intervals and the use of an unambiguous arousal-valence plane. The techniques that utilise regression show the possibility for many advancements in the incorporation of machine learning algorithms. Such algorithms that could use active learning to train machines to improve themselves, are still in early days of development. But research into this field shows there are endless possibilities of what could be achieved with regression and music emotion recognition.</p>
+<p>Regression has proven itself to be a very useful methodology when it comes to giving machines the necessary tools to reason about emotions and music. It addresses problems on clarity of results (miscommunication between users) through a continuous plane. Regression helps improve the applications of MER machines by implementing features such as time interval analysis. <abbr title="Support Vector Regression.">SVR</abbr> and <abbr title="Linear Regression.">LR</abbr> are regression techniques which apply quite different processes. They both show promising results brought about by the implementation of regression.<sup id="fnref2:5"><a href="#fn:5" class="footnote-ref">4</a></sup> <sup id="fnref3:3"><a href="#fn:3" class="footnote-ref">6</a></sup> These technique show the possibility for advancements in the incorporation of machine learning algorithms such as those which use active learning. Though the practice of using ML algorithms in MER is in its early stages, it is clear that ML could go on to improve our understanding of the relationship between music and emotions.</p>
 
-<h2>References</h2>
+<h3>References</h3>
 
 <div class="footnotes">
 <hr>
 <ol>
 
 <li id="fn:2">
-<p>Yang , Y., Lin , Y., Su , Y. &amp; Chen , H. (2008) A Regression Approach to Music Emotion Recognition. <em>IEEE Transactions on Audio, Speech, and Language Processing.</em> 16 (2), 1-1-10.&nbsp;<a href="#fnref:2" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+<p>Yang , Y., Lin , Y., Su , Y. &amp; Chen , H. (2008) A Regression Approach to Music Emotion Recognition. <em>IEEE Transactions on Audio, Speech, and Language Processing.</em> 16 (2), 1-1-10.&nbsp;<a href="#fnref:2" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref2:2" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
 </li>
 
 <li id="fn:1">
-<p>Stevens, M. (2013) <em>Why Do We Feel Nostalgia?</em> [Video] Available from: <a href="https://www.youtube.com/watch?v=coGfGmOeLjE" target="_blank">https://www.youtube.com/watch?v=coGfGmOeLjE</a> [Accessed 15/02/2015].&nbsp;<a href="#fnref:1" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+<p>Stevens, M. (2013) <em>Why Do We Feel Nostalgia?</em> [Video] Available from: <a href="https://www.youtube.com/watch?v=coGfGmOeLjE">https://www.youtube.com/watch?v=coGfGmOeLjE</a> [Accessed 15/02/2015].&nbsp;<a href="#fnref:1" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
 </li>
 
 <li id="fn:6">
@@ -133,7 +200,7 @@
 </li>
 
 <li id="fn:5">
-<p>Han , B., Rho , S., Dannenberg , R. &amp; Hwang , E. (2009) Smers: Music emotion recognition using support vector regression. <em>10th International Society for Music Information Retrieval Conference.</em>.&nbsp;<a href="#fnref:5" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+<p>Han , B., Rho , S., Dannenberg , R. &amp; Hwang , E. (2009) Smers: Music emotion recognition using support vector regression. <em>10th International Society for Music Information Retrieval Conference.</em>.&nbsp;<a href="#fnref:5" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref2:5" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
 </li>
 
 <li id="fn:7">
@@ -141,15 +208,31 @@
 </li>
 
 <li id="fn:3">
-<p>Chen, Y., Wang, J., Yang, Y. &amp; Chen, H. (2014) Linear regression-based adaptation of music emotion recognition models for personalization. <em>2014 IEEE International Conference on Acoustic, Speech and Signal Processing.</em> [Online], 09/03/2015. Available from: <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6853979&amp;tag=1" target="_blank">http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6853979&amp;tag=1</a> [Accessed 09/03/2015].&nbsp;<a href="#fnref:3" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+<p>Chen, Y., Wang, J., Yang, Y. &amp; Chen, H. (2014) Linear regression-based adaptation of music emotion recognition models for personalization. <em>2014 IEEE International Conference on Acoustic, Speech and Signal Processing.</em> [Online], 09/03/2015. Available from: <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6853979&amp;tag=1">http://ieeexplore.ieee.org/stamp/stam…</a> [Accessed 09/03/2015].&nbsp;<a href="#fnref:3" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref2:3" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref3:3" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
 </li>
 
 <li id="fn:9">
-<p>Wang, J., Yang, Y., Wang, H. &amp; Jeng, S. (2012) <em>The acoustic emotion Gaussians model for emotion-based music annotation and retrieval.</em> Department of Electrical Engineering. National Taiwan University.&nbsp;<a href="#fnref:9" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+<p>Wang, J., Yang, Y., Wang, H. &amp; Jeng, S. (2012) <em>The acoustic emotion Gaussians model for emotion-based music annotation and retrieval.</em> Department of Electrical Engineering. National Taiwan University.&nbsp;<a href="#fnref:9" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref2:9" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+</li>
+
+<li id="fn:10">
+<p>Barthet, M., Fazekas, G. &amp; Sandler, M. (2013) <em>Music Emotion Recognition: From Content- to Context- Based Models.</em> Centre of Digital Music. Queen Mary University of London.&nbsp;<a href="#fnref:10" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
 </li>
 
 </ol>
 </div>
 </div>
-</body>
+
+<a href="#" id="top">
+  ↑
+</a>
+    <div class="c-b"></div>
+<footer>
+  <span class="f-l">© Group 21.</span>
+  <span class="f-r right">MER Machine Learning</span>
+</footer>
+  </div>
+
+
+
 </html>
