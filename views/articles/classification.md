@@ -82,6 +82,9 @@ For the machine to create a model, it must first learn the values of the trainin
 
 In a study carried out by Yang et al., each piece in the training set were split into segments. When labeling the segments, if the classifications were not a<!--?--> majority, the segment was withdrawn from the training data. This particular study found an accuracy of 70.88%[^10]
 
+#### GMM
+
+
 
 ### Conclusion
 
@@ -124,3 +127,4 @@ Some may argue that, since certain emotions are so similar to each other and yet
 [^13]: Burges, C. J. (1998). A tutorial on support vector machines for pattern recognition. Data mining and knowledge discovery. [online] 2(2), 121-167. Available from: http://research.microsoft.com/pubs/67119/svmtutorial.pdf [Accessed 26 Feb. 2015].
 [^14]: opencv dev team, (2015). Introduction to Support Vector Machines — OpenCV 2.4.11.0 documentation. [online] Docs.opencv.org. Available at: http://docs.opencv.org/doc/tutorials/ml/introduction_to_svm/introduction_to_svm.html [Accessed 17 Mar. 2015].
 [^15]: Chiang, W., Wang, J. and Hsu, Y. (2014). A Music Emotion Recognition Algorithm with Hierarchical SVM Based Classifiers. 2014 International Symposium on Computer, Consumer and Control. [online] Available at: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6846115 [Accessed 28 Feb. 2015].
+[^16]: Byeong-jun Han, Seungmin Rho Roger and B. Dannenberg Eenjun Hwang (2009) SMERS: Music Emotion Recognition using Support Vector Recognition [Online] Available from:[ http://www.cs.cmu.edu/~rbd/pap&hellip;](http://www.cs.cmu.edu/~rbd/papers/emotion-ismir-09.pdf)
