@@ -41,9 +41,9 @@ The purposes of the previous forms mentioned are to output a definite value for 
 
 ### Why classification is difficult
 
-Classification is, in essence, pattern recognition - &ldquo;the act of taking in raw data and making an action based on the "category" of the pattern&rdquo;.[^5] Although humans clearly have this skill, we often struggle with defining rules for the classification of a particular set of data because it comes so naturally to us. Because of this, machine learning is very useful in classification as the rules created are data based, therefore more likely to be accurate in determining the nature of the data.[^11] The training set of data does however need to be labelled by a human before a machine can come up with a suitable model for classifying (known as supervised learning); otherwise it will just be trying to partition groups of data with common attributes (unsuprevised learning) which may not result in emotion related connections.[^12]
+Classification is, in essence, pattern recognition - &ldquo;the act of taking in raw data and making an action based on the "category" of the pattern&rdquo;.[^5] Although humans clearly have this skill, we often struggle with defining rules for the classification of a particular set of data because it comes so naturally to us. Because of this, Machine Learning is very useful in classification as the rules created are data based, therefore more likely to be accurate in determining the nature of the data.[^11] The training set of data does however need to be labelled by a human before a machine can come up with a suitable model for classifying (known as supervised learning); otherwise it will just be trying to partition groups of data with common attributes (unsuprevised learning) which may not result in emotion related connections.[^12]
 
-### Machine learning models
+### Machine Learning Models
 
 #### Support Vector Machines
 Support Vector Machines take training data (a.k.a. observations) and represent them as a pair; the first part of the pair is a vector, and the second is the ground truth. The vectors for each observation have n dimensions and are plotted in a set space also of `n` dimensions (`R`<sup>`n`</sup>) where `n` is the number of elements / features used to compare the observations. Using one of the observations as the origin, hyperplanes are created to shatter the points (divide the points into two groups, data points which exist in the class and those which don't). If the data are not falling into the correct partition of the space, a vector of weighting coefficients is adjusted and applied to the the vectors to shift the data round in order to fit into the partition which matches their ground truth.[^13]
@@ -75,9 +75,6 @@ One particular study into the use of SVMs for MER carried out by Chiang et al. u
 
 This study managed to achieve average accuracies of 86.94% in one data set and 92.33% in another.[^15]
 
- <!-- - Decision trees -->
- <!-- - Boosting -->
- <!-- - neural networks -->
 #### Fuzzy k-Nearest Neighbour Classifiers (FKNN) #### {#FKNN}
 In regular k-Nearest Neighbour algorithms, the input data is predicted to exist in the category which it's k-Nearest Neighbours belong to. The *fuzzy* introduces the notion of likelihood in belonging to this category, and all categories.  To find the fuzzy membership `μ`<!-- mu --> to a particular class of an input data, you take `(Σ(μ`<sub>`i`</sub> `/` `x`<sub>`i`</sub><sup>`2`</sup> `)) / (Σx`<sub>`i`</sub><sup>`-2`</sup>`) : 1 <= i <= k; x`<sub>`i`</sub> is the distance from input data to data point `i`.
 
