@@ -119,12 +119,11 @@ Some may argue that, since certain emotions are so similar to each other and yet
 [^5]: Duda, R., Hart, P. and Stork, D. (2001). Pattern classification. 2nd ed. New York: Wiley.
 [^6]: <!-- not used -->(SVM use for text recognition) https://dl.acm.org/citation.cfm?id=944790.944793&coll=DL&dl=ACM&CFID=485866018&CFTOKEN=79343228
 [^7]: X., Downie, J., Laurier, C., Bay, M. and Ehmann, A. (2008). The 2007 MIREX audio mood classification task: Lessons learned. Proceedings of the International Conference on Music Information Retrieval. [online] Available at : http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf [Accessed 5 Mar. 2015].
-
-[^8]: Ng,A.. 2012. Classification (8 min). [Online]. [Accessed 25 February 2015]. Available from: https://class.coursera.org/ml-005/lecture/33
-[^9]: (good read to overview all) https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false
-[^10]: (Fuzzy label case study) http://dl.acm.org/citation.cfm?id=1180665
-[^11]: http://www.cs.princeton.edu/~schapire/talks/picasso-minicourse.pdf
-[^12]: (coursera supervised learning) https://class.coursera.org/ml-005/lecture/3
-[^13]: (SVM Tutorial) http://research.microsoft.com/pubs/67119/svmtutorial.pdf
-[^14]: (another (simpler) SVM explanation) http://docs.opencv.org/doc/tutorials/ml/introduction_to_svm/introduction_to_svm.html
-[^15]: (SVM study for MER) http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6846115
+[^8]: Ng,A.. 2012. Classification (8 min). [online]. [Accessed 25 Feb. 2015]. Available from: https://class.coursera.org/ml-005/lecture/33
+[^9]: Barthet, M., Fazekas, G. and Sandler, M. (2013). Music emotion recognition: from content-to context-based models. From Sounds to Music and Emotions. [online] Available at: https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false [Accessed 5 Mar. 2015].
+[^10]: Yang, Y., Liu, C. and Chen, H. (2006). Music emotion classification. Proceedings of the 14th annual ACM international conference on Multimedia - MULTIMEDIA '06. [online] Available at: http://dl.acm.org/citation.cfm?id=1180665 [Accessed 12 Feb. 2015].
+[^11]: Schapire, R. (n.d.). Machine Learning Algorithms for Classification..
+[^12]: Ng,A.. 2012. Supervised Learning (12 min). [online]. [Accessed 25 Feb. 2015]. Available from: https://class.coursera.org/ml-005/lecture/3
+[^13]: Burges, C. J. (1998). A tutorial on support vector machines for pattern recognition. Data mining and knowledge discovery. [online] 2(2), 121-167. Available from: http://research.microsoft.com/pubs/67119/svmtutorial.pdf [Accessed 26 Feb. 2015].
+[^14]: opencv dev team, (2015). Introduction to Support Vector Machines — OpenCV 2.4.11.0 documentation. [online] Docs.opencv.org. Available at: http://docs.opencv.org/doc/tutorials/ml/introduction_to_svm/introduction_to_svm.html [Accessed 17 Mar. 2015].
+[^15]: Chiang, W., Wang, J. and Hsu, Y. (2014). A Music Emotion Recognition Algorithm with Hierarchical SVM Based Classifiers. 2014 International Symposium on Computer, Consumer and Control. [online] Available at: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6846115 [Accessed 28 Feb. 2015].
