@@ -10,13 +10,14 @@ We shall begin by looking at accuracy of the methods. Recall from the [technique
 
 <figure markdown="1">
 #### Accuracy #### {#Fig51}
-Technique       | Accuracy
---------------- | --------------
-SVR             | 78.8%
-SVM             | 60.5%
-**GMM**         | **92.1%**
-Neural Network  | 85.6%
-KNN             | 38.9%
+Technique         | Accuracy
+----------------- | --------------
+SVR               | 78.8%
+SVM               | 60.5%
+**GMM**           | **92.1%**
+Neural Network    | 85.6%
+KNN               | 38.9%
+Linear Regression |
 <figcaption markdown="1">
   Figure 5.1: Comparative Table of Various ML Techniques Applied in MER
 </figcaption>
