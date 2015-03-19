@@ -162,7 +162,7 @@ Neural Networks imitate the activity of our biological nervous system. It associ
 In MER application, the hidden layers correspond to music features. You also need a training set of data for the computer to work with (i.e. data that depending on the activity of the features outputs the corresponding emotion). It is also necessary to find a concrete way to represent emotions. Usually researchers will use coordinates with x-axis representing some general aspect of emotion and y-axis another aspect of emotion such as valence and arousal.
 Just like your nervous system associates musical attributes to certain emotions (high energy music, fast rhythm&hellip; &rarr; agitated; slow rhythm, no energy, long sounds as opposed to short, brief sounds &rarr; sad&hellip;), the neural network does the same thing.
 
-Naresh N. Vempala and Frank A. Russo led an experiment of MER using Neural Networks. They conducted a network that predicted the emotion for the entire piece of music. Twelve music experts were used to give the emotions they felt whilst listening to pieces. The data that was retrieved was then used as the "actual" emotion of the song even though emotions are subjective. Then thirteen music features were extracted used as inputs and hidden layers  and the ouputs were again AV coordinates (because it is an simple way to represent emotions) as shown on the image below.
+Naresh N. Vempala and Frank A. Russo led an experiment of MER using Neural Networks. They conducted a network that predicted the emotion for the entire piece of music. Twelve music experts were used to give the emotions they felt whilst listening to pieces. The data that was retrieved was then used as the "actual" emotion of the song even though emotions are subjective. Then thirteen music features were extracted used as inputs and hidden layers  and the ouputs were again AV coordinates (because it is an simple way to represent emotions) as shown on the imag  e below.
 
 <figure markdown="1">
 ![Neural Network schema](/assets/images/NN_explanation.png)
@@ -185,6 +185,12 @@ This is the final result of the experiment:
 </figure>
 
 We can see from the graph that overall, Neural Networks accurately predict emotions. However Stravinsky "actual" emotions and predicted emotions are quite far off. What could be done is to create a Neural Network for each music attribute and then use the ones that contribute the most to the AV prediction.
+
+### Gaussian Mixture Model
+
+GMM is another classification technique that uses an `n` dimensional plane, `n` being the number of musical features. GMM shifts the data points by modifyfing the current weightings in order to match the predicted class of the data points with the ground truth. The probability of the data points being a member of a specific class is normally distrubuted in the space. The model finds the highest probability in all the computed distributions and associates that data point with that class (i.e. emotion). The weights are adjusted accordingly to the error evaluated by the computer between model prediction and ground truth[^8]. 
+
+The experiment mentioned above in [SVR](techniques#SVR) uses GMM to compare its accuracy with the accuracy of SVR. As we can see, GMM has a very high probability using both Cartesian and Polar Coordinates.       
 
 ### Conclusion
 
@@ -219,15 +225,17 @@ From the table above, we can see that the researches and experiments on MER are 
 
 [^1]: Wikipedia (2015) Machine Learning [Online] Available from: <a href="http://en.wikipedia.org/wiki/Machine_learning" TARGET="_blank">http://en.wikipedia.org/wiki/Machine_learning</a>  
 
-[^2]: Byeong-jun Han, Seungmin Rho Roger and B. Dannenberg Eenjun Hwang (2009) SMERS: Music Emotion Recognition using Support Vector Recognition [Online] Available from:[ http://www.cs.cmu.edu/~rbd/pap&hellip;](http://www.cs.cmu.edu/~rbd/papers/emotion-ismir-09.pdf)
+[^2]: Han, B., Rho, S., Dannenberg, R., Hwang, E. (2009) SMERS: Music Emotion Recognition using Support Vector Recognition [Online] Available from:[ http://www.cs.cmu.edu/~rbd/pap&hellip;](http://www.cs.cmu.edu/~rbd/papers/emotion-ismir-09.pdf)
 
-[^3]: Christos Stergiou and Dimitrios Siganos (-) Neural Networks [Online] Available from: [http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/repo&hellip;](http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/report.html#What%20is%20a%20Neural%20Network)
+[^3]: Stergiou, C., Siganos, D. (-) Neural Networks [Online] Available from: [http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/repo&hellip;](http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/report.html#What%20is%20a%20Neural%20Network)
 
-[^4]: Naresh N. Vempala and Frank A. Russo (2012) Predicting Emotion from Music Audio Features Using Neural Networks [Online] Available from: [http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eec&hellip;](http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_66.pdf)
+[^4]: Vempala, N., Russo, F. (2012) Predicting Emotion from Music Audio Features Using Neural Networks [Online] Available from: [http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eec&hellip;](http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_66.pdf)
 
-[^5]: Michael Halls-Moore (2014) Predicting Support Vector Machines: A guide for beginners [Online] Available from: [http://www.quantstart.com/articles/Support-Vector-Mach&hellip;](http://www.quantstart.com/articles/Support-Vector-Machines-A-Guide-for-Beginners)
+[^5]: Halls-Moore, M. (2014) Predicting Support Vector Machines: A guide for beginners [Online] Available from: [http://www.quantstart.com/articles/Support-Vector-Mach&hellip;](http://www.quantstart.com/articles/Support-Vector-Machines-A-Guide-for-Beginners)
 
-[^6]: Cyril Laurier and Perfecto Herrera (-) Audio Music Mood Classification
+[^6]: Laurier, C., Herrera, P. (-) Audio Music Mood Classification
 Using Support Vecotor Machine [Online] Available from: [http://www.mtg.upf.edu/files/publications/b6c06&hellip;](http://www.mtg.upf.edu/files/publications/b6c067-ISMIR-MIREX-2007-Laurier-Herrera.pdf)
 
-[^7]: Ricardo Malheiro, Renato Panda, Paulo Gomes and Rui Pedro Paiva (2013) Music Emotion Recognition from Lyrics: A Comparative Study [Online] Available from: [http://www.academia.edu/8516120/Music_Emotion_Recogn&hellip;](http://www.academia.edu/8516120/Music_Emotion_Recognition_from_Lyrics_A_Comparative_Study._6th_International_Workshop_on_Machine_Learning_and_Music_MML13_._Praga)
+[^7]: Malheiro, R., Panda, R., Gomes, P., Paiva, R. (2013) Music Emotion Recognition from Lyrics: A Comparative Study [Online] Available from: [http://www.academia.edu/8516120/Music_Emotion_Recogn&hellip;](http://www.academia.edu/8516120/Music_Emotion_Recognition_from_Lyrics_A_Comparative_Study._6th_International_Workshop_on_Machine_Learning_and_Music_MML13_._Praga)
+
+[^8]: Robertson, H. (2012) Introduction to Gaussian Mixture Models for Music Information Retrieval [Online] Available from: [http://www.music.mcgill.ca/~hannah/MUM&hellip;](http://www.music.mcgill.ca/~hannah/MUMT621/gmm.pdf)

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Florian Emile's Personal Page</title>
+  <meta name="description" content="Personal Page">
+  <meta name="author" content="Elliot Greenwood">
+
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+  <script src="//use.typekit.net/xvl2gac.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+  <!-- CSS
+  ================================================== -->
+  <style>
+  #top,a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dl dt,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}::selection{color:#050505;background:#c7c7c7}::-moz-selection{color:#050505;background:#c7c7c7}html{color:#272727;font-family:Calluna,Georgia,Times,"Times New Roman",serif;font-variant-ligatures:additional-ligatures;-webkit-font-variant-ligatures:additional-ligatures;text-rendering:optimizeLegibility;font-kerning:normal}p{margin:0 0 18px;font-size:1em;line-height:1.4em;text-align:justify;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto}p.lead{font-size:1em;line-height:1.5em}h1{font-size:3em;line-height:1.125em}h2{font-size:2.25em;line-height:1.5em}#top,h3{font-size:1.5em;line-height:2em;font-weight:700}h4{font-size:1em;line-height:1.5em;font-weight:700}h5{line-height:1.5em;font-weight:700}a,a:visited{color:#050505}a:focus,a:hover{text-decoration:none}a:focus.purple,a:hover.purple{color:#cd9aba}a:focus.blue,a:hover.blue{color:#8baecc}a:focus.green,a:hover.green{color:#a4c39c}a:focus.yellow,a:hover.yellow{color:#e3cf56}nav a,nav a:visited{text-decoration:none;color:#050505}.classification header>nav a:focus,.classification header>nav>ul>li>a:hover{color:#881058}.regression header>nav a:focus,.regression header>nav>ul>li>a:hover{color:#0e5f9b}.techniques header>nav a:focus,.techniques header>nav>ul>li>a:hover{color:#277512}.summary header>nav a:focus,.summary header>nav>ul>li>a:hover{color:#dbbd0b}.home header>nav a:focus,.home header>nav>ul>li>a:hover,.listen header>nav a:focus,.listen header>nav>ul>li>a:hover{color:#c7c7c7}em{font-style:italic}dl dt,h1,h2,strong{font-weight:700}code,pre{font-family:prestige-elite-std,Menlo,monospace}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}blockquote{margin:10px 50px 10px 0;padding-left:15px;border-left:3px solid #c7c7c7}.classification blockquote{color:#881058;border-color:#881058}.regression blockquote{color:#0e5f9b;border-color:#0e5f9b}.techniques blockquote{color:#277512;border-color:#277512}.summary blockquote{color:#dbbd0b;border-color:#dbbd0b}header *{font-family:proxima-nova,HelveticaNeue,"Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;font-weight:900}.left{text-align:left}.right{text-align:right}.center,figure,figure figcaption,figure figcaption p{text-align:center}.f-l{float:left}#top,.f-r{float:right}.c-l{clear:left}.c-r{clear:right}.c-b{clear:both}.i-b{display:inline-block}.a-c,header ul{text-transform:uppercase}.s-c{font-variant:small-caps}body{background:#f3f3f3}body.classification{background:#faf4f8}body.regression{background:#edf1f6}body.techniques{background:#f3f6f2}body.summary{background:#f9f9f4}.container{margin:0 auto;width:960px}.post-html{width:640px;margin:0 auto;padding:0 0 36px}.post-html ol{list-style:decimal-leading-zero}.post-html ol li{padding-bottom:10px;line-height:1.4em}.post-html ul{float:none;list-style:disc}.post-html ul li{padding-bottom:10px;line-height:1.4em}.post-html ul li>ul{padding-left:24px;padding-top:6px}.post-html ul li>ul>li{list-style:circle;padding-bottom:4px}header{margin:10px 0 26px;padding:0 40px}header *{display:inline-block}.titles{position:relative;margin-top:-460px}footer{height:18px;margin:18px 0 36px;display:block;width:960px}figure{padding:0 0 18px;margin:0 auto}figure img{padding:9px;width:520px}figure figcaption{width:100%;font-size:75%;color:#949494;position:relative}#top{position:fixed;bottom:24px;right:12%}nav{display:inline-block;height:80px;float:left}nav li{cursor:pointer}header ul{float:left}header ul>li{display:inline-block;padding:32px 0 0 24px;position:relative}header ul>li>ul{float:right;height:24px;margin:-9px 16px 0}header ul>li>ul li{padding:0 16px 0 0}header ul>li>ul li .classification{color:#cd9aba}header ul>li>ul li .regression{color:#8baecc}header ul>li>ul li .techniques{color:#669c57}header ul>li>ul li .summary{color:#e3cf56}header ul>li>ul li:hover .classification{color:#ab568a}header ul>li>ul li:hover .regression{color:#4d86b4}header ul>li>ul li:hover .techniques{color:#277512}header ul>li>ul li:hover .summary{color:#dbbd0b}dl{clear:both}dl .defn-container{float:left;width:480px;height:80px;border-left:4px solid #272727;padding:9px 0 9px 9px;margin:9px;background:#fff;-webkit-border-top-right-radius:3px;-webkit-border-bottom-right-radius:3px;-moz-border-radius-topright:3px;-moz-border-radius-bottomright:3px;border-top-right-radius:3px;border-bottom-right-radius:3px}dl .defn-container.classification{border-color:#881058}dl .defn-container.regression{border-color:#0e5f9b}dl .defn-container.techniques{border-color:#277512}dl .defn-container.summary{border-color:#dbbd0b}dl dt{margin-bottom:18px;width:440px}dl dd{font-size:.75em;line-height:1.125em;width:440px}dl .defn-arr{padding-top:32px;float:right;display:inline-block}dl .defn-arr a{text-decoration:none}dl:after{clear:left}.vertical-bar{position:relative;top:5px;height:24px;width:4px;margin-right:6px;display:inline-block}.vertical-bar.tall{position:static;height:80px;margin:0 16px}.vertical-bar.dark-grey{background:#272727}.vertical-bar.classification{background:#cd9aba}.vertical-bar.regression{background:#8baecc}.vertical-bar.techniques{background:#669c57}.vertical-bar.summary{background:#e3cf56}a.purple:hover .vertical-bar{background:#ab568a}a.blue:hover .vertical-bar{background:#4d86b4}a.green:hover .vertical-bar{background:#277512}a.yellow:hover .vertical-bar{background:#dbbd0b}hr{border:none;border-top:1px solid #3e3e3e}.classification hr{border-color:#881058}.regression hr{border-color:#0e5f9b}.techniques hr{border-color:#277512}.summary hr{border-color:#dbbd0b}table{border-collapse:collapse;border-spacing:0;empty-cells:show;border:2px solid #3e3e3e;margin:15px auto}.classification table{border-color:#881058}.regression table{border-color:#0e5f9b}.techniques table{border-color:#277512}.summary table{border-color:#dbbd0b}table caption{color:#000;font:italic 85%/1 arial,sans-serif;padding:1em 0;text-align:center}table td,table th{border-width:0 0 0 1px;font-size:inherit;text-align:center;margin:0;overflow:visible;padding:.5em 1em}table td:first-child,table th:first-child{border-left-width:0}table thead{text-align:left;vertical-align:bottom}.classification table thead{background-color:#881058;color:#faf4f8}.regression table thead{background-color:#0e5f9b;color:#edf1f6}.techniques table thead{background-color:#277512;color:#f3f3f3}.summary table thead{background-color:#dbbd0b;color:#f3f3f3}table td{background-color:transparent}.classification table tr:nth-child(2n) td{background-color:#cd9aba}.regression table tr:nth-child(2n) td{background-color:#8baecc}.techniques table tr:nth-child(2n) td{background-color:#669c57}.summary table tr:nth-child(2n) td{background-color:#e3cf56}@-webkit-keyframes fadeInLeft{0%{opacity:0;-webkit-transform:translate3d(-16px,0,0);transform:translate3d(-16px,0,0)}100%{opacity:1;-webkit-transform:none;transform:none}}@keyframes fadeInLeft{0%{-webkit-transform:translate3d(-16px,0,0);transform:translate3d(-16px,0,0)}100%{opacity:1;-webkit-transform:none;transform:none}}.fadeInLeft{-webkit-animation:fadeInLeft .4s;animation:fadeInLeft .4s;-webkit-animation-fill-mode:both}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+</head>
+<body class="techniques">
+    <header class="f-l">
+  <img src="/MERMachineLearning/assets/images/mer-main-logo-bw.png" alt="MER Machine Learning" width="300" height="80" class="f-l">
+  <span class="vertical-bar tall dark-grey f-l"></span>
+  <nav>
+    <ul>
+      <li>
+        <a href="/MERMachineLearning/">
+          Home
+        </a>
+      </li>
+      <li>
+        Articles
+        <ul>
+          <li>
+            <a href="/MERMachineLearning/articles/techniques" class="green techniques">
+              <span class="vertical-bar techniques"></span> Techniques
+            </a>
+          </li>
+          <li>
+            <a href="/MERMachineLearning/articles/classification" class="purple classification">
+              <span class="vertical-bar classification"></span> Classification
+            </a>
+          </li>
+          <li>
+            <a href="/MERMachineLearning/articles/regression" class="blue regression">
+              <span class="vertical-bar regression"></span> Regression
+            </a>
+          </li>
+          <li>
+            <a href="/MERMachineLearning/articles/summary" class="yellow summary">
+              <span class="vertical-bar summary"></span> Summary
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div class="c-b"></div>
+  <div class="container">
+    <div id="post-techniques" class="post-html"><h1>Techniques</h1>
+
+<hr>
+
+<h3>Introduction</h3>
+
+<p>Machine learning (<abbr title="Machine Learning">ML</abbr>) is a subfield of Computer Science originating from research into artificial intelligence. It explores the construction and study of algorithms that can learn from data. Such algorithms operate by building a model from example inputs and using that to make predictions or decisions, rather than following strictly static program instructions<sup id="fnref:1"><a href="#fn:1" class="footnote-ref">1</a></sup>.</p>
+
+<p>Machine Learning plays an important role in <abbr title="Music Emotion Recognition">MER</abbr> as it is with <abbr title="Machine Learning">ML</abbr> that the computer predicts the emotions we feel depending on the music. There exist many techniques, which each have their own pros and cons. However as <abbr title="Machine Learning">ML</abbr> is a relatively new science they are not all very effective, and even the most effective techniques are not extremely reliable.</p>
+
+<p>We have chosen to study three techniques of <abbr title="Machine Learning">ML</abbr> applied to <abbr title="Music Emotion Recognition">MER</abbr>:  Support Vector Regression (<abbr title="Support Vector Regression">SVR</abbr>), Support Vector Machine (<abbr title="Support Vector Machine">SVM</abbr>) and Neural Networks (NN). These techniques will span over <abbr title="Music Emotion Recognition">MER</abbr> by classification and by regression.</p>
+
+<h3 id="SVR">Support Vector Regression</h3>
+
+<p>The <abbr title="Support Vector Regression">SVR</abbr> based music emotion recognition consists of three steps:</p>
+
+<ol>
+<li>Extraction of music features such as the overall energy of the music, the rhythm and harmonics.</li>
+<li>These features and their combination must then be mapped into emotion categories on a plane; this technique therefore quantifies emotions.</li>
+<li>Find regression functions that will enable the mapping of the music to a category, i.e. placing it on the plane. When a piece is playing, the computer will retrieve the musical features, then use the regression functions that take these features as inputs, to output the emotion as coordinates (in the form of a vector) of the plane.</li>
+</ol>
+
+<p><abbr title="Support Vector Regression">SVR</abbr> was used in an experiment in 2009 supervised by Byeong-jun Han, Seungmin Rho, Roger B. and Dannenberg Eenjun Hwang<sup id="fnref:2"><a href="#fn:2" class="footnote-ref">2</a></sup>. The plane they used was Thayer’s two-dimensional emotional plane which evaluates the valence (i.e. the mood) of an emotion on the x–axis and its arousal (i.e. the intensity) on the y–axis. Representing emotions with coordinates is called <em><a href="regression">Regression</a></em>, which we will look at later on. They chose to extract seven music features such as scale, intensity, rhythm and harmonics and selected 165 various music pieces for their experiment.</p>
+
+<p></p><figure markdown="1">
+<img src="/MERMachineLearning/assets/images/VADiagram.png" alt="Thayer's two-dimensional emotion plane"><p></p>
+
+<figcaption>
+
+<p>Figure 2.1: Thayer's two-dimensional emotion plane. Adapted from: Russell, J. A. (1980). A circumplex model of affect. Journal of Personality and Social Psychology, 39, 1161–1178.</p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<p>These features were then used as input for the regression functions; both Cartesian and polar coordinates were used as outputs:</p>
+
+<ol>
+<li>In case of Cartesian representation, the emotion of a song can be represented by (<em>a</em>, <em>v</em>), where <em>a</em> denoting arousal and <em>v</em> denoting valence and their ranges are <em>a</em> ∈ <code>[-1,1]</code> and <em>v</em> ∈ <code>[-1,1]</code>.</li>
+<li>In case of polar representation assume that <code>Emotion</code><sub><code>c</code></sub> and <code>Emotion</code><sub><code>p</code></sub> represent an emotion in Cartesian and polar coordinate systems, respectively. We can calculate the distance and angle values of each emotion and transfer the coordinate system from Cartesian to polar using simple mathematical equations.
+Why use both forms? Well they found out that for the emotions that were hard to differentiate, using Cartesian form gave misclassifications. For example, “Peaceful” and “Bored” were misclassified into the “Calm” on the <abbr title="Arousal Valence">AV</abbr> plane. The results they had using polar coordinates were much more accurate as you can see with the following table:</li>
+</ol>
+
+<p></p><figure markdown="1">
+<table>
+<thead>
+<tr>
+  <th>Coordinate type</th>
+  <th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Cartesian</td>
+  <td>63.03%</td>
+</tr>
+<tr>
+  <td>Polar</td>
+  <td>94.55%</td>
+</tr>
+</tbody>
+</table><p></p>
+
+<figcaption>
+
+<p>Figure 2.2: Table comparing accuracy of <abbr title="Support Vector Regression">SVR</abbr> using Polar and Cartesian forms<sup id="fnref2:2"><a href="#fn:2" class="footnote-ref">2</a></sup></p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<p>They also compared the accuracy of <abbr title="Support Vector Regression">SVR</abbr> with classification <abbr title="Machine Learning">ML</abbr> techniques such as Gaussian Mixture Model (<abbr title="Gaussian Mixture Model">GMM</abbr>) and Support Vector Machine to try and see which was more effective. These are the results they got:</p>
+
+<p></p><figure markdown="1">
+<table>
+<thead>
+<tr>
+  <th>Technique</th>
+  <th>Coordinate type</th>
+  <th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><abbr title="Support Vector Regression">SVR</abbr></td>
+  <td>Cartesian</td>
+  <td>63.03%</td>
+</tr>
+<tr>
+  <td><abbr title="Support Vector Regression">SVR</abbr></td>
+  <td>Polar</td>
+  <td>94.55%</td>
+</tr>
+<tr>
+  <td><abbr title="Support Vector Machine">SVM</abbr></td>
+  <td>Cartesian</td>
+  <td>32.73%</td>
+</tr>
+<tr>
+  <td><abbr title="Gaussian Mixture Model">GMM</abbr></td>
+  <td>Cartesian</td>
+  <td>91.52%</td>
+</tr>
+<tr>
+  <td><abbr title="Gaussian Mixture Model">GMM</abbr></td>
+  <td>Polar</td>
+  <td>92.73%</td>
+</tr>
+</tbody>
+</table><p></p>
+
+<figcaption>
+
+<p>Figure 2.3: Table of different techniques used for experience and their accuracy<sup id="fnref3:2"><a href="#fn:2" class="footnote-ref">2</a></sup></p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<p>Misclassifications still occurred as we can see, partly due to the fact that some emotions are too hard to differentiate for a computer (even for us sometimes) such as sleepy, sad, anger, etc. It also is interesting to notice that in general, use of polar coordinates results in a better accuracy of emotion recognition (i.e. misclassifications are significantly reduced).</p>
+
+<h3 id="SVM">Support Vector Machine</h3>
+
+<p>The job of a <abbr title="Support Vector Machine">SVM</abbr> is to create a separation boundary (not necessarily linear) in a feature space such that subsequent observations can be automatically classified into separate groups. For <abbr title="Music Emotion Recognition">MER</abbr>, these groups correspond to emotions. A good example of such a system is classifying emails into spam or non-spam. The seperation boundary is produced by an optimal separating hyperplane. Consider a <code>n</code> dimensional space. A separating hyperplane is essentially an affine <code>(n-1)</code> dimensional space that lives within the larger <code>n</code> dimensional space<sup id="fnref:5"><a href="#fn:5" class="footnote-ref">3</a></sup>.</p>
+
+<p></p><figure markdown="1">
+<img src="/MERMachineLearning/assets/images/seperating_hyperplane.png" alt="One- and two-dimensional hyperplanes"><p></p>
+
+<figcaption>
+
+<p>Figure 2.4: One- and two-dimensional hyperplanes<sup id="fnref2:5"><a href="#fn:5" class="footnote-ref">3</a></sup></p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<p>An <em>optimal</em> separating plane is the separating hyperplane that is farthest from any training observations also called Maximal Margin Hyperplane (<abbr title="Maximal Margin Hyperplane">MMH</abbr>). To find an <abbr title="Maximal Margin Hyperplane">MMH</abbr>, we first compute the perpendicular distance from each training observation <code>x</code><sub><code>i</code></sub> for a given separating hyperplane. The smallest perpendicular distance to a training observation from the hyperplane is known as the margin. The <abbr title="Maximal Margin Hyperplane">MMH</abbr> is the separating hyperplane where the margin is the largest. We can see on the figure below that the <abbr title="Maximal Margin Hyperplane">MMH</abbr> is the mid-line of the widest "block" (i.e. margin) that we can insert between the two classes such that they are perfectly separated.</p>
+
+<p></p><figure markdown="1">
+<img src="/MERMachineLearning/assets/images/MMH.png" alt=" Maximal margin hyperplane with support vectors (A, B and C)"><p></p>
+
+<figcaption>
+
+<p>Figure 2.5: Maximal margin hyperplane with support vectors (A, B and C)<sup id="fnref3:5"><a href="#fn:5" class="footnote-ref">3</a></sup></p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<p>This is how a Soft Margin Classifier (<abbr title="Soft Margin Classifier">SMC</abbr>) works. A <abbr title="Soft Margin Classifier">SMC</abbr> allows some observations to be on the incorrect side of the margin or hyperplane. The following figures below demonstrate observations being on the wrong side of the margin and the wrong side of the hyperplane respectively.</p>
+
+<p></p><figure markdown="1">
+<img src="/MERMachineLearning/assets/images/SVC.png" alt="Observations on the wrong side of the margin and hyperplane, respectively"><p></p>
+
+<figcaption>
+
+<p>Figure 2.6: Observations on the wrong side of the margin and hyperplane, respectively<sup id="fnref4:5"><a href="#fn:5" class="footnote-ref">3</a></sup></p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<p><abbr title="Support Vector Machine">SVM</abbr> is an extension of a <abbr title="Soft Margin Classifier">SMC</abbr> which allows non-linear decision boundaries. Consider the following figures below. In such a situation a purely linear <abbr title="Soft Margin Classifier">SMC</abbr> will be useless, simply because the data has no clear linear separation.</p>
+
+<p></p><figure markdown="1">
+<img src="/MERMachineLearning/assets/images/nonlinear.png" alt="No clear linear separation between classes and thus poor SVC performance"><p></p>
+
+<figcaption>
+
+<p>Figure 2.7: No clear linear separation between classes and thus poor SVC performance<sup id="fnref5:5"><a href="#fn:5" class="footnote-ref">3</a></sup></p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<p><abbr title="Support Vector Machine">SVM</abbr> results from expanding the feature space through the use of special functions known as kernels<sup id="fnref6:5"><a href="#fn:5" class="footnote-ref">3</a></sup>.</p>
+
+<p></p><figure markdown="1">
+<img src="/MERMachineLearning/assets/images/SVM.png" alt="A d-degree polynomial kernel and a radial kernel"><p></p>
+
+<figcaption>
+
+<p>Figure 2.8: A d-degree polynomial kernel and a radial kernel<sup id="fnref7:5"><a href="#fn:5" class="footnote-ref">3</a></sup></p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<p>An experiment to study <abbr title="Support Vector Machine">SVM</abbr> was lead by Cyril Laurier and Perfecto Herrera<sup id="fnref:6"><a href="#fn:6" class="footnote-ref">4</a></sup>. They chose 133 music features such as energy band ratio, flatnessDB, beats per minute, etc. Five clusters, shown below, were selected (clusters/labels are another way to represent emotions: it's called <em><a href="classification">Classification</a></em>). The hyperplanes were therefore 4-dimensional as a 5-dimensional plane was used (five clusters → 5-dimensional plane).</p>
+
+<p></p><figure markdown="1">
+<table>
+<thead>
+<tr>
+  <th>Cluster 1</th>
+  <th>Cluster 2</th>
+  <th>Cluster 3</th>
+  <th>Cluster 4</th>
+  <th>Cluster 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Rowdy</td>
+  <td>Amiable</td>
+  <td>Literate</td>
+  <td>Witty</td>
+  <td>Volatile</td>
+</tr>
+<tr>
+  <td>Rousing</td>
+  <td>Sweet</td>
+  <td>Wistful</td>
+  <td>Humorous</td>
+  <td>Fiery</td>
+</tr>
+<tr>
+  <td>Confident</td>
+  <td>Fun</td>
+  <td>Bittersweet</td>
+  <td>Whimsical</td>
+  <td>Visceral</td>
+</tr>
+<tr>
+  <td>Boisterous</td>
+  <td>Rollicking</td>
+  <td>Autumnal</td>
+  <td>Wry</td>
+  <td>Aggressive</td>
+</tr>
+<tr>
+  <td>Passionate</td>
+  <td>Cheerful</td>
+  <td>Brooding</td>
+  <td>Campy</td>
+  <td>Tense/Anxious</td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td>Poignant</td>
+  <td>Quirky</td>
+  <td>Intense</td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Silly</td>
+  <td></td>
+</tr>
+</tbody>
+</table><p></p>
+
+<figcaption>
+
+<p>Figure 2.9: MIREX table of 5 clusters of emotions.<sup id="fnref2:6"><a href="#fn:6" class="footnote-ref">4</a></sup></p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<p>As you can see, the emotions in each cluster are deliberately vague for the <abbr title="Support Vector Machine">SVM</abbr> to cover as many emotions as possible.</p>
+
+<p>The experience shows three main points :</p>
+
+<ol>
+<li>Cluster 3 and 5 are the most predictable</li>
+<li>There is a problem to predict Cluster 1 because it is close to Cluster 5 due to acoustic similarities. Both are energetic, loud and many of both use electric guitar. So the computer will have difficulties to evaluate the difference of the two Clusters.</li>
+<li>There is a confusion between Cluster 2 and 4 because the emotions in these two Clusters sometimes overlap: fun (Cluster 2) and humorous (Cluster 4).</li>
+</ol>
+
+<p>The results of the experience is summarised in the table below:</p>
+
+<p></p><figure markdown="1">
+<table>
+<thead>
+<tr>
+  <th>Truth/Predicted</th>
+  <th>1</th>
+  <th>2</th>
+  <th>3</th>
+  <th>4</th>
+  <th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Cluster 1</td>
+  <td><strong>45.8</strong></td>
+  <td>11.7</td>
+  <td>5.0</td>
+  <td>17.5</td>
+  <td>20.0</td>
+</tr>
+<tr>
+  <td>Cluster 2</td>
+  <td>10.8</td>
+  <td><strong>50.0</strong></td>
+  <td>11.7</td>
+  <td>27.5</td>
+  <td>0.0</td>
+</tr>
+<tr>
+  <td>Cluster 3</td>
+  <td>1.7</td>
+  <td>11.7</td>
+  <td><strong>82.5</strong></td>
+  <td>4.1</td>
+  <td>0.0</td>
+</tr>
+<tr>
+  <td>Cluster 4</td>
+  <td>10.0</td>
+  <td>31.7</td>
+  <td>4.2</td>
+  <td><strong>53.3</strong></td>
+  <td>0.8</td>
+</tr>
+<tr>
+  <td>Cluster 5</td>
+  <td>18.3</td>
+  <td>1.7</td>
+  <td>2.5</td>
+  <td>6.7</td>
+  <td><strong>70.8</strong></td>
+</tr>
+</tbody>
+</table><p></p>
+
+<figcaption>
+
+<p>Figure 2.10: Confusion Matrix, horizontally the distribution of the prediction for a given Cluster<sup id="fnref3:6"><a href="#fn:6" class="footnote-ref">4</a></sup></p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<h3 id="NN">Neural Network</h3>
+
+<p>Neural Networks imitate the activity of our biological nervous system. It associates attributes and characteristics of data to emotions amongst other things. For example, certain colours are associated with certain emotions (brightly coloured paintings are usually associated with joy and happiness whereas dark-coloured paintings are associated with sadness, fear, etc.). The principle of this technique is illustrated with the image below. A certain number of inputs are used. These inputs are then analysed by the computer with “tools” that class the information given: the hidden layers. Each input now has a “weight” associated with the hidden layer. The hidden layers with the most weight have a greater activity level. The activity level of each layer then determines the output<sup id="fnref:3"><a href="#fn:3" class="footnote-ref">5</a></sup>. Although neural networks have been applied extensively in domains such as object recognition, speech and text recognition, they have been relatively under-utilised in music cognition and music informatics.</p>
+
+<p></p><figure markdown="1">
+<img src="/MERMachineLearning/assets/images/NeuralNetworkSchema.jpg" alt="Neural Network schema"><p></p>
+
+<figcaption>
+
+<p>Figure 2.9: Neural Network schema<sup id="fnref2:3"><a href="#fn:3" class="footnote-ref">5</a></sup></p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<p>In <abbr title="Music Emotion Recognition">MER</abbr> application, the hidden layers correspond to music features. You also need a training set of data for the computer to work with (i.e. data that depending on the activity of the features outputs the corresponding emotion). It is also necessary to find a concrete way to represent emotions. Usually researchers will use coordinates with x-axis representing some general aspect of emotion and y-axis another aspect of emotion such as valence and arousal.
+Just like your nervous system associates musical attributes to certain emotions (high energy music, fast rhythm… → agitated; slow rhythm, no energy, long sounds as opposed to short, brief sounds → sad…), the neural network does the same thing.</p>
+
+<p>Naresh N. Vempala and Frank A. Russo led an experiment of <abbr title="Music Emotion Recognition">MER</abbr> using Neural Networks. They conducted a network that predicted the emotion for the entire piece of music. Twelve music experts were used to give the emotions they felt whilst listening to pieces. The data that was retrieved was then used as the "actual" emotion of the song even though emotions are subjective. Then thirteen music features were extracted used as inputs and hidden layers  and the ouputs were again <abbr title="Arousal Valence">AV</abbr> coordinates (because it is an simple way to represent emotions) as shown on the imag  e below.</p>
+
+<p></p><figure markdown="1">
+<img src="/MERMachineLearning/assets/images/NN_explanation.png" alt="Neural Network schema"><p></p>
+
+<figcaption>
+
+<p>Figure 2.10: Neural Network of the Experience<sup id="fnref:4"><a href="#fn:4" class="footnote-ref">6</a></sup></p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<p>The nodes at each layer correspond to some combination of the musical features used in the emotion evaluation. The outputs of the nodes are the weightings of those particular combinations for the next layer's usage. The value (or activity) of the node itself is calculated by summing up all of the incoming weights. Since the activities need to be some what normalised, this sum is then put through a function (Sigmoid function) which ensures that the final activity level is between 0 and 1. Of course the summing step does not apply to the very first layer, as the first layer has only the extracted musical features as direct inputs. When the network is initialised, all weights between all units are set to random numbers close to zero.</p>
+
+<p>In the training stages after a run of the neural network, the error between the desired outputs and the calculated outputs are computed, the weightings are then adjusted and the network is run again.</p>
+
+<p>This is the final result of the experiment:</p>
+
+<p></p><figure markdown="1">
+<img src="/MERMachineLearning/assets/images/NNresult1.png" alt="Neural Network schema"><p></p>
+
+<figcaption>
+
+<p>Figure 2.11: Result of experiment<sup id="fnref2:4"><a href="#fn:4" class="footnote-ref">6</a></sup></p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<p>We can see from the graph that overall, Neural Networks accurately predict emotions. However Stravinsky "actual" emotions and predicted emotions are quite far off. What could be done is to create a Neural Network for each music attribute and then use the ones that contribute the most to the <abbr title="Arousal Valence">AV</abbr> prediction.</p>
+
+<h3>Gaussian Mixture Model</h3>
+
+<p><abbr title="Gaussian Mixture Model">GMM</abbr> is another classification technique that uses an <code>n</code> dimensional plane, <code>n</code> being the number of musical features. <abbr title="Gaussian Mixture Model">GMM</abbr> shifts the data points by modifyfing the current weightings in order to match the predicted class of the data points with the ground truth. The probability of the data points being a member of a specific class is normally distrubuted in the space. The model finds the highest probability in all the computed distributions and associates that data point with that class (i.e. emotion). The weights are adjusted accordingly to the error evaluated by the computer between model prediction and ground truth<sup id="fnref:8"><a href="#fn:8" class="footnote-ref">7</a></sup>.</p>
+
+<p>The experiment mentioned above in <a href="techniques#SVR"><abbr title="Support Vector Regression">SVR</abbr></a> uses <abbr title="Gaussian Mixture Model">GMM</abbr> to compare its accuracy with the accuracy of <abbr title="Support Vector Regression">SVR</abbr>. As we can see, <abbr title="Gaussian Mixture Model">GMM</abbr> has a very high probability using both Cartesian and Polar Coordinates.</p>
+
+<h3>Conclusion</h3>
+
+<p>There exists many <abbr title="Machine Learning">ML</abbr> techniques applied to <abbr title="Music Emotion Recognition">MER</abbr>. We have seen three: <abbr title="Support Vector Regression">SVR</abbr>, <abbr title="Support Vector Machine">SVM</abbr>, Neural Networks. Some other techniques worth mentioning are Gaussian Mixture Models, Decision Tree Learning, Clustering and k-Nearest Neighbours.</p>
+
+<p></p><figure markdown="1"><p></p>
+
+<h4 id="Fig210">Accuracy</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Technique</th>
+  <th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><abbr title="Support Vector Regression">SVR</abbr></td>
+  <td>78.8%</td>
+</tr>
+<tr>
+  <td><abbr title="Support Vector Machine">SVM</abbr></td>
+  <td>60.5%</td>
+</tr>
+<tr>
+  <td><abbr title="Gaussian Mixture Model">GMM</abbr></td>
+  <td>92.1%</td>
+</tr>
+<tr>
+  <td>Neural Network</td>
+  <td>85.6%</td>
+</tr>
+<tr>
+  <td>KNN<sup id="fnref:7"><a href="#fn:7" class="footnote-ref">8</a></sup></td>
+  <td>38.9%</td>
+</tr>
+</tbody>
+</table>
+
+<figcaption>
+
+<p>Figure 2.10: Comparative Table of Various <abbr title="Machine Learning">ML</abbr> Techniques Applied in <abbr title="Music Emotion Recognition">MER</abbr> (Calculated from average of <sup id="fnref4:2"><a href="#fn:2" class="footnote-ref">2</a></sup>, <sup id="fnref4:6"><a href="#fn:6" class="footnote-ref">4</a></sup>, <sup id="fnref3:4"><a href="#fn:4" class="footnote-ref">6</a></sup>, <sup id="fnref2:7"><a href="#fn:7" class="footnote-ref">8</a></sup>)</p>
+
+</figcaption>
+
+<p></p></figure><p></p>
+
+<p>From the table above, we can see that the researches and experiments on <abbr title="Music Emotion Recognition">MER</abbr> are promising because generally emotions are recognised by the computer. However all of these techniques have yet to be perfected and therefore need a lot of work.</p>
+
+<h3>References</h3>
+
+<div class="footnotes">
+<hr>
+<ol>
+
+<li id="fn:1">
+<p>Wikipedia (2015) Machine Learning [Online] Available from: <a href="http://en.wikipedia.org/wiki/Machine_learning" target="_blank">http://en.wikipedia.org/wiki/Machine_learning</a>&nbsp;<a href="#fnref:1" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+</li>
+
+<li id="fn:2">
+<p>Han, B., Rho, S., Dannenberg, R., Hwang, E. (2009) SMERS: Music Emotion Recognition using Support Vector Recognition [Online] Available from:<a href="http://www.cs.cmu.edu/~rbd/papers/emotion-ismir-09.pdf"> http://www.cs.cmu.edu/~rbd/pap…</a>&nbsp;<a href="#fnref:2" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref2:2" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref3:2" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref4:2" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+</li>
+
+<li id="fn:5">
+<p>Halls-Moore, M. (2014) Predicting Support Vector Machines: A guide for beginners [Online] Available from: <a href="http://www.quantstart.com/articles/Support-Vector-Machines-A-Guide-for-Beginners">http://www.quantstart.com/articles/Support-Vector-Mach…</a>&nbsp;<a href="#fnref:5" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref2:5" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref3:5" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref4:5" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref5:5" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref6:5" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref7:5" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+</li>
+
+<li id="fn:6">
+<p>Laurier, C., Herrera, P. (-) Audio Music Mood Classification
+Using Support Vecotor Machine [Online] Available from: <a href="http://www.mtg.upf.edu/files/publications/b6c067-ISMIR-MIREX-2007-Laurier-Herrera.pdf">http://www.mtg.upf.edu/files/publications/b6c06…</a>&nbsp;<a href="#fnref:6" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref2:6" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref3:6" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref4:6" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+</li>
+
+<li id="fn:3">
+<p>Stergiou, C., Siganos, D. (-) Neural Networks [Online] Available from: <a href="http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/report.html#What%20is%20a%20Neural%20Network">http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/repo…</a>&nbsp;<a href="#fnref:3" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref2:3" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+</li>
+
+<li id="fn:4">
+<p>Vempala, N., Russo, F. (2012) Predicting Emotion from Music Audio Features Using Neural Networks [Online] Available from: <a href="http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_66.pdf">http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eec…</a>&nbsp;<a href="#fnref:4" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref2:4" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref3:4" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+</li>
+
+<li id="fn:8">
+<p>Robertson, H. (2012) Introduction to Gaussian Mixture Models for Music Information Retrieval [Online] Available from: <a href="http://www.music.mcgill.ca/~hannah/MUMT621/gmm.pdf">http://www.music.mcgill.ca/~hannah/MUM…</a>&nbsp;<a href="#fnref:8" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+</li>
+
+<li id="fn:7">
+<p>Malheiro, R., Panda, R., Gomes, P., Paiva, R. (2013) Music Emotion Recognition from Lyrics: A Comparative Study [Online] Available from: <a href="http://www.academia.edu/8516120/Music_Emotion_Recognition_from_Lyrics_A_Comparative_Study._6th_International_Workshop_on_Machine_Learning_and_Music_MML13_._Praga">http://www.academia.edu/8516120/Music_Emotion_Recogn…</a>&nbsp;<a href="#fnref:7" class="footnote-backref"><i class="icon-up-right small"></i></a> <a href="#fnref2:7" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+</li>
+
+</ol>
+</div>
+</div>
+
+<a href="#" id="top">
+  ↑
+</a>
+    <div class="c-b"></div>
+<footer>
+  <span class="f-l">© Group 21.</span>
+  <span class="f-r right">MER Machine Learning</span>
+</footer>
+  </div>
+
+</body>
+</html>

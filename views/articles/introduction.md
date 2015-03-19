@@ -65,6 +65,7 @@ Neural Networks is modelled on our biological nervous system. It works by associ
 
 The output is then compared to the correct values, a backpropagation algorithm is then applied which reduces the errors. The machine is then trained by repeating the above steps, which can be around 10,&nbsp;000 cycles.[^4]
 
+Other techniques including Gaussian Mixture Models, Fuzzy K-Nearest Neighbour and Active Learning are included in the later pages of this website. They will highlight information about the techniques and how they can help with MER related problems.
 
 More information on the three methods can be found by reading our *[Techniques](articles/techniques)* page.
 
