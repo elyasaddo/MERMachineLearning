@@ -36,8 +36,8 @@ Technique         | Problem
 SVR               |  
 SVM               | Binary classification
 GMM               |
-Neural Network    |
-KNN               |  
+Neural Network    | Great for classification problems[^3]
+FKNN              | Good for problems where the results need to be ordered.
 Linear Regression | Works well for speech recognition, especially helpful for identifying&nbsp;lyrics
 <figcaption markdown="1">
   Figure 5.2: Comparative Table of Various ML Techniques and problems in MER
@@ -52,18 +52,13 @@ Fuzzy labelling appears to be a promising method of emotional taxonomy. It offer
 
 On this website, we have discussed Machine Learning and how it aids Music Emotion Recognition in establishing the emotion/mood of a song segment. We've looked at how these ML techniques can overcome several problems including: human perception by looking into [fuzzy labelling](classification#FKNN), generating accurate results from very little data by learning from similar examples it has seen previously using [active learning](regression#ActLearning), and detecting changes in emotion throughout the course of a song using [time-continuous regression](regression#TimeCont).
 
-<!--
-- Potential Machine Learning techniques that haven't been used a great deal, but may be useful in solving certain problems
-  - GMM
-  - Decision Tree Learning
-  - K-Nearest Neighbours
-
--->
 ### References
 
 [^1]: Bing Xiang, and Berger, T. (2003). Efficient text-independent speaker verification with structu&shy;ral gaussian mixture models and neural network. IEEE Transactions on Speech and Audio Processing, [online] 11(5), pp.447-456. Available at: [http://ieeexplore.ieee.org/xpls/abs_all&hellip;](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1223594&tag=1) [Acc&shy;essed 16 Mar. 2015].
 
 [^2]: Yang, Y., Liu, C. and Chen, H. (2006). Music emotion classification. Proceedings of the 14th annual ACM international conference on Multimedia - MULTIMEDIA '06. [online] Available at: [http://delivery.acm.org/10.1145/11&hellip;](http://delivery.acm.org/10.1145/1190000/1180665/p81-yang.pdf?ip=129.31.74.197&id=1180665&acc=ACTIVE%20SERVICE&key=BF07A2EE685417C5%2EF5014A9D3D5CC2D9%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=640746836&CFTOKEN=80988680&__acm__=1426551374_0a116eecd6560832218d5b22b6b2c4dd) [Accessed 17 Mar. 2015].
+
+[^3]: Heaton, J. (2015). Problems Commonly Solved With Neural Networks | Heaton Research. [online] Heatonresearch.com. Available at: [http://www.heatonresearch.com/online/introduction-neu&hellip;](http://www.heatonresearch.com/online/introduction-neural-networks-java-edition-2/chapter-1/page3.html) [Accessed 18 Mar. 2015].
 
 *[ML]: Machine Learning
 *[GMM]: Gaussian Mixture Model
