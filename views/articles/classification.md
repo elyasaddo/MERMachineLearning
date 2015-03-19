@@ -41,9 +41,9 @@ The purposes of the previous forms mentioned are to output a definite value for 
 
 ### Why classification is difficult
 
-Classification is, in essence, pattern recognition - &ldquo;the act of taking in raw data and making an action based on the "category" of the pattern&rdquo;.[^5] Although humans clearly have this skill, we often struggle with defining rules for the classification of a particular set of data because it comes so naturally to us. Because of this, machine learning is very useful in classification as the rules created are data based, therefore more likely to be accurate in determining the nature of the data.[^11] The training set of data does however need to be labelled by a human before a machine can come up with a suitable model for classifying (known as supervised learning); otherwise it will just be trying to partition groups of data with common attributes (unsuprevised learning) which may not result in emotion related connections.[^12]
+Classification is, in essence, pattern recognition - &ldquo;the act of taking in raw data and making an action based on the "category" of the pattern&rdquo;.[^5] Although humans clearly have this skill, we often struggle with defining rules for the classification of a particular set of data because it comes so naturally to us. Because of this, Machine Learning is very useful in classification as the rules created are data based, therefore more likely to be accurate in determining the nature of the data.[^11] The training set of data does however need to be labelled by a human before a machine can come up with a suitable model for classifying (known as supervised learning); otherwise it will just be trying to partition groups of data with common attributes (unsuprevised learning) which may not result in emotion related connections.[^12]
 
-### Machine learning models
+### Machine Learning Models
 
 #### Support Vector Machines
 Support Vector Machines take training data (a.k.a. observations) and represent them as a pair; the first part of the pair is a vector, and the second is the ground truth. The vectors for each observation have n dimensions and are plotted in a set space also of `n` dimensions (`R`<sup>`n`</sup>) where `n` is the number of elements / features used to compare the observations. Using one of the observations as the origin, hyperplanes are created to shatter the points (divide the points into two groups, data points which exist in the class and those which don't). If the data are not falling into the correct partition of the space, a vector of weighting coefficients is adjusted and applied to the the vectors to shift the data round in order to fit into the partition which matches their ground truth.[^13]
@@ -75,15 +75,15 @@ One particular study into the use of SVMs for MER carried out by Chiang et al. u
 
 This study managed to achieve average accuracies of 86.94% in one data set and 92.33% in another.[^15]
 
- <!-- - Decision trees -->
- <!-- - Boosting -->
- <!-- - neural networks -->
 #### Fuzzy k-Nearest Neighbour Classifiers (FKNN) #### {#FKNN}
 In regular k-Nearest Neighbour algorithms, the input data is predicted to exist in the category which it's k-Nearest Neighbours belong to. The *fuzzy* introduces the notion of likelihood in belonging to this category, and all categories.  To find the fuzzy membership `μ`<!-- mu --> to a particular class of an input data, you take `(Σ(μ`<sub>`i`</sub> `/` `x`<sub>`i`</sub><sup>`2`</sup> `)) / (Σx`<sub>`i`</sub><sup>`-2`</sup>`) : 1 <= i <= k; x`<sub>`i`</sub> is the distance from input data to data point `i`.
 
 For the machine to create a model, it must first learn the values of the training set. These values are fuzzy vectors, of which, each component is calculated from the mean of the f<sup>th</sup> feature in each class. The machine learning part of this is when the error is calculated for each test data point and removes the weakest features are removed in order until the output vector accuracy converges. <!-- restructure this part #remove remove -->
 
 In a study carried out by Yang et al., each piece in the training set were split into segments. When labeling the segments, if the classifications were not a<!--?--> majority, the segment was withdrawn from the training data. This particular study found an accuracy of 70.88%[^10]
+
+#### GMM
+
 
 
 ### Conclusion
@@ -112,18 +112,19 @@ Some may argue that, since certain emotions are so similar to each other and yet
 
 
 ### References
-[^1]: Yang, Y., Lin, Y., Su, Y. and Chen, H. (2008). A Regression Approach to Music Emotion Recognition. IEEE Transactions on Audio, Speech, and Language Processing, [online] 16(2), pp.448-457. Available at: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1655&rep=rep1&type=pdf [Accessed 12 Feb. 2015].
-[^2]: Trohidis, K., Tsoumakas, G., Kalliris, G. and Vlahavas, I. (2011). Multi-label classification of music by emotion. EURASIP Journal on Audio, Speech, and Music Processing, [online] 2011(1), p.4. Available at: http://ismir2008.ismir.net/papers/ISMIR2008_275.pdf [Accessed 13 Feb. 2015].
-[^3]: Tsoumakas, G. and Katakis, I. (2007). Multi-Label Classification. International Journal of Data Warehousing and Mining, [online] 3(3), pp.1-13. Available at: http://books.google.co.uk/books?hl=en&lr=&id=1bpEifVEi2MC&oi=fnd&pg=PA64&dq=Multi-label+classification:An+overview&ots=WyD83kziKF&sig=P6VHFTT9RycLgfpCDrK0vq5o4hM#v=onepage&q=single-label%20&f=false [Accessed 15 Feb. 2015].
-[^4]: Boutell, M. (2004). Learning multi-label scene classification*1. Pattern Recognition. [online] Available at: https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf [Accessed 3 Mar. 2015].
+[^1]: Yang, Y., Lin, Y., Su, Y. and Chen, H. (2008). A Regression Approach to Music Emotion Recognition. IEEE Transactions on Audio, Speech, and Language Processing, [online] 16(2), pp.448-457. Available at: [http://citeseerx.ist.psu.edu/viewdoc/&hellip;](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1655&rep=rep1&type=pdf) [Accessed 12 Feb. 2015].
+[^2]: Trohidis, K., Tsoumakas, G., Kalliris, G. and Vlahavas, I. (2011). Multi-label classification of music by emotion. EURASIP Journal on Audio, Speech, and Music Processing, [online] 2011(1), p.4. Available at: [http://ismir2008.ismir.net/papers/&hellip;](http://ismir2008.ismir.net/papers/ISMIR2008_275.pdf) [Accessed 13 Feb. 2015].
+[^3]: Tsoumakas, G. and Katakis, I. (2007). Multi-Label Classification. International Journal of Data Warehousing and Mining, [online] 3(3), pp.1-13. Available at: [http://books.google.co.uk/books?hl&hellip;](http://books.google.co.uk/books?hl=en&lr=&id=1bpEifVEi2MC&oi=fnd&pg=PA64&dq=Multi-label+classification:An+overview&ots=WyD83kziKF&sig=P6VHFTT9RycLgfpCDrK0vq5o4hM#v=onepage&q=single-label%20&f=false) [Accessed 15 Feb. 2015].
+[^4]: Boutell, M. (2004). Learning multi-label scene classification*1. Pattern Recognition. [online] Available at: [https://www.rose-hulman.edu/~boutell/&hellip;](https://www.rose-hulman.edu/~boutell/publications/boutell04PRmultilabel.pdf) [Accessed 3 Mar. 2015].
 [^5]: Duda, R., Hart, P. and Stork, D. (2001). Pattern classification. 2nd ed. New York: Wiley.
 [^6]: <!-- not used -->(SVM use for text recognition) https://dl.acm.org/citation.cfm?id=944790.944793&coll=DL&dl=ACM&CFID=485866018&CFTOKEN=79343228
-[^7]: X., Downie, J., Laurier, C., Bay, M. and Ehmann, A. (2008). The 2007 MIREX audio mood classification task: Lessons learned. Proceedings of the International Conference on Music Information Retrieval. [online] Available at : http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf [Accessed 5 Mar. 2015].
-[^8]: Ng,A.. 2012. Classification (8 min). [online]. [Accessed 25 Feb. 2015]. Available from: https://class.coursera.org/ml-005/lecture/33
-[^9]: Barthet, M., Fazekas, G. and Sandler, M. (2013). Music emotion recognition: from content-to context-based models. From Sounds to Music and Emotions. [online] Available at: https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false [Accessed 5 Mar. 2015].
-[^10]: Yang, Y., Liu, C. and Chen, H. (2006). Music emotion classification. Proceedings of the 14th annual ACM international conference on Multimedia - MULTIMEDIA '06. [online] Available at: http://dl.acm.org/citation.cfm?id=1180665 [Accessed 12 Feb. 2015].
+[^7]: X., Downie, J., Laurier, C., Bay, M. and Ehmann, A. (2008). The 2007 MIREX audio mood classification task: Lessons learned. Proceedings of the International Conference on Music Information Retrieval. [online] Available at : [http://citeseerx.ist.psu.edu/&hellip;](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.182.2004&rep=rep1&type=pdf) [Accessed 5 Mar. 2015].
+[^8]: Ng,A.. 2012. Classification (8 min). [online]. [Accessed 25 Feb. 2015]. Available from: [https://class.coursera.org/ml-005/&hellip;](https://class.coursera.org/ml-005/lecture/33)
+[^9]: Barthet, M., Fazekas, G. and Sandler, M. (2013). Music emotion recognition: from content-to context-based models. From Sounds to Music and Emotions. [online] Available at: [https://books.google.co.uk/books?id=zW&hellip;](https://books.google.co.uk/books?id=zWG5BQAAQBAJ&pg=PA243&dq=fuzzy+label+classification&hl=en&sa=X&ei=9dn2VIDsGIG3UeHngIgL&ved=0CC4Q6AEwAA#v=onepage&q=fuzzy%20label%20classification&f=false) [Accessed 5 Mar. 2015].
+[^10]: Yang, Y., Liu, C. and Chen, H. (2006). Music emotion classification. Proceedings of the 14th annual ACM international conference on Multimedia - MULTIMEDIA '06. [online] Available at: [http://dl.acm.org/&hellip;](http://dl.acm.org/citation.cfm?id=1180665) [Accessed 12 Feb. 2015].
 [^11]: Schapire, R. (n.d.). Machine Learning Algorithms for Classification..
-[^12]: Ng,A.. 2012. Supervised Learning (12 min). [online]. [Accessed 25 Feb. 2015]. Available from: https://class.coursera.org/ml-005/lecture/3
-[^13]: Burges, C. J. (1998). A tutorial on support vector machines for pattern recognition. Data mining and knowledge discovery. [online] 2(2), 121-167. Available from: http://research.microsoft.com/pubs/67119/svmtutorial.pdf [Accessed 26 Feb. 2015].
-[^14]: opencv dev team, (2015). Introduction to Support Vector Machines — OpenCV 2.4.11.0 documentation. [online] Docs.opencv.org. Available at: http://docs.opencv.org/doc/tutorials/ml/introduction_to_svm/introduction_to_svm.html [Accessed 17 Mar. 2015].
-[^15]: Chiang, W., Wang, J. and Hsu, Y. (2014). A Music Emotion Recognition Algorithm with Hierarchical SVM Based Classifiers. 2014 International Symposium on Computer, Consumer and Control. [online] Available at: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6846115 [Accessed 28 Feb. 2015].
+[^12]: Ng,A.. 2012. Supervised Learning (12 min). [online]. [Accessed 25 Feb. 2015]. Available from: [https://class.coursera.org/ml-005/&hellip;](https://class.coursera.org/ml-005/lecture/3)
+[^13]: Burges, C. J. (1998). A tutorial on support vector machines for pattern recognition. Data mining and knowledge discovery. [online] 2(2), 121-167. Available from: [http://research.microsoft.com/pubs/67119/svmtutorial.pdf](http://research.microsoft.com/pubs/67119/svmtutorial.pdf) [Accessed 26 Feb. 2015].
+[^14]: opencv dev team, (2015). Introduction to Support Vector Machines — OpenCV 2.4.11.0 documentation. [online] Docs.opencv.org. Available at: [http://docs.opencv.org/doc/&hellip;](http://docs.opencv.org/doc/tutorials/ml/introduction_to_svm/introduction_to_svm.html) [Accessed 17 Mar. 2015].
+[^15]: Chiang, W., Wang, J. and Hsu, Y. (2014). A Music Emotion Recognition Algorithm with Hierarchical SVM Based Classifiers. 2014 International Symposium on Computer, Consumer and Control. [online] Available at: [http://ieeexplore.ieee.org/stamp/&hellip;](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6846115) [Accessed 28 Feb. 2015].
+[^16]: Byeong-jun Han, Seungmin Rho Roger and B. Dannenberg Eenjun Hwang (2009) SMERS: Music Emotion Recognition using Support Vector Recognition [online] Available from:[ http://www.cs.cmu.edu/~rbd/pap&hellip;](http://www.cs.cmu.edu/~rbd/papers/emotion-ismir-09.pdf)

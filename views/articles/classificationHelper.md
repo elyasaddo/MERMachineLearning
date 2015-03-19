@@ -118,3 +118,5 @@
 [^13]: (SVM Tutorial) http://research.microsoft.com/pubs/67119/svmtutorial.pdf
 [^14]: (another (simpler) SVM explanation) http://docs.opencv.org/doc/tutorials/ml/introduction_to_svm/introduction_to_svm.html
 [^15]: (SVM study for MER) http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6846115
+[^16]: Byeong-jun Han, Seungmin Rho Roger and B. Dannenberg Eenjun Hwang (2009) SMERS: Music Emotion Recognition using Support Vector Recognition [Online] Available from:[ http://www.cs.cmu.edu/~rbd/pap&hellip;](http://www.cs.cmu.edu/~rbd/papers/emotion-ismir-09.pdf)
+[^17]:GMM

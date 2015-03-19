@@ -10,13 +10,14 @@ We shall begin by looking at accuracy of the methods. Recall from the [technique
 
 <figure markdown="1">
 #### Accuracy #### {#Fig51}
-Technique       | Accuracy
---------------- | --------------
-SVR             | 78.8%
-SVM             | 60.5%
-**GMM**         | **92.1%**
-Neural Network  | 85.6%
-KNN             | 38.9%
+Technique         | Accuracy
+----------------- | --------------
+SVR               | 78.8%
+SVM               | 60.5%
+**GMM**           | **92.1%**
+Neural Network    | 85.6%
+KNN               | 38.9%
+Linear Regression |
 <figcaption markdown="1">
   Figure 5.1: Comparative Table of Various ML Techniques Applied in MER
 </figcaption>
@@ -26,8 +27,22 @@ From the table we can see that NN's accuracy is not too dissimilar from GMM's, ~
 
 The issue with some of these methods, however, is that the output is a vector; most commonly a Valence and Arousal value, from the Thayer's 2D emotional plane. This is difficult for humans to understand, for this reason it can be argued that [classification](classification) is preferable to [regression](regression) as when used in applications the user can directly and instinctively know what the output means, viz. out of "Sad" and "(-0.6, -0.25)", "Sad" is instantly more recognisable.
 
-<!-- Regression -->
+[Below](#Fig52) is a table showing the various ML techniques and to what sort of problem each technique is best suited.
 
+<figure markdown="1">
+#### Techniques and Problems #### {#Fig52}
+Technique         | Problem
+----------------- | --------------
+SVR               |  
+SVM               | Binary classification
+GMM               |
+Neural Network    |
+KNN               |  
+Linear Regression | Works well for speech recognition, especially helpful for identifying&nbsp;lyrics
+<figcaption markdown="1">
+  Figure 5.2: Comparative Table of Various ML Techniques and problems in MER
+</figcaption>
+</figure>
 
 ### Other Machine Learning Techniques
 
