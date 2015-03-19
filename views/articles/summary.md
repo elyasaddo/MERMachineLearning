@@ -17,7 +17,7 @@ SVM               | 60.5%
 **GMM**           | **92.1%**
 Neural Network    | 85.6%
 KNN               | 38.9%
-Linear Regression |
+Linear Regression | 86.3% [^5]
 <figcaption markdown="1">
   Figure 5.1: Comparative Table of Various ML Techniques Applied in MER
 </figcaption>
@@ -33,11 +33,10 @@ The issue with some of these methods, however, is that the output is a vector; m
 #### Techniques and Problems #### {#Fig52}
 Technique         | Problem
 ----------------- | --------------
-SVR               |  
 SVM               | Binary classification
-GMM               |
+GMM               | Useful for data clustering, which is a good solution for single-label classification problems[^4]
 Neural Network    | Great for classification problems[^3]
-FKNN              | Good for problems where the results need to be ordered.
+FKNN              | Good for problems where the results need to be ordered
 Linear Regression | Works well for speech recognition, especially helpful for identifying&nbsp;lyrics
 <figcaption markdown="1">
   Figure 5.2: Comparative Table of Various ML Techniques and problems in MER
@@ -59,6 +58,10 @@ On this website, we have discussed Machine Learning and how it aids Music Emotio
 [^2]: Yang, Y., Liu, C. and Chen, H. (2006). Music emotion classification. Proceedings of the 14th annual ACM international conference on Multimedia - MULTIMEDIA '06. [online] Available at: [http://delivery.acm.org/10.1145/11&hellip;](http://delivery.acm.org/10.1145/1190000/1180665/p81-yang.pdf?ip=129.31.74.197&id=1180665&acc=ACTIVE%20SERVICE&key=BF07A2EE685417C5%2EF5014A9D3D5CC2D9%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=640746836&CFTOKEN=80988680&__acm__=1426551374_0a116eecd6560832218d5b22b6b2c4dd) [Accessed 17 Mar. 2015].
 
 [^3]: Heaton, J. (2015). Problems Commonly Solved With Neural Networks | Heaton Research. [online] Heatonresearch.com. Available at: [http://www.heatonresearch.com/online/introduction-neu&hellip;](http://www.heatonresearch.com/online/introduction-neural-networks-java-edition-2/chapter-1/page3.html) [Accessed 18 Mar. 2015].
+
+[^4]: Uk.mathworks.com, (2015). Clustering Using Gaussian Mixture Models - MATLAB & Simulink. [online] Available at: [http://uk.mathworks.com/help/stats/gau&hellip;](http://uk.mathworks.com/help/stats/gaussian-mixture-models.html) [Accessed 18 Mar. 2015].
+
+[^5]: Kim, Y., Schmidt, E., Migneco, R., Morton, B., Richardson, P., Scott, J., Speck, J. and Turnbull, D. (2015). Music Emotion Recognition: A State of the Art Review. [Online] Available at: [http://citeseerx.ist.psu.edu/viewdoc/downlo&hellip;](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.231.7740&rep=rep1&type=pdf) [Accessed 13 Mar. 2015].
 
 *[ML]: Machine Learning
 *[GMM]: Gaussian Mixture Model
