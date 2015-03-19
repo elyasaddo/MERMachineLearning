@@ -119,4 +119,8 @@
 [^14]: (another (simpler) SVM explanation) http://docs.opencv.org/doc/tutorials/ml/introduction_to_svm/introduction_to_svm.html
 [^15]: (SVM study for MER) http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6846115
 [^16]: Byeong-jun Han, Seungmin Rho Roger and B. Dannenberg Eenjun Hwang (2009) SMERS: Music Emotion Recognition using Support Vector Recognition [Online] Available from:[ http://www.cs.cmu.edu/~rbd/pap&hellip;](http://www.cs.cmu.edu/~rbd/papers/emotion-ismir-09.pdf)
+<<<<<<< HEAD
 [^17]: Robertson, H. (2012) Introduction to Gaussian Mixture Models for Music Information Retrieval [Online] Available from: [http://www.music.mcgill.ca/~hannah/MUM&hellip;](http://www.music.mcgill.ca/~hannah/MUMT621/gmm.pdf)
+=======
+[^17]:GMM
+>>>>>>> 610f5ad78fc899b754f0497376b76bef3b0eae6f
