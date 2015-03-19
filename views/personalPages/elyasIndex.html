@@ -151,7 +151,7 @@
 <p>Support Vector Machines take training data (a.k.a. observations) and represent them as a pair; the first part of the pair is a vector, and the second is the ground truth. The vectors for each observation have n dimensions and are plotted in a set space also of <code>n</code> dimensions (<code>R</code><sup><code>n</code></sup>) where <code>n</code> is the number of elements / features used to compare the observations. Using one of the observations as the origin, hyperplanes are created to shatter the points (divide the points into two groups, data points which exist in the class and those which don't). If the data are not falling into the correct partition of the space, a vector of weighting coefficients is adjusted and applied to the the vectors to shift the data round in order to fit into the partition which matches their ground truth.<sup id="fnref:13"><a href="#fn:13" class="footnote-ref">11</a></sup></p>
 
 <p></p><figure markdown="1">
-<img src="elyasImages/dataShattering.png" alt="Examples of data shattering in 2 dimensions" title="" id="Fig32"><p></p>
+<img src="/I/Imperial/Group%20Projects/Year%201%20-%20Topics/MERMachineLearning/assets/images/dataShattering.png" alt="Examples of data shattering in 2 dimensions" title="" id="Fig32"><p></p>
 
 <figcaption>
 
@@ -164,7 +164,7 @@
 <p>Many hyperplanes can exist which shatter the data points correctly, SVMs choose the hyperplane which maximises the distance to the closest points in order to generate the most general model. The vectors closest to the hyper plane are known as the support vectors.<sup id="fnref:14"><a href="#fn:14" class="footnote-ref">12</a></sup> It is important to use a more general model as it is more resilient against subtle changes in test data and in real life applications.</p>
 
 <p></p><figure markdown="1">
-<img src="elyasImages/manyHyperPlanes.png" alt="Demonstration of strongest hyperplane" title="" id="Fig33"><p></p>
+<img src="/I/Imperial/Group%20Projects/Year%201%20-%20Topics/MERMachineLearning/assets/images/manyHyperPlanes.png" alt="Demonstration of strongest hyperplane" title="" id="Fig33"><p></p>
 
 <figcaption>
 
@@ -177,7 +177,7 @@
 <p>One particular study into the use of SVMs for MER carried out by Chiang et al. used 35 features such as rhythm, dynamics and pitch to determine a model which fits pieces of music into four categories: happy, sad, peaceful and tensional. Once the relevant features had been extracted and selected, the intensity (arousal level) of the piece is classified as low or high using one SVM node, then the mood (valance level) of the piece is determined to decide which of the categories it belongs to. A flowchart for this system can be seen in <a href="#Fig34">Fig 3.4</a>. As we can see, SVMs can be used in traditional binary classification problems and part of PTMs for multi-label classification.<sup id="fnref:15"><a href="#fn:15" class="footnote-ref">13</a></sup> Multi-class problems can also be approached with SVMs; however, since the number of classes will be large and sparse in the context of MER, it is not really used.<sup id="fnref4:4"><a href="#fn:4" class="footnote-ref">4</a></sup></p>
 
 <p></p><figure markdown="1">
-<img src="elyasImages/ClassificationExampleFlowChart.png" alt="Flowchart of SVM usage in study by Chiang et. al." title="" id="Fig34"><p></p>
+<img src="/I/Imperial/Group%20Projects/Year%201%20-%20Topics/MERMachineLearning/assets/images/ClassificationExampleFlowChart.png" alt="Flowchart of SVM usage in study by Chiang et. al." title="" id="Fig34"><p></p>
 
 <figcaption>
 
@@ -197,7 +197,11 @@
 
 <p>In a study carried out by Yang et al., each piece in the training set were split into segments. When labeling the segments, if the classifications were not a<!--?--> majority, the segment was withdrawn from the training data. This particular study found an accuracy of 70.88%<sup id="fnref:10"><a href="#fn:10" class="footnote-ref">14</a></sup></p>
 
-<h4>GMM</h4>
+<h4 id="GMM">Gaussian Mixture Model (GMM)</h4>
+
+<p>GMM is another ML technique for single-label classification. Like SVM, the data points are feature vectors in an n-dimentional hyper-space where n is the number of musical features. GMM applies weightings to the features in order to form clusters of the data points. The data points are clustered in such a way that the probability of any data point being in a particular class is normally distributed across the hyper-space. The predicted class of any given data point is the class for which the probability is the highest in all of the normal distributions created by the model. Again, errors are calculated and the weightings are changed so that the model predictions and ground truths are reduced. For ML this process is repeated until the errors are irreducible.<sup id="fnref:17"><a href="#fn:17" class="footnote-ref">15</a></sup></p>
+
+<p>In experiment an run by Han. et al. a GMM was found to produce an accuracy of 92.1%.<sup id="fnref:16"><a href="#fn:16" class="footnote-ref">16</a></sup></p>
 
 <h3>Conclusion</h3>
 
@@ -313,9 +317,16 @@
 <p>Yang, Y., Liu, C. and Chen, H. (2006). Music emotion classification. Proceedings of the 14th annual ACM international conference on Multimedia - MULTIMEDIA '06. [online] Available at: <a href="http://dl.acm.org/citation.cfm?id=1180665">http://dl.acm.org/…</a> [Accessed 12 Feb. 2015].&nbsp;<a href="#fnref:10" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
 </li>
 
+<li id="fn:17">
+<p>Robertson, H. (2012) Introduction to Gaussian Mixture Models for Music Information Retrieval [Online] Available from: <a href="http://www.music.mcgill.ca/~hannah/MUMT621/gmm.pdf">http://www.music.mcgill.ca/~hannah/MUM…</a>&nbsp;<a href="#fnref:17" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+</li>
+
+<li id="fn:16">
+<p>Han, B., Rho, S., Roger, Dannenberg, R. B. and Hwang, E. (2009) SMERS: Music Emotion Recognition using Support Vector Recognition [online] Available from:<a href="http://www.cs.cmu.edu/~rbd/papers/emotion-ismir-09.pdf"> http://www.cs.cmu.edu/~rbd/pap…</a>&nbsp;<a href="#fnref:16" class="footnote-backref"><i class="icon-up-right small"></i></a></p>
+</li>
+
 </ol>
 </div>
 </div>
-
 </body>
 </html>
